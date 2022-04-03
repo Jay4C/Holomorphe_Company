@@ -1,0 +1,1157 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet"
+              href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+              integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+              crossorigin="anonymous">
+
+        <!-- Code Ad -->
+        {% include 'index/codeAd.html' %}
+
+        <!-- title -->
+        {% include 'index/title.html' %}
+
+        <!-- Vis.js -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css"></script>
+        <style type="text/css">
+        #international_free_trade_agreements_network {
+            width: 1050px;
+            height: 400px
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+          <!-- Code consent -->
+          {% include 'index/consent.html' %}
+
+          <!-- Header -->
+          {% include 'index/header.html' %}
+
+          <br>
+
+          <!-- ad1 -->
+          {% include 'index/ad1.html' %}
+
+          <br>
+
+          <!-- International free trade agreements -->
+          <div class="card">
+              <div class="card-header text-center">
+               International free trade agreements
+              </div>
+              <div class="card-body">
+                  <br>
+
+                  <div id="international_free_trade_agreements_network">
+                  </div>
+
+                  <script type="text/javascript">
+                  // create an array with nodes
+                  var nodes = new vis.DataSet([
+                    {
+                    id: 11,
+                    label: "The General Agreement on Tariffs and Trade (GATT)",
+                    color: 'red',
+                    size: 50,
+                    font: '50px'
+                    },
+                    {
+                    id: 12,
+                    label: "The Australia-U.S. Free Trade Agreement",
+                    color: 'red',
+                    size: 50,
+                    font: '50px'
+                    },
+                    {
+                    id: 13,
+                    label: "The Canada-US Free Trade Agreement",
+                    color: 'red',
+                    size: 50,
+                    font: '50px'
+                    },
+                    {
+                    id: 14,
+                    label: "The Colombia-United States Free Trade Agreement",
+                    color: 'red',
+                    size: 50,
+                    font: '50px',
+                    },
+                    {
+                    id: 15,
+                    label: "The Free Trade Agreement between the United States and Chile",
+                    color: 'red',
+                    size: 50,
+                    font: '50px'
+                    },
+                    {
+                    id: 16,
+                    label: "The North American Free Trade Agreement (NAFTA) ratified between the United States, Canada and Mexico",
+                    color: 'red',
+                    size: 50,
+                    font: '50px'
+                    },
+                    {
+                    id: 17,
+                    label: "The Eden-Rayneval Treaty, a trade agreement between France and Great Britain (1786)",
+                    color: 'red',
+                    size: 50,
+                    font: '50px'
+                    },
+                    {
+                    id: 18,
+                    label: "The Cobden-Chevalier Treaty, a free trade treaty between the French Empire and the United Kingdom (1860)",
+                    color: 'red',
+                    size: 50,
+                    font: '50px'
+                    },
+                    {
+                    id: 19,
+                    label: "The Treaty establishing the European Coal and Steel Community establishing the European Coal and Steel Community (1951)",
+                    color: 'red',
+                    size: 50,
+                    font: '50px'
+                    },
+                    {
+                    id: 111,
+                    label: "The Treaty on the Functioning of the European Union, known as the Treaty of Rome (1957)",
+                    color: 'red',
+                    size: 50,
+                    font: '50px'
+                    },
+                    {
+                    id: 112,
+                    label: "The European Free Trade Association (EFTA) between Iceland, Norway, Liechtenstein and Switzerland",
+                    color: 'red',
+                    size: 50,
+                    font: '50px'
+                    },
+                    {
+                    id: 113,
+                    label: "The Free Trade Agreement within the Commonwealth of Independent States: ratified between Russia, Kazakhstan, Belarus, Ukraine, Moldova, Kyrgyzstan, Tajikistan and Armenia",
+                    color: 'red',
+                    size: 50,
+                    font: '50px'
+                    },
+                    {
+                    id: 114,
+                    label: "The Central European Free Trade Agreement (CEFTA) ratified between North Macedonia, Bosnia and Herzegovina, Moldova, Serbia, Montenegro, Albania and Kosovo",
+                    color: 'red',
+                    size: 50,
+                    font: '50px'
+                    },
+                    {
+                    id: 115,
+                    label: "The Japan-European Union Free Trade Agreement (JEFTA)",
+                    color: 'red',
+                    size: 50,
+                    font: '50px'
+                    },
+                    {
+                    id: 116,
+                    label: "The Comprehensive Economic and Trade Agreement (CETA), an agreement between Canada and the European Union",
+                    color: 'red',
+                    size: 50,
+                    font: '50px'
+                    },
+                    {
+                    id: 117,
+                    label: "The Association of Southeast Asian Nations (ASEAN) between Indonesia, Malaysia, Philippines, Singapore, Thailand, Brunei, Vietnam, Laos, Burma and Cambodia",
+                    color: 'red',
+                    size: 50,
+                    font: '50px'
+                    },
+                    {
+                    id: 118,
+                    label: "Singapore-Sri Lanka Free Trade Agreement",
+                    color: 'red',
+                    size: 50,
+                    font: '50px'
+                    },
+                    {
+                    id: 119,
+                    label: "Agreement establishing the African Continental Free Trade Area (Zlecaf), African Union",
+                    color: 'red',
+                    size: 50,
+                    font: '50px'
+                    },
+                    {
+                    id: 120,
+                    label: "The Treaty of Asunción (1991), establishing the Mercosur",
+                    color: 'red',
+                    size: 50,
+                    font: '50px'
+                    },
+                    {
+                    id: "a1",
+                    label: "South Asian Free Trade Area (SAFTA)",
+                    color: 'red',
+                    size: 50,
+                    font: '50px'
+                    },
+                    {
+                    id: "a2",
+                    label: "Council of Arab Economic Unity (CAEU)",
+                    color: 'red',
+                    size: 50,
+                    font: '50px'
+                    },
+                    {
+                    id: "a3",
+                    label: "Asia-Pacific trade agreement",
+                    color: 'red',
+                    size: 50,
+                    font: '50px'
+                    },
+                    {
+                    id: "a4",
+                    label: "Australia-China Free Trade Agreement",
+                    color: 'red',
+                    size: 50,
+                    font: '50px'
+                    },
+                    {
+                    id: "a5",
+                    label: "China-ASEAN Free Trade Agreement",
+                    color: 'red',
+                    size: 50,
+                    font: '50px'
+                    },
+                    {
+                    id: "a6",
+                    label: "China-Iceland Free Trade Agreement",
+                    color: 'red',
+                    size: 50,
+                    font: '50px'
+                    },
+                    {
+                    id: "a7",
+                    label: "China-Switzerland Free Trade Agreement",
+                    color: 'red',
+                    size: 50,
+                    font: '50px'
+                    },
+                    {
+                    id: "a8",
+                    label: "China-Thailand Free Trade Agreement",
+                    color: 'red',
+                    size: 50,
+                    font: '50px'
+                    },
+                    {
+                    id: "a9",
+                    label: "China-Chile Free Trade Agreement",
+                    color: 'red',
+                    size: 50,
+                    font: '50px'
+                    },
+                    {
+                    id: "a10",
+                    label: "China-Pakistan Free Trade Agreement",
+                    color: 'red',
+                    size: 50,
+                    font: '50px'
+                    },
+                    {
+                    id: "a11",
+                    label: "China-Peru Free Trade Agreement",
+                    color: 'red',
+                    size: 50,
+                    font: '50px'
+                    },
+                    {
+                    id: "a12",
+                    label: "China-Singapore Free Trade Agreement",
+                    color: 'red',
+                    size: 50,
+                    font: '50px'
+                    },
+                    {
+                    id: "a13",
+                    label: "South Korea-China Free Trade Agreement",
+                    color: 'red',
+                    size: 50,
+                    font: '50px'
+                    },
+                    {
+                    id: "a14",
+                    label: "Georgia-China Free Trade Agreement",
+                    color: 'red',
+                    size: 50,
+                    font: '50px'
+                    },
+                    {
+                    id: "a15",
+                    label: "New Zealand-China Free Trade Agreement",
+                    color: 'red',
+                    size: 50,
+                    font: '50px'
+                    },
+                    {
+                    id: "a16",
+                    label: "Free Trade Agreement between Costa Rica and China",
+                    color: 'red',
+                    size: 50,
+                    font: '50px'
+                    },
+                    {
+                    id: "a17",
+                    label: "Maldives-China Free Trade Agreement",
+                    color: 'red',
+                    size: 50,
+                    font: '50px'
+                    },
+                    {
+                    id: "a18",
+                    label: "China-Hong Kong Closer Economic Partnership Agreement",
+                    color: 'red',
+                    size: 50,
+                    font: '50px'
+                    },
+                    {
+                    id: "a19",
+                    label: "China-Macao Closer Economic Agreement",
+                    color: 'red',
+                    size: 50,
+                    font: '50px'
+                    },
+                    {
+                    id: "a20",
+                    label: "China-Taiwan Economic Cooperation Framework Agreement",
+                    color: 'red',
+                    size: 50,
+                    font: '50px'
+                    },
+                    {
+                    id: "a21",
+                    label: "Free trade agreement between the European Union and South Africa",
+                    color: 'red',
+                    size: 50,
+                    font: '50px'
+                    },
+                    {
+                    id: "a22",
+                    label: "Free trade agreement between the European Union and Albania",
+                    color: 'red',
+                    size: 50,
+                    font: '50px'
+                    },
+                    {
+                    id: "a23",
+                    label: "Free trade agreement between the European Union and Algeria",
+                    color: 'red',
+                    size: 50,
+                    font: '50px'
+                    },
+                    {
+                    id: "a24",
+                    label: "Free trade agreement between the European Union and Andorra",
+                    color: 'red',
+                    size: 50,
+                    font: '50px'
+                    },
+                    {
+                    id: "a25",
+                    label: "Free trade agreement between the European Union and Bosnia and Herzegovina",
+                    color: 'red',
+                    size: 50,
+                    font: '50px'
+                    },
+                    {
+                    id: "a26",
+                    label: "Free trade agreement between the European Union and Chile",
+                    color: 'red',
+                    size: 50,
+                    font: '50px'
+                    },
+                    {
+                    id: "a27",
+                    label: "Free trade agreement between the European Union and South Korea",
+                    color: 'red',
+                    size: 50,
+                    font: '50px'
+                    },
+                    {
+                    id: "a28",
+                    label: "Free trade agreement between the European Union and Egypt",
+                    color: 'red',
+                    size: 50,
+                    font: '50px'
+                    },
+                    {
+                    id: "a29",
+                    label: "Free trade agreement between the European Union and the Faroe Islands",
+                    color: 'red',
+                    size: 50,
+                    font: '50px'
+                    },
+                    {
+                    id: "a30",
+                    label: "Free trade agreement between the European Union and Georgia",
+                    color: 'red',
+                    size: 50,
+                    font: '50px'
+                    },
+                    {
+                    id: "a31",
+                    label: "Free trade agreement between the European Union and Iceland",
+                    color: 'red',
+                    size: 50,
+                    font: '50px'
+                    },
+                    {
+                    id: "a32",
+                    label: "Free trade agreement between the European Union and Israel",
+                    color: 'red',
+                    size: 50,
+                    font: '50px'
+                    },
+                    {
+                    id: "a33",
+                    label: "Free trade agreement between the European Union and Jordan",
+                    color: 'red',
+                    size: 50,
+                    font: '50px'
+                    },
+                    {
+                    id: "a34",
+                    label: "Free trade agreement between the European Union and Kosovo",
+                    color: 'red',
+                    size: 50,
+                    font: '50px'
+                    },
+                    {
+                    id: "a35",
+                    label: "Free trade agreement between the European Union and Lebanon",
+                    color: 'red',
+                    size: 50,
+                    font: '50px'
+                    },
+                    {
+                    id: "a36",
+                    label: "Free trade agreement between the European Union and Liechtenstein",
+                    color: 'red',
+                    size: 50,
+                    font: '50px'
+                    },
+                    {
+                    id: "a37",
+                    label: "Free trade agreement between the European Union and Morocco",
+                    color: 'red',
+                    size: 50,
+                    font: '50px'
+                    },
+                    {
+                    id: "a38",
+                    label: "Free trade agreement between the European Union and Macedonia",
+                    color: 'red',
+                    size: 50,
+                    font: '50px'
+                    },
+                    {
+                    id: "a39",
+                    label: "Free trade agreement between the European Union and Mexico",
+                    color: 'red',
+                    size: 50,
+                    font: '50px'
+                    },
+                    {
+                    id: "a40",
+                    label: "Free trade agreement between the European Union and Moldova",
+                    color: 'red',
+                    size: 50,
+                    font: '50px'
+                    },
+                    {
+                    id: "a41",
+                    label: "Free trade agreement between the European Union and Monaco",
+                    color: 'red',
+                    size: 50,
+                    font: '50px'
+                    },
+                    {
+                    id: "a42",
+                    label: "Free trade agreement between the European Union and Montenegro",
+                    color: 'red',
+                    size: 50,
+                    font: '50px'
+                    },
+                    {
+                    id: "a43",
+                    label: "Free trade agreement between the European Union and Norway",
+                    color: 'red',
+                    size: 50,
+                    font: '50px'
+                    },
+                    {
+                    id: "a44",
+                    label: "Free trade agreement between the European Union and Palestine",
+                    color: 'red',
+                    size: 50,
+                    font: '50px'
+                    },
+                    {
+                    id: "a45",
+                    label: "Free trade agreement between the European Union and San Marino",
+                    color: 'red',
+                    size: 50,
+                    font: '50px'
+                    },
+                    {
+                    id: "a46",
+                    label: "Free trade agreement between the European Union and Serbia",
+                    color: 'red',
+                    size: 50,
+                    font: '50px'
+                    },
+                    {
+                    id: "a47",
+                    label: "Free trade agreement between the European Union and Switzerland",
+                    color: 'red',
+                    size: 50,
+                    font: '50px'
+                    },
+                    {
+                    id: "a48",
+                    label: "Free trade agreement between the European Union and Tunisia",
+                    color: 'red',
+                    size: 50,
+                    font: '50px'
+                    },
+                    {
+                    id: "a49",
+                    label: "Free trade agreement between the European Union and Turkey",
+                    color: 'red',
+                    size: 50,
+                    font: '50px'
+                    },
+                    {
+                    id: "a50",
+                    label: "Free trade agreement between the European Union and Ukraine",
+                    color: 'red',
+                    size: 50,
+                    font: '50px'
+                    },
+                    {
+                    id: "a51",
+                    label: "Free trade agreement between the European Union and Cameroon",
+                    color: 'red',
+                    size: 50,
+                    font: '50px'
+                    },
+                    {
+                    id: "a52",
+                    label: "Free trade agreement between the European Union and Caricom",
+                    color: 'red',
+                    size: 50,
+                    font: '50px'
+                    },
+                    {
+                    id: "a53",
+                    label: "Free trade agreement between the European Union and Ivory Coast",
+                    color: 'red',
+                    size: 50,
+                    font: '50px'
+                    },
+                    {
+                    id: "a54",
+                    label: "Free trade agreement between the European Union and SADC",
+                    color: 'red',
+                    size: 50,
+                    font: '50px'
+                    },
+                    { id: 21, label: "United States", font: '50px'},
+                    { id: 23, label: "Australia", font: '50px' },
+                    { id: 24, label: "Canada", font: '50px' },
+                    { id: 25, label: "Colombia", font: '50px' },
+                    { id: 26, label: "Mexico", font: '50px' },
+                    { id: 27, label: "Great Britain", font: '50px' },
+                    { id: 28, label: "France", font: '50px' },
+                    { id: 29, label: "United Kingdom", font: '50px' },
+                    { id: 30, label: "French Empire", font: '50px' },
+                    { id: 31, label: "Iceland", font: '50px' },
+                    { id: 32, label: "Norway", font: '50px' },
+                    { id: 33, label: "Liechtenstein", font: '50px' },
+                    { id: 34, label: "Switzerland", font: '50px' },
+                    { id: 35, label: "Russia", font: '50px' },
+                    { id: 36, label: "Kazakhstan", font: '50px' },
+                    { id: 37, label: "Belarus", font: '50px' },
+                    { id: 38, label: "Ukraine", font: '50px' },
+                    { id: 39, label: "Moldova", font: '50px' },
+                    { id: 40, label: "Kyrgyzstan", font: '50px' },
+                    { id: 41, label: "Tajikistan", font: '50px' },
+                    { id: 42, label: "Armenia", font: '50px' },
+                    { id: 43, label: "North Macedonia", font: '50px' },
+                    { id: 44, label: "Bosnia and Herzegovina", font: '50px' },
+                    { id: 45, label: "Serbia", font: '50px' },
+                    { id: 46, label: "Montenegro", font: '50px' },
+                    { id: 47, label: "Albania", font: '50px' },
+                    { id: 48, label: "Kosovo", font: '50px' },
+                    { id: 49, label: "Japan", font: '50px' },
+                    { id: 50, label: "European Union", font: '50px' },
+                    { id: 51, label: "Indonesia", font: '50px' },
+                    { id: 52, label: "Malaysia", font: '50px' },
+                    { id: 53, label: "Philippines", font: '50px' },
+                    { id: 54, label: "Singapore", font: '50px' },
+                    { id: 55, label: "Thailand", font: '50px' },
+                    { id: 56, label: "Brunei", font: '50px' },
+                    { id: 57, label: "Vietnam", font: '50px' },
+                    { id: 58, label: "Laos", font: '50px' },
+                    { id: 59, label: "Burma", font: '50px' },
+                    { id: 60, label: "Cambodia", font: '50px' },
+                    { id: 61, label: "Sri Lanka", font: '50px' },
+                    { id: 62, label: "Argentine", font: '50px' },
+                    { id: 63, label: "Brasil", font: '50px' },
+                    { id: 64, label: "Paraguay", font: '50px' },
+                    { id: 65, label: "Uruguay", font: '50px' },
+                    { id: 66, label: "Bolivia", font: '50px' },
+                    { id: 67, label: "Chile", font: '50px' },
+                    { id: 68, label: "Colombia", font: '50px' },
+                    { id: 69, label: "Ecuador", font: '50px' },
+                    { id: 70, label: "Guyana", font: '50px' },
+                    { id: 71, label: "Peru", font: '50px' },
+                    { id: 72, label: "Suriname", font: '50px' },
+                    { id: 73, label: "New Zealand", font: '50px' },
+                    { id: 74, label: "Mexico", font: '50px' },
+                    { id: 75, label: "India", font: '50px' },
+                    { id: 76, label: "Israel", font: '50px' },
+                    { id: 77, label: "Namibia", font: '50px' },
+                    { id: 78, label: "Botswana", font: '50px' },
+                    { id: 79, label: "Eswatini", font: '50px' },
+                    { id: 80, label: "Lesotho", font: '50px' },
+                    { id: 81, label: "South Africa", font: '50px' },
+                    { id: 82, label: "Algeria", font: '50px' },
+                    { id: 83, label: "Angola", font: '50px' },
+                    { id: 84, label: "Bénin", font: '50px' },
+                    { id: 85, label: "Burkina Faso", font: '50px' },
+                    { id: 86, label: "Burundi", font: '50px' },
+                    { id: 87, label: "Cameroon", font: '50px' },
+                    { id: 88, label: "Cap-Vert", font: '50px' },
+                    { id: 89, label: "Centrafrique", font: '50px' },
+                    { id: 90, label: "Comores", font: '50px' },
+                    { id: 91, label: "Congo", font: '50px' },
+                    { id: 92, label: "Congo-Kinshasa", font: '50px' },
+                    { id: 93, label: "Ivory Coast", font: '50px' },
+                    { id: 94, label: "Djibouti", font: '50px' },
+                    { id: 95, label: "Égypte", font: '50px' },
+                    { id: 96, label: "Érythrée", font: '50px' },
+                    { id: 97, label: "Éthiopie", font: '50px' },
+                    { id: 98, label: "Gabon", font: '50px' },
+                    { id: 99, label: "Gambie", font: '50px' },
+                    { id: 100, label: "Ghana", font: '50px' },
+                    { id: 101, label: "Guinée", font: '50px' },
+                    { id: 102, label: "Guinée-Bissau", font: '50px' },
+                    { id: 103, label: "Guinée équatoriale", font: '50px' },
+                    { id: 104, label: "Kenya", font: '50px' },
+                    { id: 105, label: "Liberia", font: '50px' },
+                    { id: 106, label: "Libye", font: '50px' },
+                    { id: 107, label: "Madagascar", font: '50px' },
+                    { id: 108, label: "Malawi", font: '50px' },
+                    { id: 109, label: "Mali", font: '50px' },
+                    { id: 110, label: "Maroc", font: '50px' },
+                    { id: 1110, label: "Maurice", font: '50px' },
+                    { id: 1120, label: "Mauritanie", font: '50px' },
+                    { id: 1130, label: "Mozambique", font: '50px' },
+                    { id: 1140, label: "Niger", font: '50px' },
+                    { id: 1150, label: "Nigeria", font: '50px' },
+                    { id: 1160, label: "Ouganda", font: '50px' },
+                    { id: 1170, label: "Rwanda", font: '50px' },
+                    { id: 1180, label: "Sahara occidental", font: '50px' },
+                    { id: 1190, label: "Sao Tomé-et-Principe", font: '50px' },
+                    { id: 1200, label: "Sénégal", font: '50px' },
+                    { id: 1210, label: "Seychelles", font: '50px' },
+                    { id: 1220, label: "Sierra Leone", font: '50px' },
+                    { id: 1230, label: "Somalie", font: '50px' },
+                    { id: 1240, label: "Sudan", font: '50px' },
+                    { id: 1250, label: "Soudan du Sud", font: '50px' },
+                    { id: 1260, label: "Tanzanie", font: '50px' },
+                    { id: 1270, label: "Tchad", font: '50px' },
+                    { id: 1280, label: "Togo", font: '50px' },
+                    { id: 1290, label: "Tunisie", font: '50px' },
+                    { id: 1300, label: "Zambie", font: '50px' },
+                    { id: 1310, label: "Zimbabwe", font: '50px' },
+                    { id: "c1", label: "Afghanistan", font: '50px' },
+                    { id: "c2", label: "Bangladesh", font: '50px' },
+                    { id: "c3", label: "Bhutan", font: '50px' },
+                    { id: "c4", label: "The Maldives", font: '50px' },
+                    { id: "c5", label: "Nepal", font: '50px' },
+                    { id: "c6", label: "Pakistan", font: '50px' },
+                    { id: "c7", label: "Egypt", font: '50px' },
+                    { id: "c8", label: "Iraq", font: '50px' },
+                    { id: "c9", label: "Jordan", font: '50px' },
+                    { id: "c10", label: "Kuwait", font: '50px' },
+                    { id: "c11", label: "Tunisia", font: '50px' },
+                    { id: "c12", label: "Mauritania", font: '50px' },
+                    { id: "c13", label: "Palestine", font: '50px' },
+                    { id: "c14", label: "Saudi Arabia", font: '50px' },
+                    { id: "c15", label: "Syria", font: '50px' },
+                    { id: "c16", label: "United Arab Emirates", font: '50px' },
+                    { id: "c17", label: "Yemen", font: '50px' },
+                    { id: "c18", label: "South Korea", font: '50px' },
+                    { id: "c19", label: "China", font: '50px' },
+                    { id: "c20", label: "Mongolia", font: '50px' },
+                    { id: "c21", label: "Georgia", font: '50px' },
+                    { id: "c22", label: "Costa Rica", font: '50px' },
+                    { id: "c23", label: "Hong Kong", font: '50px' },
+                    { id: "c24", label: "Macao", font: '50px' },
+                    { id: "c25", label: "Taiwan", font: '50px' },
+                    { id: "c26", label: "Andorra", font: '50px' },
+                    { id: "c27", label: "The Faroe Islands", font: '50px' },
+                    { id: "c28", label: "Lebanon", font: '50px' },
+                    { id: "c29", label: "Morocco", font: '50px' },
+                    { id: "c30", label: "Monaco", font: '50px' },
+                    { id: "c31", label: "San Marino", font: '50px' },
+                    { id: "c32", label: "Turkey", font: '50px' },
+                    { id: "c33", label: "Caricom", font: '50px' },
+                    { id: "c34", label: "SADC", font: '50px' },
+                  ]);
+
+                  // create an array with edges
+                  var edges = new vis.DataSet([
+                    // from 12
+                    { from: 12, to: 21, label: 'In force', font: {size: 60, align: 'top'}  },
+                    { from: 12, to: 23, label: 'In force', font: {size: 60, align: 'top'}  },
+
+                    // from 13
+                    { from: 13, to: 21, label: 'In force', font: {size: 60, align: 'top'}  },
+                    { from: 13, to: 24, label: 'In force', font: {size: 60, align: 'top'}  },
+
+                    // from 14
+                    { from: 14, to: 21, label: 'In force', font: {size: 60, align: 'top'}  },
+                    { from: 14, to: 25, label: 'In force', font: {size: 60, align: 'top'}  },
+
+                    // from 15
+                    { from: 15, to: 21, label: 'In force', font: {size: 60, align: 'top'}  },
+                    { from: 15, to: 67, label: 'In force', font: {size: 60, align: 'top'}  },
+
+                    // from 16
+                    { from: 16, to: 21, label: 'In force', font: {size: 60, align: 'top'}  },
+                    { from: 16, to: 24, label: 'In force', font: {size: 60, align: 'top'}  },
+                    { from: 16, to: 26, label: 'In force', font: {size: 60, align: 'top'}  },
+
+                    // from 17
+                    { from: 17, to: 27, label: 'In force', font: {size: 60, align: 'top'}  },
+                    { from: 17, to: 28, label: 'In force', font: {size: 60, align: 'top'}  },
+
+                    // from 18
+                    { from: 18, to: 29, label: 'In force', font: {size: 60, align: 'top'}  },
+                    { from: 18, to: 30, label: 'In force', font: {size: 60, align: 'top'}  },
+
+                    // from 112
+                    { from: 112, to: 31, label: 'In force', font: {size: 60, align: 'top'}  },
+                    { from: 112, to: 32, label: 'In force', font: {size: 60, align: 'top'}  },
+                    { from: 112, to: 33, label: 'In force', font: {size: 60, align: 'top'}  },
+                    { from: 112, to: 34, label: 'In force', font: {size: 60, align: 'top'}  },
+
+                    // from 113
+                    { from: 113, to: 35, label: 'In force', font: {size: 60, align: 'top'}  },
+                    { from: 113, to: 36, label: 'In force', font: {size: 60, align: 'top'}  },
+                    { from: 113, to: 37, label: 'In force', font: {size: 60, align: 'top'}  },
+                    { from: 113, to: 38, label: 'In force', font: {size: 60, align: 'top'}  },
+                    { from: 113, to: 39, label: 'In force', font: {size: 60, align: 'top'}  },
+                    { from: 113, to: 40, label: 'In force', font: {size: 60, align: 'top'}  },
+                    { from: 113, to: 41, label: 'In force', font: {size: 60, align: 'top'}  },
+                    { from: 113, to: 42, label: 'In force', font: {size: 60, align: 'top'} },
+
+                    // from 114
+                    { from: 114, to: 39, label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: 114, to: 43, label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: 114, to: 44, label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: 114, to: 45, label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: 114, to: 46, label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: 114, to: 47, label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: 114, to: 48, label: 'In force', font: {size: 60, align: 'top'} },
+
+                    // from 115
+                    { from: 115, to: 49, label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: 115, to: 50, label: 'In force', font: {size: 60, align: 'top'} },
+
+                    // from 116
+                    { from: 116, to: 24, label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: 116, to: 50, label: 'In force', font: {size: 60, align: 'top'} },
+
+                    // from 117
+                    { from: 117, to: 51, label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: 117, to: 52, label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: 117, to: 53, label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: 117, to: 54, label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: 117, to: 55, label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: 117, to: 56, label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: 117, to: 57, label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: 117, to: 58, label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: 117, to: 59, label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: 117, to: 60, label: 'In force', font: {size: 60, align: 'top'} },
+
+                    // from 118
+                    { from: 118, to: 54, label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: 118, to: 61, label: 'In force', font: {size: 60, align: 'top'} },
+
+                    // from 119
+                    { from: 119, to: 77, label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: 119, to: 78, label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: 119, to: 79, label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: 119, to: 80, label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: 119, to: 81, label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: 119, to: 82, label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: 119, to: 83, label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: 119, to: 84, label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: 119, to: 85, label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: 119, to: 86, label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: 119, to: 87, label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: 119, to: 88, label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: 119, to: 89, label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: 119, to: 90, label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: 119, to: 91, label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: 119, to: 92, label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: 119, to: 93, label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: 119, to: 94, label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: 119, to: 95, label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: 119, to: 96, label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: 119, to: 97, label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: 119, to: 98, label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: 119, to: 99, label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: 119, to: 100, label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: 119, to: 101, label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: 119, to: 102, label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: 119, to: 103, label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: 119, to: 104, label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: 119, to: 105, label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: 119, to: 106, label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: 119, to: 107, label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: 119, to: 108, label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: 119, to: 109, label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: 119, to: 110, label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: 119, to: 1110, label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: 119, to: 1120, label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: 119, to: 1130, label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: 119, to: 1140, label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: 119, to: 1150, label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: 119, to: 1160, label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: 119, to: 1170, label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: 119, to: 1180, label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: 119, to: 1190, label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: 119, to: 1200, label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: 119, to: 1210, label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: 119, to: 1220, label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: 119, to: 1230, label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: 119, to: 1240, label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: 119, to: 1250, label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: 119, to: 1260, label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: 119, to: 1270, label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: 119, to: 1280, label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: 119, to: 1290, label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: 119, to: 1300, label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: 119, to: 1310, label: 'In force', font: {size: 60, align: 'top'} },
+
+                    // from 120
+                    { from: 120, to: 50, label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: 120, to: 34, label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: 120, to: 62, label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: 120, to: 63, label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: 120, to: 64, label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: 120, to: 65, label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: 120, to: 66, label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: 120, to: 67, label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: 120, to: 68, label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: 120, to: 69, label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: 120, to: 70, label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: 120, to: 71, label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: 120, to: 72, label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: 120, to: 73, label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: 120, to: 74, label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: 120, to: 75, label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: 120, to: 76, label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: 120, to: 77, label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: 120, to: 78, label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: 120, to: 79, label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: 120, to: 80, label: 'In force', font: {size: 60, align: 'top'} },
+
+                    // from a1
+                    { from: "a1", to: "c1", label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: "a1", to: 75, label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: "a1", to: "c2", label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: "a1", to: "c3", label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: "a1", to: "c4", label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: "a1", to: "c5", label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: "a1", to: "c6", label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: "a1", to: 61, label: 'In force', font: {size: 60, align: 'top'} },
+
+                    // from a2
+                    { from: "a2", to: "c7", label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: "a2", to: "c8", label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: "a2", to: "c9", label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: "a2", to: "c10", label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: "a2", to: "c11", label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: "a2", to: "c12", label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: "a2", to: "c13", label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: "a2", to: "c14", label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: "a2", to: "c15", label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: "a2", to: 1240, label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: "a2", to: 106, label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: "a2", to: "c16", label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: "a2", to: "c17", label: 'In force', font: {size: 60, align: 'top'} },
+
+                    // from a3
+                    { from: "a3", to: "75", label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: "a3", to: "61", label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: "a3", to: "c18", label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: "a3", to: "c2", label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: "a3", to: "58", label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: "a3", to: "c19", label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: "a3", to: "c20", label: 'In force', font: {size: 60, align: 'top'} },
+
+                    // from a4
+                    { from: "a4", to: "c19", label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: "a4", to: "23", label: 'In force', font: {size: 60, align: 'top'} },
+
+                    // from a5
+                    { from: "a5", to: "117", label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: "a5", to: "c19", label: 'In force', font: {size: 60, align: 'top'} },
+
+                    // from a6
+                    { from: "a6", to: "31", label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: "a6", to: "c19", label: 'In force', font: {size: 60, align: 'top'} },
+
+                    // from a7
+                    { from: "a7", to: "c19", label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: "a7", to: "34", label: 'In force', font: {size: 60, align: 'top'} },
+
+                    // from a8
+                    { from: "a8", to: "55", label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: "a8", to: "c19", label: 'In force', font: {size: 60, align: 'top'} },
+
+                    // from a9
+                    { from: "a9", to: "67", label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: "a9", to: "c19", label: 'In force', font: {size: 60, align: 'top'} },
+
+                    // from a10
+                    { from: "a10", to: "c19", label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: "a10", to: "c6", label: 'In force', font: {size: 60, align: 'top'} },
+
+                    // from a11
+                    { from: "a11", to: "c19", label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: "a11", to: "71", label: 'In force', font: {size: 60, align: 'top'} },
+
+                    // from a12
+                    { from: "a12", to: "c19", label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: "a12", to: "54", label: 'In force', font: {size: 60, align: 'top'} },
+
+                    // from a13
+                    { from: "a13", to: "c19", label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: "a13", to: "c18", label: 'In force', font: {size: 60, align: 'top'} },
+
+                    // from a14
+                    { from: "a14", to: "c19", label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: "a14", to: "c21", label: 'In force', font: {size: 60, align: 'top'} },
+
+                    // from a15
+                    { from: "a15", to: "c19", label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: "a15", to: "73", label: 'In force', font: {size: 60, align: 'top'} },
+
+                    // from a16
+                    { from: "a16", to: "c19", label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: "a16", to: "c22", label: 'In force', font: {size: 60, align: 'top'} },
+
+                    // from a17
+                    { from: "a17", to: "c4", label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: "a17", to: "c19", label: 'In force', font: {size: 60, align: 'top'} },
+
+                    // from a18
+                    { from: "a18", to: "c23", label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: "a18", to: "c19", label: 'In force', font: {size: 60, align: 'top'} },
+
+                    // from a19
+                    { from: "a19", to: "c24", label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: "a19", to: "c19", label: 'In force', font: {size: 60, align: 'top'} },
+
+                    // from a20
+                    { from: "a20", to: "c19", label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: "a20", to: "c25", label: 'In force', font: {size: 60, align: 'top'} },
+
+                    // from a21
+                    { from: "a21", to: "50", label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: "a21", to: "81", label: 'In force', font: {size: 60, align: 'top'} },
+
+                    // from a22
+                    { from: "a22", to: "50", label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: "a22", to: "47", label: 'In force', font: {size: 60, align: 'top'} },
+
+                    // from a23
+                    { from: "a23", to: "50", label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: "a23", to: "82", label: 'In force', font: {size: 60, align: 'top'} },
+
+                    // from a24
+                    { from: "a24", to: "50", label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: "a24", to: "c26", label: 'In force', font: {size: 60, align: 'top'} },
+
+                    // from a25
+                    { from: "a25", to: "50", label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: "a25", to: "44", label: 'In force', font: {size: 60, align: 'top'} },
+
+                    // from a26
+                    { from: "a26", to: "50", label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: "a26", to: "67", label: 'In force', font: {size: 60, align: 'top'} },
+
+                    // from a27
+                    { from: "a27", to: "50", label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: "a27", to: "c18", label: 'In force', font: {size: 60, align: 'top'} },
+
+                    // from a28
+                    { from: "a28", to: "50", label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: "a28", to: "c7", label: 'In force', font: {size: 60, align: 'top'} },
+
+                    // from a29
+                    { from: "a29", to: "50", label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: "a29", to: "c27", label: 'In force', font: {size: 60, align: 'top'} },
+
+                    // from a30
+                    { from: "a30", to: "50", label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: "a30", to: "c21", label: 'In force', font: {size: 60, align: 'top'} },
+
+                    // from a31
+                    { from: "a31", to: "50", label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: "a31", to: "31", label: 'In force', font: {size: 60, align: 'top'} },
+
+                    // from a32
+                    { from: "a32", to: "50", label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: "a32", to: "76", label: 'In force', font: {size: 60, align: 'top'} },
+
+                    // from a33
+                    { from: "a33", to: "50", label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: "a33", to: "c9", label: 'In force', font: {size: 60, align: 'top'} },
+
+                    // from a34
+                    { from: "a34", to: "50", label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: "a34", to: "48", label: 'In force', font: {size: 60, align: 'top'} },
+
+                    // from a35
+                    { from: "a35", to: "50", label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: "a35", to: "c28", label: 'In force', font: {size: 60, align: 'top'} },
+
+                    // from a36
+                    { from: "a36", to: "50", label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: "a36", to: "33", label: 'In force', font: {size: 60, align: 'top'} },
+
+                    // from a37
+                    { from: "a37", to: "50", label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: "a37", to: "c29", label: 'In force', font: {size: 60, align: 'top'} },
+
+                    // from a38
+                    { from: "a38", to: "50", label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: "a38", to: "43", label: 'In force', font: {size: 60, align: 'top'} },
+
+                    // from a39
+                    { from: "a39", to: "50", label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: "a39", to: "74", label: 'In force', font: {size: 60, align: 'top'} },
+
+                    // from a40
+                    { from: "a40", to: "50", label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: "a40", to: "39", label: 'In force', font: {size: 60, align: 'top'} },
+
+                    // from a41
+                    { from: "a41", to: "50", label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: "a41", to: "c30", label: 'In force', font: {size: 60, align: 'top'} },
+
+                    // from a42
+                    { from: "a42", to: "50", label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: "a42", to: "46", label: 'In force', font: {size: 60, align: 'top'} },
+
+                    // from a43
+                    { from: "a43", to: "50", label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: "a43", to: "32", label: 'In force', font: {size: 60, align: 'top'} },
+
+                    // from a44
+                    { from: "a44", to: "50", label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: "a44", to: "c13", label: 'In force', font: {size: 60, align: 'top'} },
+
+                    // from a45
+                    { from: "a45", to: "50", label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: "a45", to: "c31", label: 'In force', font: {size: 60, align: 'top'} },
+
+                    // from a46
+                    { from: "a46", to: "50", label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: "a46", to: "45", label: 'In force', font: {size: 60, align: 'top'} },
+
+                    // from a47
+                    { from: "a47", to: "50", label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: "a47", to: "34", label: 'In force', font: {size: 60, align: 'top'} },
+
+                    // from a48
+                    { from: "a48", to: "50", label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: "a48", to: "c11", label: 'In force', font: {size: 60, align: 'top'} },
+
+                    // from a49
+                    { from: "a49", to: "50", label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: "a49", to: "c32", label: 'In force', font: {size: 60, align: 'top'} },
+
+                    // from a50
+                    { from: "a50", to: "50", label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: "a50", to: "38", label: 'In force', font: {size: 60, align: 'top'} },
+
+                    // from a51
+                    { from: "a51", to: "50", label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: "a51", to: "87", label: 'In force', font: {size: 60, align: 'top'} },
+
+                    // from a52
+                    { from: "a52", to: "50", label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: "a52", to: "c33", label: 'In force', font: {size: 60, align: 'top'} },
+
+                    // from a53
+                    { from: "a53", to: "50", label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: "a53", to: "93", label: 'In force', font: {size: 60, align: 'top'} },
+
+                    // from a54
+                    { from: "a54", to: "50", label: 'In force', font: {size: 60, align: 'top'} },
+                    { from: "a54", to: "c34", label: 'In force', font: {size: 60, align: 'top'} },
+                  ]);
+
+                  // create a network
+                  var container = document.getElementById("international_free_trade_agreements_network");
+                  var data = {
+                    nodes: nodes,
+                    edges: edges,
+                  };
+                  var options = {
+                    nodes : {
+                        shape: 'dot'
+                    }
+                  };
+                  var network = new vis.Network(container, data, options);
+                </script>
+
+                  <br>
+              </div>
+            </div>
+
+          <br>
+
+          <!-- ad1 -->
+          {% include 'index/ad1.html' %}
+
+          <br>
+
+          <!-- Footer -->
+          {% include 'index/footer.html' %}
+
+          <br>
+        </div>
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+        <br>
+
+        <!-- blockadblock -->
+        {% include 'index/blockadblock.html' %}
+    </body>
+</html>

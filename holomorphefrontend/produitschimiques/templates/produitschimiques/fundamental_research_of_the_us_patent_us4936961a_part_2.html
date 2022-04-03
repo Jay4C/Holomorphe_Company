@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+          crossorigin="anonymous">
+
+    <!-- MathJax.js -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+
+    <!-- title -->
+    {% include 'index/title.html' %}
+</head>
+<body>
+    <div class="container">
+      <!-- Code consent -->
+      {% include 'index/consent.html' %}
+
+      <!-- Header -->
+      {% include 'index/header.html' %}
+
+      <br>
+
+      <!-- Body -->
+      <!-- Fundamental research of the US Patent US4936961A -->
+      <div class="card">
+        <div class="card-header text-center">
+          Fundamental research for the US Patent US4936961A - Part 2
+        </div>
+        <div class="card-body">
+            <!-- Schéma -->
+            <img src="/static/produitschimiques/static/ecd_brevet_us_5149407_water_electrolyzer_v1.svg"
+                 class="img-fluid" alt="Responsive image">
+
+            <br>
+            <br>
+
+            <h5>
+                With t in real world, we have :
+                \[ U_{source}(t) = |U_{source}| * sin(\omega_{source} * t) \]
+                <br>
+                \[ U_{full wave}(t) = |U_{source}| * |sin(\omega_{source} * t)| \]
+            </h5>
+
+            <br>
+
+            <h5>
+                With t in [0, T/2], we have :
+                \[
+                    U^{(1)}_{half-full-wave}(t) = |U_{source}| * |sin(\omega_{pulse-generator} * t)|
+                \]
+                and
+                \[ \omega_{pulse-generator} = \frac{2 * \pi}{T} \]
+            </h5>
+
+            <br>
+
+            <h5>
+                With t in [T/2, T], we have :
+                \[
+                    U^{(2)}_{half-full-wave}(t) = 0
+                \]
+                and
+                \[ \omega_{pulse-generator} = \frac{2 * \pi}{T} \]
+            </h5>
+
+            <br>
+
+            <h5>
+                With t in [0, T/2], we have :
+                \[
+                    U^{(1)}_{1,Main-Transformer}(t) = U^{(1)}_{half-full-wave}(t)
+                \]
+            </h5>
+
+            <br>
+
+            <h5>
+                With t in [T/2, T], we have :
+                \[
+                    U^{(2)}_{1,Main-Transformer}(t) = U^{(2)}_{half-full-wave}(t)
+                \]
+            </h5>
+
+            <br>
+
+            <h5>
+                With t in [0, T/2], we have :
+                \[
+                    U^{(1)}_{2,Main-Transformer}(t) = \frac{ N_{2,Main-Transformer} }{ N_{1,Main-Transformer} }
+                    * U^{(1)}_{1,Main-Transformer}(t)
+                \]
+            </h5>
+
+            <br>
+
+            <h5>
+                With t in [T/2, T], we have :
+                \[
+                    U^{(2)}_{2,Main-Transformer}(t) = \frac{ N_{2,Main-Transformer} }{ N_{1,Main-Transformer} }
+                    * U^{(2)}_{1,Main-Transformer}(t)
+                \]
+            </h5>
+
+            <br>
+
+            <h5>
+                From the Stanley Meyer electronic circuit and t in [0, T/2], we have :
+                \[
+                \begin{aligned}
+                    U^{(1)}_{2,Main-Transformer}(t) &= U^{(1)}_{L}(t) + U^{(1)}_{C}(t) + U^{(1)}_{L}(t) \\
+                    &= U^{(1)}_{C}(t) + 2 * U^{(1)}_{L}(t)
+                \end{aligned}
+                \]
+            </h5>
+
+            <br>
+
+            <h5>
+                From the Stanley Meyer electronic circuit and t in [T/2, T], we have :
+                \[
+                \begin{aligned}
+                    U^{(2)}_{2,Main-Transformer}(t) &= U^{(2)}_{L}(t) + U^{(2)}_{C}(t) + U^{(2)}_{L}(t) \\
+                    &= U^{(2)}_{C}(t) + 2 * U^{(2)}_{L}(t)
+                \end{aligned}
+                \]
+            </h5>
+
+            <br>
+
+            <h5>
+                With t in [0, T/2], we have to find :
+                \[
+                    U^{(1)}_{C}(t)
+                \]
+
+                and with t in [T/2, T], we have to find :
+
+                \[
+                    U^{(2)}_{C}(t)
+                \]
+            </h5>
+
+            <br>
+
+            <h5>
+                With t in [0, T/2], we have :
+                \[
+                    U^{(1)}_{L}(t) = L * \frac{\mathrm d i_{C}^{(1)}(t)}{\mathrm d t}
+                \]
+
+                and with t in [0, T/2], we have :
+
+                \[
+                    i^{(1)}_{C}(t) = C * \frac{\mathrm d U_{C}^{(1)}(t)}{\mathrm d t}
+                \]
+            </h5>
+
+            <br>
+
+            <h5>
+                With t in [0, T/2], we have :
+                \[
+                    U^{(1)}_{L}(t) = L * C * \frac{\mathrm d^{2} U_{C}^{(1)}(t)}{\mathrm d t^{2}}
+                \]
+            </h5>
+
+            <br>
+
+            <h5>
+                With t in [0, T/2], we have the equation (1) :
+                \[
+                    U^{(1)}_{2,Main-Transformer}(t) = U_{C}^{(1)}(t) + 2 * L * C *
+                    \frac{\mathrm d^{2} U_{C}^{(1)}(t)}{\mathrm d t^{2}}
+                \]
+                <br>
+                \[
+                    \frac{\mathrm d^{2} U_{C}^{(1)}(t)}{\mathrm d t^{2}} + \frac{ U_{C}^{(1)}(t) }{ 2 * L * C }
+                    = \frac{ N_{2,Main-Transformer} * U^{(1)}_{1,Main-Transformer}(t) }{ 2 *
+                    L * C * N_{1,Main-Transformer} }
+                \]
+                <br>
+                \[
+                    \frac{\mathrm d^{2} U_{C}^{(1)}(t)}{\mathrm d t^{2}} + \frac{ U_{C}^{(1)}(t) }{ 2 * L * C }
+                    = \frac{ N_{2,Main-Transformer} * |U_{source}| * |sin(\omega_{pulse-generator} * t)| }
+                    { 2 * L * C * N_{1,Main-Transformer} }
+                \]
+            </h5>
+
+            <br>
+
+            <h5>
+                First, with t in [0, T/2], we have to find the solutions of the homogenous equation (1h) :
+                <br>
+                \[
+                    \frac{\mathrm d^{2} U_{C}^{(1)}(t)}{\mathrm d t^{2}} + \frac{ U_{C}^{(1)}(t) }{ 2 * L * C } = 0
+                \]
+                <br>
+                Let be the associated characteristic equation of the equation (1h) :
+                <br>
+                \[
+                    r^{2} + \frac{ 1 }{ 2 * L * C } = 0
+                \]
+                <br>
+                \[
+                    \varDelta = 0^{2} - 4 * 1 * \frac{ 1 }{ 2 * L * C } < 0
+                \]
+                <br>
+                So, let r1 and r2 be the complex roots of the characteristic equation of the equation (E), we have :
+                <br>
+                \[
+                    r1 = \frac{ - 0 - i * \sqrt{ | \varDelta | } }{2 * 1} = - i * \frac{ 1 }{ \sqrt{ 2 * L * C } }
+                \]
+                <br>
+                \[
+                    r2 = i * \frac{ 1 }{ \sqrt{ 2 * L * C } }
+                \]
+                <br>
+                So, with t in [0, T/2], the solutions of the equation (1h)
+                are the following functions :
+                <br>
+                \[
+                    U^{(1)}_{C,h}(t) = \lambda_{1} * \cos(\frac{ 1 }{ \sqrt{ 2 * L * C } } * t) +
+                    \mu_{1} * \sin(\frac{ 1 }{ \sqrt{ 2 * L * C } } * t)
+                \]
+                <br>
+                \[
+                    (\lambda_{1}, \mu_{1})
+                \]
+                in real world.
+            </h5>
+
+            <br>
+
+            <h5>
+                We have to seek one particular solution of the equation (1).
+                <br>
+                With t in [0, T/2], we have the second part of the equation (1) is :
+                <br>
+                \[
+                    \frac{ N_{2,Main-Transformer} * |U_{source}| * |sin(\omega_{pulse-generator} * t)| }
+                    { 2 * L * C * N_{1,Main-Transformer} }
+                \]
+                <br>
+                The equation (1h) is :
+                <br>
+                \[
+                    \frac{\mathrm d^{2} U_{C}^{(1)}(t)}{\mathrm d t^{2}} + \frac{ U_{C}^{(1)}(t) }{ 2 * L * C } = 0
+                \]
+                <br>
+                So, we are looking for one particular solution under the form :
+                <br>
+                \[
+                    U^{(1)}_{C,p}(t) = a_{1} * t * \cos(\frac{ 1 }{ \sqrt{ 2 * L * C } } * t)
+                \]
+                <br>
+                and where
+                <br>
+                \[
+                    a_{1}
+                \]
+                <br>
+                is real.
+                <br>
+                So, with t in [0, T/2], the solutions of the equation (1) are written as the sum of this particular
+                solution and the solutions of the equation (1h) and we obtain :
+                <br>
+                \[
+                \boxed{
+                \begin{aligned}
+                    U^{(1)}_{C}(t) &= U^{(1)}_{C, h}(t) + U^{(1)}_{C, p}(t) \\
+                    & = \lambda_{1} * \cos(\frac{ 1 }{ \sqrt{ 2 * L * C } } * t) +
+                    \mu_{1} * \sin(\frac{ 1 }{ \sqrt{ 2 * L * C } } * t) +
+                    a_{1} * t * \cos(\frac{ 1 }{ \sqrt{ 2 * L * C } } * t)
+                \end{aligned}
+                }
+                \]
+                <br>
+                where
+                <br>
+                \[
+                    (\lambda_{1}, \mu_{1}, a_{1})
+                \]
+                <br>
+                in real world.
+            </h5>
+
+            <br>
+
+            <h5>
+                With t in [T/2, T], we have the equation (2) :
+                <br>
+                \[
+                    \frac{\mathrm d^{2} U_{C}^{(2)}(t)}{\mathrm d t^{2}} + \frac{ U_{C}^{(2)}(t) }{ 2 * L * C }
+                    = U^{(2)}_{2,Main-Transformer}(t)
+                \]
+                <br>
+                \[
+                    U^{(2)}_{2,Main-Transformer}(t) = 0
+                \]
+                <br>
+                \[
+                    \frac{\mathrm d^{2} U_{C}^{(2)}(t)}{\mathrm d t^{2}} + \frac{ U_{C}^{(2)}(t) }{ 2 * L * C } = 0
+                \]
+                <br>
+                With t in [T/2, T], trivially, the solutions of the equation (2h) are the following functions :
+                <br>
+                \[
+                    U_{C,h}^{(2)}(t) = \lambda_{2} * \cos(\frac{ 1 }{ \sqrt{ 2 * L * C } } * t) +
+                    \mu_{2} * \sin(\frac{ 1 }{ \sqrt{ 2 * L * C } } * t)
+                \]
+                <br>
+                where
+                <br>
+                \[
+                    (\lambda_{2}, \mu_{2})
+                \]
+                <br>
+                in real world.
+                <br>
+                We are looking for one particular solution under the form :
+                <br>
+                \[
+                    U_{C,p}^{(2)}(t) = a_{2}
+                \]
+                <br>
+                where
+                <br>
+                \[
+                    a_{2}
+                \]
+                <br>
+                in real world.
+                <br>
+                So, with t in [T/2, T], the solutions of the equation (2) are written as the sum of the particular
+                solution and the solutions of the equation (2h) and we obtain :
+                <br>
+                \[
+                    U_{C}^{(2)}(t) = U_{C,p}^{(2)}(t) + U_{C,h}^{(2)}(t)
+                \]
+                <br>
+                \[
+                \boxed{
+                \begin{aligned}
+                    U_{C}^{(2)}(t) = a_{2} + \lambda_{2} * \cos(\frac{ 1 }{ \sqrt{ 2 * L * C } } * t)
+                    + \mu_{2} * \sin(\frac{ 1 }{ \sqrt{ 2 * L * C } } * t)
+                \end{aligned}
+                }
+                \]
+                <br>
+                where
+                <br>
+                \[
+                    (\lambda_{2}, \mu_{2}, a_{2})
+                \]
+                <br>
+                in real world.
+            </h5>
+
+            <br>
+
+            <h5>
+                For t = 0, we have :
+                <br>
+                \[
+                    U_{C}^{(1)}(t = 0) = 0
+                \]
+                <br>
+                \[
+                    i_{C}^{(1)}(t = 0) = 0
+                \]
+                <br>
+                \[
+                    U_{L}^{(1)}(t = 0) = 0
+                \]
+                <br>
+                With t in [0, T/2], we have :
+                <br>
+                \[
+                    i_{C}^{(1)}(t) = C * \frac{\mathrm d U_{C}^{(1)}(t)}{\mathrm d t}
+                \]
+                <br>
+                \[
+                    \begin{aligned}
+                        i_{C}^{(1)}(t) = C * [ \lambda_{1} * ( \frac{ -1 }{ \sqrt{ 2 * L * C } } )
+                        * \sin( \frac{ 1 }{ \sqrt{ 2 * L * C } } * t )
+                        + \mu_{1} * ( \frac{ 1 }{ \sqrt{ 2 * L * C } } )
+                        * \cos( \frac{ 1 }{ \sqrt{ 2 * L * C } } * t ) \\
+                        + a_{1} * ( \cos( \frac{ 1 }{ \sqrt{ 2 * L * C } } * t )
+                        + t * ( \frac{ -1 }{ \sqrt{ 2 * L * C } } ) * \\
+                        \sin( \frac{ 1 }{ \sqrt{ 2 * L * C } } * t ) ) ]
+                    \end{aligned}
+                \]
+                <br>
+                \[
+                    U_{L}^{(1)}(t) = L * \frac{\mathrm d i_{C}^{(1)}(t)}{\mathrm d t}
+                \]
+                <br>
+                \[
+                    \begin{aligned}
+                        U_{L}^{(1)}(t) = L * C * [ \lambda_{1} * ( \frac{ -1 }{ \sqrt{ 2 * L * C } } )
+                        * ( \frac{ 1 }{ \sqrt{ 2 * L * C } } )
+                        * \cos( \frac{ 1 }{ \sqrt{ 2 * L * C } } * t ) \\
+                        + \mu_{1} * ( \frac{ 1 }{ \sqrt{ 2 * L * C } } ) * ( \frac{ -1 }{ \sqrt{ 2 * L * C } } )
+                        * \sin( \frac{ 1 }{ \sqrt{ 2 * L * C } } * t ) \\
+                        + a_{1} * ( ( \frac{ -1 }{ \sqrt{ 2 * L * C } } )
+                        * \sin( \frac{ 1 }{ \sqrt{ 2 * L * C } } * t ) \\
+                        + ( \frac{ -1 }{ \sqrt{ 2 * L * C } } ) * [ \sin( \frac{ 1 }{ \sqrt{ 2 * L * C } } * t ) \\
+                        + t * (\frac{ 1 }{ \sqrt{ 2 * L * C } } ) * \cos( \frac{ 1 }{ \sqrt{ 2 * L * C } } * t ) ] ) ]
+                    \end{aligned}
+                \]
+                <br>
+                So, we have :
+                <br>
+                \[
+                    \lambda_{1} = 0
+                \]
+                <br>
+                \[
+                    C * ( \mu_{1} * \frac{ 1 }{ \sqrt{ 2 * L * C } } + a_{1} ) = 0
+                \]
+                <br>
+                \[
+                    L * C * ( \lambda_{1} * \frac{ -1 }{ \sqrt{ 2 * L * C } } ) = 0
+                \]
+                <br>
+                So, we have :
+                <br>
+                \[
+                    a_{1} = \frac{ -\mu_{1} }{ \sqrt{ 2 * L * C } }
+                \]
+                <br>
+                We have :
+                <br>
+                \[
+                    \omega_{pulse-generator} = \frac{ 1 }{ \sqrt{ 2 * L * C } }
+                \]
+                <br>
+                \[
+                    \boxed{
+                    \begin{aligned}
+                        U_{C}^{(1)}(t) = \mu_{1} * [\sin( \frac{ 1 }{ \sqrt{ 2 * L * C } } * t ) -
+                        \frac{ t }{ \sqrt{ 2 * L * C } } * \cos( \frac{ 1 }{ \sqrt{ 2 * L * C } } * t )]
+                    \end{aligned}
+                    }
+                \]
+            </h5>
+
+            <br>
+
+            <h5>
+                With t in [0, T/2], we have :
+                <br>
+                \[
+                    \frac{\mathrm d^{2} U_{C}^{(1)}(t)}{\mathrm d t^{2}} + \frac{ U_{C}^{(1)}(t) }{ 2 * L * C }
+                    = \frac{ N_{2,Main-Transformer} * U^{(1)}_{1,Main-Transformer}(t) }{ 2 * L * C *
+                    N_{1,Main-Transformer} }
+                \]
+                <br>
+                \[
+                    \frac{\mathrm d^{2} U_{C}^{(1)}(t)}{\mathrm d t^{2}} + \frac{ U_{C}^{(1)}(t) }{ 2 * L * C }
+                    = \frac{ N_{2,Main-Transformer} * |U_{source}| * |sin(\omega_{pulse-generator} * t)| }
+                    { 2 * L * C * N_{1,Main-Transformer} }
+                \]
+                <br>
+                So, with t in [0, T/2], we have :
+                <br>
+                \[
+                    \begin{aligned}
+                        ( \frac{ -\mu_{1} }{ 2 * L * C } ) * \sin( \frac{ 1 }{ \sqrt{ 2 * L * C } } * t )
+                        + ( \frac{ \mu_{1} }{ 2 * L * C } ) * \sin( \frac{ 1 }{ \sqrt{ 2 * L * C } } * t )
+                        + ( \frac{ \mu_{1} }{ 2 * L * C } ) * \sin( \frac{ 1 }{ \sqrt{ 2 * L * C } } * t ) \\
+                        + ( \frac{ \mu_{1} }{ \sqrt{ 2 * L * C } } ) * ( \frac{ 1 }{ 2 * L * C } ) * t *
+                        \cos( \frac{ 1 }{ \sqrt{ 2 * L * C } } * t ) + ( \frac{ \mu_{1} }{ 2 * L * C } ) *
+                        \sin( \frac{ 1 }{ \sqrt{ 2 * L * C } } * t ) - ( \frac{ \mu_{1} }{ \sqrt{ 2 * L * C } } ) * \\
+                        ( \frac{ 1 }{ 2 * L * C } ) * t * \cos( \frac{ 1 }{ \sqrt{ 2 * L * C } } * t ) =
+                        \frac{ N_{2,Main-Transformer} * |U_{source}| * |sin(\omega_{pulse-generator} * t)| }
+                        { 2 * L * C * N_{1,Main-Transformer} }
+                    \end{aligned}
+                \]
+                <br>
+                So, with t in [0, T/2], we have :
+                <br>
+                \[
+                    \begin{aligned}
+                        ( \frac{ \mu_{1} }{ L * C } ) * \sin( \frac{ 1 }{ \sqrt{ 2 * L * C } } * t ) =
+                        \frac{ N_{2,Main-Transformer} * |U_{source}| * |sin(\omega_{pulse-generator} * t)| }
+                        { 2 * L * C * N_{1,Main-Transformer} }
+                    \end{aligned}
+                \]
+                <br>
+                So, with t in [0, T/2], we have :
+                <br>
+                \[
+                    \begin{aligned}
+                        \mu_{1} = \frac{ N_{2,Main-Transformer} * |U_{source}| }{ 2 * N_{1,Main-Transformer} }
+                    \end{aligned}
+                \]
+                <br>
+                So, with t in [0, T/2], we have :
+                <br>
+                \[
+                    \boxed{
+                    \begin{aligned}
+                        U_{C}^{(1)}(t) = \frac{ N_{2,Main-Transformer} * |U_{source}| }
+                        { 2 * N_{1,Main-Transformer} } * [\sin( \frac{ 1 }{ \sqrt{ 2 * L * C } } * t ) -
+                        \frac{ t }{ \sqrt{ 2 * L * C } } * \cos( \frac{ 1 }{ \sqrt{ 2 * L * C } } * t )]
+                    \end{aligned}
+                    }
+                \]
+            </h5>
+
+            <br>
+
+            <h5>
+                We consider that at t = T/2, we have :
+                <br>
+                \[
+                    U_{C}^{(2)}(t = T/2) = U_{C}^{(1)}(t = T/2)
+                \]
+                <br>
+                \[
+                    i_{C}^{(2)}(t = T/2) = i_{C}^{(1)}(t = T/2)
+                \]
+                <br>
+                \[
+                    U_{L}^{(2)}(t = T/2) = U_{L}^{(1)}(t = T/2)
+                \]
+                <br>
+                So, we have :
+                <br>
+                \[
+                    U_{C}^{(1)}(t = T/2) = \frac{ \pi * N_{2,Main-Transformer} * |U_{source}| }
+                    { 2 * N_{1,Main-Transformer} }
+                \]
+                <br>
+                With t in [0, T/2], we have :
+                <br>
+                \[
+                    \begin{aligned}
+                        i_{C}^{(1)}(t) = \frac{ C * N_{2,Main-Transformer} * |U_{source}| }{ 2 * N_{1,Main-Transformer} } *
+                        [ (\frac{ 1 }{ \sqrt{ 2 * L * C } }) * \cos( \frac{ 1 }{ \sqrt{ 2 * L * C } } * t ) - \\
+                        (\frac{ 1 }{ \sqrt{ 2 * L * C } }) * ( \cos( \frac{ 1 }{ \sqrt{ 2 * L * C } } * t ) + t
+                        * (\frac{ -1 }{ \sqrt{ 2 * L * C } }) * \sin( \frac{ 1 }{ \sqrt{ 2 * L * C } } * t ) )
+                        ]
+                    \end{aligned}
+                \]
+                <br>
+                With t in [0, T/2], we have :
+                <br>
+                \[
+                    \begin{aligned}
+                        U_{L}^{(1)}(t) = \frac{ L * C * N_{2,Main-Transformer} * |U_{source}| }{ 2 * N_{1,Main-Transformer} } *
+                        [ ( \frac{ -1 }{ 2 * L * C } ) * \sin( \frac{ 1 }{ \sqrt{ 2 * L * C } } * t ) - \\
+                        ( \frac{ 1 }{ \sqrt{ 2 * L * C } } ) * ( ( \frac{ -1 }{ \sqrt{ 2 * L * C } } ) *
+                        \sin( \frac{ 1 }{ \sqrt{ 2 * L * C } } * t ) - ( \frac{ 1 }{ \sqrt{ 2 * L * C } } ) * ( \\
+                        \sin( \frac{ 1 }{ \sqrt{ 2 * L * C } } * t ) + t *
+                        ( \frac{ 1 }{ \sqrt{ 2 * L * C } } ) * \cos( \frac{ 1 }{ \sqrt{ 2 * L * C } } * t ) ) )
+                        ]
+                    \end{aligned}
+                \]
+                <br>
+                We have :
+                <br>
+                \[
+                    i_{C}^{(1)}(t = T/2) = 0
+                \]
+                <br>
+                We have :
+                <br>
+                \[
+                    U_{L}^{(1)}(t = T/2) = \frac{ L * C * N_{2,Main-Transformer} * |U_{source}| }{ 2 * N_{1,Main-Transformer} } *
+                    ( \frac{ -1 }{ \sqrt{ 2 * L * C } } ) * ( \frac{ -1 }{ \sqrt{ 2 * L * C } } )  * ( -\pi )
+                \]
+                <br>
+                With t in [T/2, T], we have :
+                <br>
+                \[
+                    \begin{aligned}
+                        i_{C}^{(2)}(t) = C * ( \lambda_{2} * ( \frac{ -1 }{ \sqrt{ 2 * L * C } } ) *
+                        \sin( \frac{ 1 }{ \sqrt{ 2 * L * C } } * t ) + \mu_{2} * ( \frac{ 1 }{ \sqrt{ 2 * L * C } } ) * \\
+                        \cos( \frac{ 1 }{ \sqrt{ 2 * L * C } } * t )
+                        )
+                    \end{aligned}
+                \]
+                <br>
+                With t in [T/2, T], we have :
+                <br>
+                \[
+                    \begin{aligned}
+                        U_{L}^{(2)}(t) = L * C *
+                        [
+                            \lambda_{2} * ( \frac{ -1 }{ \sqrt{ 2 * L * C } } ) * ( \frac{ 1 }{ \sqrt{ 2 * L * C } } ) *
+                            \cos( \frac{ 1 }{ \sqrt{ 2 * L * C } } * t ) + \mu_{2} * ( \frac{ 1 }{ \sqrt{ 2 * L * C } } ) \\
+                            * ( \frac{ -1 }{ \sqrt{ 2 * L * C } } ) * \sin( \frac{ 1 }{ \sqrt{ 2 * L * C } } * t )
+                        ]
+                    \end{aligned}
+                \]
+                <br>
+                So, we have :
+                <br>
+                \[
+                    \lambda_{2} * ( -1 ) + a_{2} = \frac{ \pi * N_{2,Main-Transformer} * |U_{source}| }{ 2 * N_{1,Main-Transformer} }
+                \]
+                <br>
+                \[
+                    C * \mu_{2} * ( \frac{ 1 }{ \sqrt{ 2 * L * C } } ) * ( -1 ) = 0
+                \]
+                <br>
+                So,
+                <br>
+                \[
+                    \mu_{2} = 0
+                \]
+                <br>
+                \[
+                    L * C * \lambda_{2} * ( \frac{ -1 }{ \sqrt{ 2 * L * C } } ) * ( \frac{ 1 }{ \sqrt{ 2 * L * C } } )
+                    * ( -1 ) = \frac{ - \pi * N_{2,Main-Transformer} * |U_{source}| }{ 4 * N_{1,Main-Transformer} }
+                \]
+                <br>
+                So, we have :
+                <br>
+                \[
+                    \lambda_{2} = \frac{ - \pi * N_{2,Main-Transformer} * |U_{source}| }{ 2 * N_{1,Main-Transformer} }
+                \]
+                <br>
+                \[
+                    \mu_{2} = 0
+                \]
+                <br>
+                \[
+                    a_{2} = 0
+                \]
+                <br>
+                So, with t in [T/2, T], we have :
+                <br>
+                \[
+                    \boxed{
+                    \begin{aligned}
+                        U_{C}^{(2)}(t) = \frac{ -\pi * N_{2,Main-Transformer} * |U_{source}| }{ 2 * N_{1,Main-Transformer} } *
+                        \cos( \frac{ 1 }{ \sqrt{ 2 * L * C } } * t )
+                    \end{aligned}
+                    }
+                \]
+            </h5>
+
+            <br>
+
+            <h5>
+                With t in [0, T/2], we have :
+                <br>
+                \[
+                    Q^{(1)}(t) = C * U_{C}^{(1)}(t)
+                \]
+                <br>
+                \[
+                    n_{e^{-}}^{(1)}(t) = \frac{ C }{ F } * U_{C}^{(1)}(t)
+                \]
+                <br>
+                \[
+                    n_{H_{2}}^{(1)}(t) = \frac{ C }{ 2 * F } * U_{C}^{(1)}(t)
+                \]
+                <br>
+                \[
+                    m_{H_{2}}^{(1)}(t) = \frac{ M_{H_{2}} * C }{ 2 * F } * U_{C}^{(1)}(t)
+                \]
+                <br>
+                \[
+                    V_{H_{2}}^{(1)}(t) = \frac{ M_{H_{2}} * C }{ 2 * F * \rho_{H_{2}} } * U_{C}^{(1)}(t)
+                \]
+                <br>
+                \[
+                    V_{H_{2}}^{(2)}(t) = \frac{ M_{H_{2}} * C }{ 2 * F * \rho_{H_{2}} } * U_{C}^{(2)}(t)
+                \]
+                <br>
+                \[
+                    \omega_{0} = \frac{ 1 }{ \sqrt{ 2 * L * C } }
+                \]
+                <br>
+                We consider that at t = T,
+                <br>
+                \[
+                    U_{C}^{(2)}(t = T) = 0
+                \]
+                <br>
+                \[
+                    i_{C}^{(2)}(t = T) = 0
+                \]
+                <br>
+                \[
+                    U_{L}^{(2)}(t = T) = 0
+                \]
+                <br>
+                So, we have :
+                <br>
+                \[
+                    \lambda_{2} + a_{2} = 0
+                \]
+                <br>
+                \[
+                    C * ( \mu_{2} * \omega_{0} ) = 0
+                \]
+                <br>
+                \[
+                    L * C * ( \lambda_{2} * ( - \omega_{0} )^{2} ) = 0
+                \]
+                <br>
+                \[
+                    \lambda_{2} = 0
+                \]
+                <br>
+                \[
+                    \mu_{2} = 0
+                \]
+                <br>
+                \[
+                    a_{2} = 0
+                \]
+            </h5>
+
+            <br>
+
+            <h5>
+                Find the average value of the function
+                <br>
+                \[
+                    U_{C}(t)
+                \]
+                <br>
+                during its period T.
+                <br>
+                We have,
+                <br>
+                \[
+                    < U_{C}(t) > = \frac{ 1 }{ T } * \int_{0}^{T} U_{C}(t) \, \mathrm{d}t
+                \]
+                <br>
+                So, we have :
+                <br>
+                \[
+                    \begin{aligned}
+                        < U_{C}(t) > = \frac{ 1 }{ T } * [ \int_{0}^{T/2} U_{C}^{(1)}(t) \, \mathrm{d}t +
+                        \int_{T/2}^{T} U_{C}^{(2)}(t) \, \mathrm{d}t ]
+                    \end{aligned}
+                \]
+                <br>
+                \[
+                    \begin{aligned}
+                        < U_{C}(t) > = \frac{ 1 }{ T } *
+                        [ \int_{0}^{T/2} ( ( \frac{ N_{2,Main-Transformer} * |U_{source}| }
+                        { 2 * N_{1,Main-Transformer} } ) *
+                        ( \sin(\omega_{0} * t) - \omega_{0} * t * \cos(\omega_{0} * t)
+                        ) ) \, \mathrm{d}t \\
+                        + \int_{T/2}^{T} ( ( \frac{ -\pi * N_{2,Main-Transformer} * |U_{source}| }
+                        { 2 * N_{1,Main-Transformer} } ) * \cos(\omega_{0} * t) ) \, \mathrm{d}t ]
+                    \end{aligned}
+                \]
+                <br>
+                \[
+                    \begin{aligned}
+                        < U_{C}(t) > = \frac{ 1 }{ T } * [ ( \frac{ N_{2,Main-Transformer} * |U_{source}| }
+                        { 2 * N_{1,Main-Transformer} } ) * ( ( \frac{ -1 }{ \omega_{0} } ) * ( (-1) - 1 ) -
+                        \omega_{0} * \\
+                        ( [ \frac{ t * \sin(\omega_{0} * t) }{ \omega_{0} } ]_{0}^{T/2} -
+                        \int_{0}^{T/2} ( \frac{ 1 }{ \omega_{0} } * \sin(\omega_{0} * t) \, \mathrm{d}t ) ) )
+                        + ( \frac{ -\pi * N_{2,Main-Transformer} * |U_{source}| }{ 2 * N_{1,Main-Transformer} *
+                        \omega_{0} } ) * (0 - 0)
+                        ]
+                    \end{aligned}
+                \]
+                <br>
+                \[
+                    \begin{aligned}
+                        < U_{C}(t) > = \frac{ 1 }{ T } * [ ( \frac{ N_{2,Main-Transformer} * |U_{source}| }
+                        { 2 * N_{1,Main-Transformer} } ) * ( ( \frac{ 2 }{ \omega_{0} } ) - \omega_{0} *
+                        ( (\frac{ -1 }{ \omega_{0} }) * (\frac{ -1 }{ \omega_{0} }) * ( (-1) - 1 ) ) )
+                        ]
+                    \end{aligned}
+                \]
+                <br>
+                \[
+                    \begin{aligned}
+                        < U_{C}(t) > = \frac{ 1 }{ T } * [ ( \frac{ N_{2,Main-Transformer} * |U_{source}| }
+                        { 2 * N_{1,Main-Transformer} } ) * ( \frac{ 4 }{ \omega_{0} } )
+                        ]
+                    \end{aligned}
+                \]
+                <br>
+                \[
+                    \begin{aligned}
+                        < U_{C}(t) > = \frac{ 2 * N_{2,Main-Transformer} * |U_{source}| }
+                        { T * \omega_{0} * N_{1,Main-Transformer} }
+                    \end{aligned}
+                \]
+                <br>
+                \[
+                    \begin{aligned}
+                        < U_{C}(t) > = \frac{ N_{2,Main-Transformer} * |U_{source}| }
+                        { \pi * N_{1,Main-Transformer} }
+                    \end{aligned}
+                \]
+                <br>
+                So, we have :
+                <br>
+                \[
+                    < V_{H_{2}}(t) > = < \frac{ M_{H_{2}} * C }{ \rho_{H_{2}} * F } * U_{C}(t) >
+                \]
+                <br>
+                \[
+                    < V_{H_{2}}(t) > = \frac{ M_{H_{2}} * C * N_{2,Main-Transformer} * |U_{source}| }
+                    { \rho_{H_{2}} * F * N_{1,Main-Transformer} * \pi }
+                \]
+                <br>
+                So, we have :
+                \[
+                    t_{f}
+                \]
+                <br>
+                is the time of the operation of the Stanley Meyer water electrolyser exprimed in second and
+                <br>
+                \[
+                    V_{H_{2}}^{(total)}
+                \]
+                <br>
+                is the volume of dihydrogen produced in cubic meter during the time. So, we have :
+                <br>
+                \[
+                    V_{H_{2}}^{(total)} = \frac{ t_{f} }{ T } * < V_{H_{2}}(t) >
+                \]
+                <br>
+                \[
+                    V_{H_{2}}^{(total)} = \frac{ t_{f} * M_{H_{2}} * C * N_{2,Main-Transformer} * |U_{source}| }
+                    { T * \rho_{H_{2}} * F * N_{1,Main-Transformer} * \pi  }
+                \]
+                <br>
+                So, we have :
+                <br>
+                \[
+                    d_{H_{2}} = \frac{ V_{H_{2}}^{(total)} }{ 3600 }
+                \]
+                <br>
+                is the dihydrogen flow rate during the operation time
+                <br>
+                \[
+                    t_{f}
+                \]
+                <br>
+                in cubic meter per hour.
+            </h5>
+
+            <br>
+
+            <h5>
+                We should use Tesla coils for performing the high voltage performance. We have :
+                <br>
+                \[
+                    L_{2} = \frac{ \mu_{0} * N_{2}^{2} * S_{2} }{ l_{2} }
+                \]
+                <br>
+                \[
+                    L_{1} = \frac{ \mu_{0} * N_{1}^{2} * S_{1} }{ l_{1} }
+                \]
+                <br>
+                \[
+                    V_{2} = V_{1} * \sqrt{ ( \frac{ L_{2} }{ L_{1} } ) }
+                \]
+                <br>
+                \[
+                    V_{2} = V_{1} * \sqrt{
+                    \frac{ \mu_{0} * N_{2}^{2} * S_{2} * l_{1} }{ \mu_{0} * N_{1}^{2} * S_{1} * l_{2} }
+                    }
+                \]
+                <br>
+                \[
+                    V_{2} = V_{1} * ( \frac{ N_{2} }{ N_{1} } ) * ( \frac{ S_{2} * l_{1} }{ S_{1} * l_{2} } )^{1/2}
+                \]
+                <br>
+                So, in steps, we have :
+                <br>
+                \[
+                    V_{2,n} = V_{1} * ( \frac{ N_{2} }{ N_{1} } )^{n} * ( \frac{ S_{2} * l_{1} }{ S_{1} * l_{2} } )^{n/2}
+                \]
+                <br>
+                So, we have :
+                <br>
+                \[
+                    V_{2,n} = V_{1} * ( \frac{ N_{2} }{ N_{1} } )^{n} * ( \frac{ R_{2}^{2} * l_{1} }{ R_{1}^{2} * l_{2} } )^{n/2}
+                \]
+                <br>
+                \[
+                    V_{2,n} = V_{1} * ( \frac{ N_{2} }{ N_{1} } )^{n} *
+                    ( \frac{ R_{2} }{ R_{1} } )^{n} * ( \frac{ l_{1} }{ l_{2} } )^{n/2}
+                \]
+            </h5>
+
+            <br>
+
+            <h5>
+                We have :
+                <br>
+                \[
+                    P = F / S
+                \]
+                <br>
+                where P is the pressure of the gas into the tube ; F is the force applied at the surface S of the tube.
+                <br>
+                We know that
+                <br>
+                \[
+                    P_{N} <= 95
+                \]
+                <br>
+                bars and
+                <br>
+                \[
+                    S_{N}
+                \]
+                <br>
+                should have a diametre <= 1,20 meter. We have :
+                <br>
+                \[
+                    D_{H_{2}} = v_{H_{2}} * S_{tube}
+                \]
+                <br>
+                where
+                \[
+                    D_{H_{2}}
+                \]
+                <br>
+                is the gas flow rate in cubic meter per hour and
+                <br>
+                \[
+                    v_{H_{2}}
+                \]
+                <br>
+                is the velocity of the gas into the tube. We have :
+                <br>
+                \[
+                    P_{H_{2}} = ( \frac{ 1 }{ 2 } ) * \rho_{H_{2}} * (v_{H_{2}})^{2}
+                \]
+                <br>
+                where
+                <br>
+                \[
+                    \rho_{H_{2}}
+                \]
+                <br>
+                is the density of the dihydrogen. So, we have :
+                <br>
+                \[
+                    P_{H_{2}} = ( \frac{ 1 }{ 2 } ) * \rho_{H_{2}} * ( \frac{ D_{H_{2}} }{ S_{tube} } )^{2}
+                \]
+                <br>
+                So we have :
+                <br>
+                \[
+                    P_{H_{2}} = ( \frac{ 1 }{ 2 } ) * \rho_{H_{2}} * ( \frac{ D_{H_{2}} }{ \pi * (R_{tube})^{2} } )^{2}
+                \]
+                <br>
+                \[
+                    P_{H_{2}} = ( \frac{ 1 }{ 2 } ) * \rho_{H_{2}} * \frac{ (D_{H_{2}})^{2} }{ \pi * (R_{tube})^{4} }
+                \]
+                <br>
+                Dimensional analysis of the pressure :
+                <br>
+                \[
+                    [ P_{H_{2}} ] = \frac{ [kg] * [m]^{6} }{ [m]^{3} * [s]^{2} }
+                \]
+                <br>
+                \[
+                    [ P_{H_{2}} ] = \frac{ [kg] }{ [m] * [s]^{2} }
+                \]
+                <br>
+                So, we have :
+                <br>
+                \[
+                    R_{tube} = (\frac{ 1 }{ 2 })^{1/4} * (\rho_{H_{2}})^{1/4} * ( \frac{ D_{H_{2}} }{ \pi } )^{1/2}
+                    * ( \frac{ 1 }{ P_{H_{2}} } )^{1/4}
+                \]
+            </h5>
+
+            <br>
+
+            <img src="/static/produitschimiques/static/plot_u_c_1.png"
+                 class="img-fluid" alt="Responsive image">
+
+            <br>
+
+            <img src="/static/produitschimiques/static/plot_u_c_2.png"
+                 class="img-fluid" alt="Responsive image">
+
+            <br>
+
+            <img src="/static/produitschimiques/static/plot_v_h_1.png"
+                 class="img-fluid" alt="Responsive image">
+
+            <br>
+
+            <img src="/static/produitschimiques/static/plot_v_h_2.png"
+                 class="img-fluid" alt="Responsive image">
+        </div>
+      </div>
+
+      <br>
+
+
+      <br>
+
+      <!-- Footer -->
+      {% include 'index/footer.html' %}
+
+      <br>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+            integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+            crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+          crossorigin="anonymous">
+
+    <!-- Code Ad -->
+    {% include 'index/codeAd.html' %}
+
+    <!-- title -->
+    {% include 'index/title.html' %}
+
+    <script src="https://cdn.babylonjs.com/viewer/babylon.viewer.js"></script>
+</head>
+<body>
+    <div class="container">
+      <!-- Code consent -->
+      {% include 'index/consent.html' %}
+
+      <!-- Header -->
+      {% include 'index/header.html' %}
+
+      <br>
+
+      <!-- ad1 -->
+      {% include 'index/ad1.html' %}
+
+      <br>
+
+      <!-- Body -->
+      <div class="card text-center">
+          <div class="card-header">
+              <h6>
+                  Computer-aided design of patent US 4661747
+              </h6>
+              <br>
+              <a class="btn btn-outline-secondary"
+                        href="https://patents.google.com/patent/US4661747A/en?oq=US4661747"
+                        role="button"
+                        target="_blank">Download the patent US 4661747</a>
+          </div>
+          <div class="card-body">
+            <div class="card">
+                <div class="card-header">
+                  Part : coil transformer
+                </div>
+                <div id="part_coil_transformer" class="card-body">
+                    <babylon model="/static/cad/static/patent_us_4661747/part_coil_transformer.stl"
+                             templates.main.params.fill-screen="true">
+                    </babylon>
+                </div>
+                <div class="card-footer text-muted">
+                    <h6>Price of this part in Nylon PA12 from Sculpteo : 5,50 euros without taxes</h6>
+                    <br>
+                    <a class="btn btn-outline-secondary"
+                        href="https://github.com/Jay4C/Python-Macros-For-FreeCAD/blob/master/Brevet_US_4661747_Edwin_Gray_Power_Tube/part_coil_transformer.py"
+                        role="button"
+                        target="_blank">Download the part on GitHub</a>
+                </div>
+            </div>
+
+            <br>
+
+          <!-- ad1 -->
+          {% include 'index/ad1.html' %}
+
+            <br>
+
+            <div class="card">
+                <div class="card-header">
+                  Part : support
+                </div>
+                <div id="part_support" class="card-body">
+                    <babylon model="/static/cad/static/patent_us_4661747/part_support.stl"
+                             templates.main.params.fill-screen="true">
+                    </babylon>
+                </div>
+                <div class="card-footer text-muted">
+                    <h6>Price of this part in Nylon PA12 from Sculpteo : 5,81 euros without taxes</h6>
+                    <br>
+                    <a class="btn btn-outline-secondary"
+                        href="https://github.com/Jay4C/Python-Macros-For-FreeCAD/blob/master/Brevet_US_4661747_Edwin_Gray_Power_Tube/part_support.py"
+                        role="button"
+                        target="_blank">Download the part on GitHub</a>
+                </div>
+                </div>
+
+            <br>
+
+          <!-- ad1 -->
+          {% include 'index/ad1.html' %}
+
+              <br>
+
+            <div class="card">
+                <div class="card-header">
+                  Part : tank
+                </div>
+                <div id="part_tank" class="card-body">
+                    <babylon model="/static/cad/static/patent_us_4661747/part_tank.stl"
+                             templates.main.params.fill-screen="true">
+                    </babylon>
+                </div>
+                <div class="card-footer text-muted">
+                    <h6>Price of this part in Nylon PA12 from Sculpteo : 43,65 euros without taxes</h6>
+                    <br>
+                    <a class="btn btn-outline-secondary"
+                        href="https://github.com/Jay4C/Python-Macros-For-FreeCAD/blob/master/Brevet_US_4661747_Edwin_Gray_Power_Tube/part_tank.py"
+                        role="button"
+                        target="_blank">Download the part on GitHub</a>
+                </div>
+            </div>
+          </div>
+      </div>
+
+      <br>
+
+      <!-- ad1 -->
+      {% include 'index/ad1.html' %}
+
+      <br>
+
+      <!-- Footer -->
+      {% include 'index/footer.html' %}
+
+      <br>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+            integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+            crossorigin="anonymous"></script>
+
+
+    <!-- blockadblock -->
+    {% include 'index/blockadblock.html' %}
+</body>
+</html>

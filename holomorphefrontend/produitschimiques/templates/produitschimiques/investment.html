@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+          crossorigin="anonymous">
+
+    <!-- title -->
+    {% include 'index/title.html' %}
+</head>
+<body>
+    <div class="container">
+      <!-- Code consent -->
+      {% include 'index/consent.html' %}
+
+      <br>
+
+      <!-- Header -->
+      {% include 'index/header.html' %}
+
+      <br>
+
+      <!-- Body -->
+        <div class="card text-center">
+          <div class="card-header">
+              Investment
+          </div>
+          <div class="card-body">
+              <div class="card">
+                  <div class="card-header">
+                      Operation management for the Stanley Meyer's electrolyser
+                  </div>
+                  <div class="card-body">
+                    <div class="card">
+                      <div class="card-header">
+                          Input
+                      </div>
+                      <div class="card-body">
+                          <table class="table table-striped table-bordered">
+                              <thead>
+                                <tr>
+                                  <th scope="col">Nomenclature</th>
+                                  <th scope="col">Quantity</th>
+                                  <th scope="col">Net price produced [€ without taxes]</th>
+                                  <th scope="col">Product VAT [%]</th>
+                                  <th scope="col">Gross price of the product [€ with all taxes]</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                {% for i in data_electrolyser %}
+                                <tr>
+                                    <td>{{ i.k1 }}</td>
+                                    <td>{{ i.k2 }}</td>
+                                    <td>{{ i.k3 }}</td>
+                                    <td>{{ i.k4 }}</td>
+                                    <td>{{ i.k5 }}</td>
+                                </tr>
+                                {% endfor %}
+                              </tbody>
+                            </table>
+
+                          <br>
+
+                          <table class="table table-striped table-bordered">
+                              <thead>
+                                <tr>
+                                  <th scope="col">Net price of delivery [€ without taxes]</th>
+                                  <th scope="col">Delivery VAT [%]</th>
+                                  <th scope="col">Gross price of the delivery [€ with all taxes]</th>
+                                  <th scope="col">Total net price [€ without taxes]</th>
+                                  <th scope="col">Total gross price [€ with all taxes]</th>
+                                  <th scope="col">Theoretical average acquisition time [minutes]</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                {% for i in data_electrolyser %}
+                                <tr>
+                                    <td>{{ i.k6 }}</td>
+                                    <td>{{ i.k7 }}</td>
+                                    <td>{{ i.k8 }}</td>
+                                    <td>{{ i.k9 }}</td>
+                                    <td>{{ i.k10 }}</td>
+                                    <td>{{ i.k11 }}</td>
+                                </tr>
+                                {% endfor %}
+                              </tbody>
+                            </table>
+                      </div>
+                    </div>
+
+                      <br>
+
+                      <div class="card">
+                        <div class="card-header">
+                          Output
+                        </div>
+                        <div class="card-body">
+                          <table class="table table-striped table-bordered">
+                              <thead>
+                                <tr>
+                                  <th scope="col">Nomenclature</th>
+                                  <th scope="col">Quantity</th>
+                                  <th scope="col">Total price net global [€ without taxes]</th>
+                                  <th scope="col">Total price brut global [€ with all taxes]</th>
+                                  <th scope="col">Theoretical average acquisition time [minutes]</th>
+                                  <th scope="col">Theoretical average acquisition time [hours]</th>
+                                  <th scope="col">Theoretical average acquisition time [days]</th>
+                                  <th scope="col">Theoretical average acquisition time [month]</th>
+                                  <th scope="col">Theoretical average acquisition time [years]</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                    <td>Electrolyser</td>
+                                    <td>1</td>
+                                    <td>1 327,25 €</td>
+                                    <td>4 473,26 €</td>
+                                    <td>7 200</td>
+                                    <td>120</td>
+                                    <td>17</td>
+                                    <td>1</td>
+                                    <td>0</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+
+              <br>
+
+            <div class="card">
+              <div class="card-header">
+                  Operation management for the hydrogen container
+              </div>
+              <div class="card-body">
+                <div class="card">
+                  <div class="card-header">
+                      Input
+                  </div>
+                  <div class="card-body">
+                      <table class="table table-striped table-bordered">
+                          <thead>
+                            <tr>
+                              <th scope="col">Nomenclature</th>
+                              <th scope="col">Quantity</th>
+                              <th scope="col">Net price produced [€ without taxes]</th>
+                              <th scope="col">Product VAT [%]</th>
+                              <th scope="col">Gross price of the product [€ with all taxes]</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            {% for i in data_hydrogen_container %}
+                            <tr>
+                                <td>{{ i.k1 }}</td>
+                                <td>{{ i.k2 }}</td>
+                                <td>{{ i.k3 }}</td>
+                                <td>{{ i.k4 }}</td>
+                                <td>{{ i.k5 }}</td>
+                            </tr>
+                            {% endfor %}
+                          </tbody>
+                        </table>
+
+                      <br>
+
+                      <table class="table table-striped table-bordered">
+                          <thead>
+                            <tr>
+                              <th scope="col">Net price of delivery [€ without taxes]</th>
+                              <th scope="col">Delivery VAT [%]</th>
+                              <th scope="col">Gross price of the delivery [€ with all taxes]</th>
+                              <th scope="col">Total net price [€ without taxes]</th>
+                              <th scope="col">Total gross price [€ with all taxes]</th>
+                              <th scope="col">Theoretical average acquisition time [minutes]</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            {% for i in data_hydrogen_container %}
+                            <tr>
+                                <td>{{ i.k6 }}</td>
+                                <td>{{ i.k7 }}</td>
+                                <td>{{ i.k8 }}</td>
+                                <td>{{ i.k9 }}</td>
+                                <td>{{ i.k10 }}</td>
+                                <td>{{ i.k11 }}</td>
+                            </tr>
+                            {% endfor %}
+                          </tbody>
+                      </table>
+                  </div>
+                </div>
+
+                  <br>
+
+                  <div class="card">
+                    <div class="card-header">
+                      Output
+                    </div>
+                    <div class="card-body">
+                      <table class="table table-striped table-bordered">
+                            <thead>
+                                <tr>
+                                  <th scope="col">Nomenclature</th>
+                                  <th scope="col">Quantity</th>
+                                  <th scope="col">Total price net global [€ without taxes]</th>
+                                  <th scope="col">Total price brut global [€ with all taxes]</th>
+                                  <th scope="col">Theoretical average acquisition time [minutes]</th>
+                                  <th scope="col">Theoretical average acquisition time [hours]</th>
+                                  <th scope="col">Theoretical average acquisition time [days]</th>
+                                  <th scope="col">Theoretical average acquisition time [month]</th>
+                                  <th scope="col">Theoretical average acquisition time [years]</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Hydrogen container</td>
+                                    <td>1</td>
+                                    <td>2 802,25 €</td>
+                                    <td>1 298 625,12 €</td>
+                                    <td>103 900</td>
+                                    <td>1 732</td>
+                                    <td>247</td>
+                                    <td>12</td>
+                                    <td>1</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      <br>
+
+      <!-- Footer -->
+      {% include 'index/footer.html' %}
+
+      <br>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+            integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+            crossorigin="anonymous"></script>
+</body>
+</html>

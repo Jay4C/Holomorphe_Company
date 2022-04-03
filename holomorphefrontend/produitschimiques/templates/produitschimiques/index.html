@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+          crossorigin="anonymous">
+
+    <!-- Flowchart.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.3.0/raphael.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="https://flowchart.js.org/flowchart-latest.js"></script>
+
+    <!-- MathJax.js -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+
+    <!-- title -->
+    {% include 'index/title.html' %}
+  </head>
+  <body>
+    <div class="container">
+      <!-- Code consent -->
+      {% include 'index/consent.html' %}
+
+      <br>
+
+      <!-- Header -->
+      {% include 'index/header.html' %}
+
+      <br>
+
+      <!-- Body -->
+      <!-- Vente en gros d'un mélange gazeux composé de dihydrogène pur au mètre cube sur site d'exploitation -->
+      <div class="card text-center">
+        <div class="card-header">
+          Wholesale of a gas mixture composed of pure dihydrogen
+        </div>
+        <div class="card-body">
+          <!-- Electrolyse de l'eau -->
+          <div class="card">
+            <div class="card-header text-center">
+              Water electrolysis
+            </div>
+            <div class="card-body">
+              <h4 class="text-center">
+                Chemical equation of the electrolysis of water:
+              </h4>
+              <h4>
+                2 * H<sub>2</sub>O = 2 * H<sub>2</sub> + O<sub>2</sub>
+              </h4>
+              <br>
+              <div class="list-group text-center">
+                <a href="https://en.wikipedia.org/wiki/Electrolysis_of_water" class="list-group-item list-group-item-action">
+                  Water electrolysis
+                </a>
+              </div>
+              <br>
+              <h4 class="text-center">
+                The hydrogen technologies of the Holomorphe are based at least on the following public patents :
+              </h4>
+              <div>
+                <a href="https://patents.google.com/patent/US5149407A/en" class="list-group-item list-group-item-action">
+                  Process and apparatus for the production of fuel gas and the enhanced release of thermal
+                  energy from such gas - US 5,149,407 A
+                </a>
+                <a href="https://patents.google.com/patent/US4936961A/en?oq=4_936_961" class="list-group-item list-group-item-action">
+                  Method for the production of a fuel gas - US 4,936,961 A
+                </a>
+                <a href="https://patents.google.com/patent/US4798661A/en?oq=US_4_798_661" class="list-group-item list-group-item-action">
+                  Gas generator voltage control circuit - US 4,798,661 A
+                </a>
+                <a href="https://patents.google.com/patent/CA1234773A/en" class="list-group-item list-group-item-action">
+                  Resonant cavity hydrogen generator that operates with a pulsed voltage electrical potential - CA 1,234,773 A
+                </a>
+                <a href="https://patents.google.com/patent/CA1234774A/en" class="list-group-item list-group-item-action">
+                  Hydrogen generator system - CA 1,234,774 A
+                </a>
+                <a href="https://patents.google.com/patent/WO1992007861A1/en?oq=4_936_961" class="list-group-item list-group-item-action">
+                  A control and driver circuits for a hydrogen gas fuel producing cell - WO 1,992,007,861 A1
+                </a>
+                <a href="https://patents.google.com/patent/US4124463A/en?oq=US4124463" class="list-group-item list-group-item-action">
+                  Electrolytic cell - US 4,124,463 A
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <br>
+
+          <!-- Dimensions, sécurité, qualité et fonctionnement de l'électrolyseur de l'eau -->
+          <div class="card">
+            <div class="card-header text-center">
+              Dimensions, safety, quality and operation of the water electrolyser
+            </div>
+            <div class="card-body">
+              <h4 class="text-center">
+                The dimensions of the water electrolyser are defined by Holomorphe exclusively.
+              </h4>
+              <br>
+              <h4 class="text-center">The water electrolyser will have a power supply of the order of some tens of watts.</h4>
+            </div>
+          </div>
+
+          <br>
+
+          <!-- Conditions de vente du mélange gazeux de dihydrogène pur -->
+          <div class="card">
+            <div class="card-header text-center">
+              Conditions of sale of the gas mixture of pure dihydrogen
+            </div>
+            <div class="card-body">
+              <h4 class="text-center">
+                The operating site must follow ATEX regulations for explosive atmospheres.
+              </h4>
+              <br>
+              <h4 class="text-center">
+                The operating site must follow all applicable regulations and standards applicable to
+                its activity for the use of the gas mixture of pure dihydrogen.
+              </h4>
+              <br>
+              <h4 class="text-center">
+                The operating site must be insured by one or more insurer(s) in the event of damage
+                for the use of the gas mixture of pure dihydrogen.
+              </h4>
+              <br>
+              <h4 class="text-center">
+                The operation site must respect a minimum annually consumption quota for the gas mixture of pure
+                dihydrogen supplied by the Holomorphe at 500,000 cubic meters for its customers
+                and 5,000,000 cubic meters in partnership.
+              </h4>
+              <br>
+              <h4 class="text-center">
+                The meter reading must be taken every month manually in presence of a staff of Holomorphe
+                and a staff of the operating site run by a customer or a partner of Holomorphe . The records
+                will be stored into a immutable database or a immutable ledger kept in safe
+                by Holomorphe and a concerned customer or a concerned partner of Holomorphe .
+              </h4>
+              <br>
+              <h4 class="text-center">
+                The operating site must supply the water electrolyser with tap water at the expense of a concerned
+                customer or a concerned partner of Holomorphe.
+              </h4>
+              <br>
+              <h4 class="text-center">
+                The operating site will have to supply the water electrolyser with electricity payable by
+                a concerned customer or a concerned partner of Holomorphe.
+              </h4>
+              <br>
+              <h4 class="text-center">
+                Holomorphe will take out comprehensive professional civil liability insurance to
+                insure itself against any damage caused by the use of its own water electrolyser in function in
+                the operating site of the customer or partner of Holomorphe after examining the
+                operation site by the insurance experts.
+              </h4>
+              <br>
+              <h4 class="text-center">
+                The price of pure dihydrogen will be sold in cubic meter at the standard conditions of temperature and
+                pressure by Holomorphe with its partners.
+                <br>
+                The pure dihydrogen will be sold in function of the contract between Holomorphe, its partners and
+                the buyers of this gas mixture.
+              </h4>
+            </div>
+          </div>
+
+          <br>
+
+          <!-- Diagram of the incorporation of the production application of the gas mixture of hydrogen in different
+          chemical processes -->
+          <div class="card">
+            <div class="card-header text-center">
+              Diagram of the incorporation of the production application of the pure hydrogen gas
+            </div>
+            <div class="card-body">
+              <div class="card">
+                <div class="card-header text-center">
+                  Installation at a partner of Holomorphe
+                </div>
+                <div class="card-body">
+                  <div id="diagram_2"></div>
+                  <script>
+                  var diagram = flowchart.parse(`
+n1=>start: The water and electricity supply at the expense of Holomorphe and its partners
+n2=>operation: The system for producing the pure dihydrogen gas with some water electrolysers
+developped by Holomorphe installed at its partner
+n3=>subroutine: The pure dihydrogen gas
+n4=>inputoutput: The gas meter at the expense of Holomorphe
+n5=>subroutine: The pure dihydrogen gas
+n6=>operation: The connection of the pure dihydrogen gas at the expense of the Holomorphe
+n7=>end: The injection of the pure dihydrogen gas into a natural gas transport network at the expense of Holomorphe
+and its partner
+
+n1->n2
+n2->n3
+n3->n4
+n4->n5
+n5->n6
+n6->n7
+          `
+          );
+
+                  diagram.drawSVG('diagram_2');
+                  </script>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <br>
+
+        </div>
+      </div>
+
+      <br>
+
+      <!-- Footer -->
+      {% include 'index/footer.html' %}
+
+      <br>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+            integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+            crossorigin="anonymous"></script>
+  </body>
+</html>

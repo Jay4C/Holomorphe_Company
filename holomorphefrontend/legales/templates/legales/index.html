@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <!-- title -->
+    {% include 'index/title.html' %}
+  </head>
+  <body>
+    <div class="container">
+      <!-- Code consent -->
+      {% include 'index/consent.html' %}
+
+      <!-- Header -->
+      {% include 'index/header.html' %}
+
+      <br>
+
+      <!-- Body -->
+      <!-- Card : Mentions légales -->
+      <div class="card">
+        <div class="card-header text-center">
+        Legal notice
+        </div>
+        <div class="card-body">
+          <!-- Card : Identification -->
+          <div class="card">
+            <div class="card-header text-center">
+              Identification
+            </div>
+            <div class="card-body">
+              <h5>Company name : Holomorphe</h5>
+              <br>
+              <h5>Headquarters address: </h5>
+              <!-- address -->
+              {% include 'index/address.html' %}
+              <br>
+              <h5>Phone number : </h5>
+              <!-- telephone -->
+              {% include 'index/telephone.html' %}
+              <br>
+              <h5>Email : </h5>
+              <!-- email -->
+              {% include 'index/email.html' %}
+              <br>
+              <h5>Legal form of the company: Simplified joint stock company with variable capital</h5>
+              <br>
+              <h5>Amount of share capital: 100.00 euros</h5>
+              <br>
+              <h5>Direction of publication: Mr. Jason ALOYAU, Chairman</h5>
+              <br>
+              <h5>Name, denomination or corporate name of the website host: OVH</h5>
+              <br>
+              <h5>Address of the website host: 2 rue Kellermann - 59100 Roubaix - France</h5>
+              <br>
+              <h5>Telephone number of the website host: 05 22 26 00 86</h5>
+            </div>
+          </div>
+
+          <br>
+
+          <!-- Card : Activité -->
+          <div class="card">
+            <div class="card-header text-center">
+              Activity
+            </div>
+            <div class="card-body">
+              <h5>Registration number in the trade and companies register (SIREN): 883 632 556</h5>
+              <br>
+              <h5>Individual tax identification number: FR06883632556</h5>
+            </div>
+          </div>
+
+          <br>
+
+          <!-- Card : Mentions relatives à l'utilisation de cookies -->
+          <div class="card">
+            <div class="card-header text-center">
+              Notice relating to the use of cookies and trackers
+            </div>
+            <div class="card-body">
+              <p class="card-text">
+                The website does not use cookies and trackers to track behavior when visiting a website, reading an email,
+                installation or use of software or a mobile application or for any kind of computing processes.
+                <br>
+                However, the website could use non-personalized ads.
+                <br>
+                The website recommand you to block all cookies and all trackers by adjusting your web browser settings.
+              </p>
+            </div>
+          </div>
+
+          <br>
+
+          <!-- Card : Mentions relatives à l'utilisation de données personnelles -->
+          <div class="card">
+            <div class="card-header text-center">
+              Notice relating to the use of personal data
+            </div>
+            <div class="card-body">
+              <p class="card-text">
+                The website does not use, collect or process any personal data under
+                Law No. 78-17 of 6 January 1978 relating to data processing, files and freedoms of the French law
+                and General Data Protection Regulation of the European Union law.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <br>
+
+      <!-- Footer -->
+      {% include 'index/footer.html' %}
+
+      <br>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+            integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+            crossorigin="anonymous"></script>
+  </body>
+</html>

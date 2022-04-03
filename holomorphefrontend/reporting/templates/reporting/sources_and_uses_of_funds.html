@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet"
+		href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+		integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+		crossorigin="anonymous">
+
+	<!-- Code Ad -->
+	{% include 'index/codeAd.html' %}
+
+	<!-- title -->
+	{% include 'index/title.html' %}
+</head>
+<body>
+	<div class="container">
+		<!-- Code consent -->
+		{% include 'index/consent.html' %}
+
+		<!-- Header -->
+		{% include 'index/header.html' %}
+
+		<br>
+
+		<!-- ad1 -->
+		{% include 'index/ad1.html' %}
+
+		<br>
+
+		<!-- Body -->
+
+		<!-- Sources and uses of funds -->
+		<div class="card text-center">
+			<div class="card-header">
+				<h6>Reporting - Sources and uses of funds</h6>
+				<br>
+				<a class="btn btn-outline-secondary"
+					href="https://github.com/Jay4C/Web-Automation/blob/master/Holomorphe_Website/unit_tests.py"
+					role="button"
+					target="_blank">Download this robot to fill this form by web automation</a>
+			</div>
+			<div class="card-body">
+				<form action="{% url 'generate_html_to_pdf_sources_and_uses_of_funds' %}" method="post">
+					{% csrf_token %}
+					<div class="card">
+						<div class="card-header">
+							Company
+						</div>
+						<div class="card-body">
+							<div class="form-group row">
+								<label class="col-sm col-form-label">
+									Company name :
+								</label>
+								<div class="col-sm">
+									<input type="text" class="form-control" name="company_name">
+								</div>
+							</div>
+							<div class="form-group row">
+								<label class="col-sm col-form-label">
+									Share capital :
+								</label>
+								<div class="col-sm">
+									<input type="text" class="form-control" name="share_capital">
+								</div>
+							</div>
+							<div class="form-group row">
+								<label class="col-sm col-form-label">
+									Head office address :
+								</label>
+								<div class="col-sm">
+									<input type="text" class="form-control" name="head_office_address">
+								</div>
+							</div>
+							<div class="form-group row">
+								<label class="col-sm col-form-label">
+									Establishment number :
+								</label>
+								<div class="col-sm">
+									<input type="text" class="form-control" name="establishment_number">
+								</div>
+							</div>
+							<div class="form-group row">
+								<label class="col-sm col-form-label">
+									Register of Trade and Companies :
+								</label>
+								<div class="col-sm">
+									<input type="text" class="form-control" name="register_of_trade_and_companies">
+								</div>
+							</div>
+							<div class="form-group row">
+								<label class="col-sm col-form-label">
+									Main activities :
+								</label>
+								<div class="col-sm">
+									<input type="text" class="form-control" name="main_activities">
+								</div>
+							</div>
+							<div class="form-group row">
+								<label class="col-sm col-form-label">
+									Activity number :
+								</label>
+								<div class="col-sm">
+									<input type="text" class="form-control" name="activity_number">
+								</div>
+							</div>
+							<div class="form-group row">
+								<label class="col-sm col-form-label">
+									Intra-community VAT number :
+								</label>
+								<div class="col-sm">
+									<input type="text" class="form-control" name="intra_community_vat_number">
+								</div>
+							</div>
+							<div class="form-group row">
+								<label class="col-sm col-form-label">
+									President :
+								</label>
+								<div class="col-sm">
+									<input type="text" class="form-control" name="president">
+								</div>
+							</div>
+							<div class="form-group row">
+								<label class="col-sm col-form-label">
+									Registration date :
+								</label>
+								<div class="col-sm">
+									<input type="text" class="form-control" name="registration_date">
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<br>
+
+					<!-- ad1 -->
+					{% include 'index/ad1.html' %}
+
+					<br>
+
+					<table class="table table-striped table-bordered">
+						<thead>
+							<tr>
+								<th scope="col">Details</th>
+								<th scope="col">
+									Value
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									Sources of funds:
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r1c1">
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									Line of Credit
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r2c1">
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									Outside Equity
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r3c1">
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									Personal Equity
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r4c1">
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									Term Loan
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r5c1">
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									Other
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r6c1">
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									Total Sources
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r7c1">
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									Uses of Funds:
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r8c1">
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									Cash Reserve
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r9c1">
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									Inventory
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r10c1">
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									Purchase Building
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r11c1">
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									Purchase Equipment
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r12c1">
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									Renovations
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r13c1">
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									Working  Capital
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r14c1">
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									Other
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r15c1">
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									Total Uses:
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r16c1">
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<br>
+
+					<!-- ad1 -->
+					{% include 'index/ad1.html' %}
+
+					<br>
+
+					<div class="row">
+						<div class="col-sm">
+						</div>
+						<div class="col-sm">
+							<button type="submit"
+								class="btn btn-secondary"
+								name="button_generate_html_to_pdf_sources_and_uses_of_funds">Submit</button>
+						</div>
+						<div class="col-sm">
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+
+		<br>
+
+		<!-- ad1 -->
+		{% include 'index/ad1.html' %}
+
+		<br>
+
+		<!-- Footer -->
+		{% include 'index/footer.html' %}
+
+		<br>
+	</div>
+
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+		integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+		crossorigin="anonymous"></script>
+
+	<!-- blockadblock -->
+	{% include 'index/blockadblock.html' %}
+</body>
+</html>

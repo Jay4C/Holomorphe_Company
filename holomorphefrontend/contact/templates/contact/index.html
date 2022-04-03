@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap_CSS -->
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+          crossorigin="anonymous">
+
+    <!-- title -->
+    {% include 'index/title.html' %}
+  </head>
+  <body>
+    <div class="container">
+      <!-- Code consent -->
+      {% include 'index/consent.html' %}
+
+      <br>
+
+      <!-- Header -->
+      {% include 'index/header.html' %}
+
+      <br>
+
+      <!-- Body -->
+      <!-- Chairman -->
+      <div class="card text-center">
+        <div class="card-header">
+          Chairman
+        </div>
+        <div class="card-body">
+          <h6>Mr Jason ALOYAU</h6>
+          <br>
+          <h6>General engineer graduated from Leonardo da Vinci engineering school in Paris La D&eacute;fense</h6>
+        </div>
+      </div>
+
+      <br>
+
+      <!-- Email -->
+      <div class="card text-center">
+        <div class="card-header">
+          Email
+        </div>
+        <div class="card-body">
+          <!-- email -->
+          {% include 'index/email.html' %}
+        </div>
+      </div>
+
+      <br>
+
+      <!-- Adresse du siège social -->
+      <div class="card text-center">
+        <div class="card-header">
+          Registered address
+        </div>
+        <div class="card-body">
+          {% include 'index/address.html' %}
+        </div>
+      </div>
+
+      <br>
+
+      <!-- Societe.com -->
+      <div class="card text-center">
+        <div class="card-header">
+          Societe.com
+        </div>
+        <div class="card-body">
+          <a class="btn btn-light"
+             href="https://www.societe.com/societe/holomorphe-883632556.html"
+             role="button" target="_blank">Societe.com - Holomorphe</a>
+        </div>
+      </div>
+
+      <br>
+
+      <!-- Github -->
+      <div class="card text-center">
+        <div class="card-header">
+          GitHub
+        </div>
+        <div class="card-body">
+          <a class="btn btn-light" href="https://github.com/Jay4C" role="button" target="_blank">GitHub - Jay4C</a>
+        </div>
+      </div>
+
+      <br>
+
+      <!-- YouTube -->
+      <div class="card text-center">
+        <div class="card-header">
+          YouTube
+        </div>
+        <div class="card-body">
+          <a class="btn btn-light"
+             href="https://www.youtube.com/channel/UClK7qVMGyLGEE0uPy7LFGlA"
+             role="button" target="_blank">YouTube - Holomorphe</a>
+        </div>
+      </div>
+
+      <br>
+
+      <!-- Footer -->
+      {% include 'index/footer.html' %}
+    </div>
+
+    <br>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+            integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+            crossorigin="anonymous"></script>
+  </body>
+</html>

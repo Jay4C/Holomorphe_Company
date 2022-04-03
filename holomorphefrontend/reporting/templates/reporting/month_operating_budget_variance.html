@@ -1,0 +1,2386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet"
+		href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+		integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+		crossorigin="anonymous">
+
+	<!-- Code Ad -->
+	{% include 'index/codeAd.html' %}
+
+	<!-- title -->
+	{% include 'index/title.html' %}
+</head>
+<body>
+	<div class="container">
+		<!-- Code consent -->
+		{% include 'index/consent.html' %}
+
+		<!-- Header -->
+		{% include 'index/header.html' %}
+
+		<br>
+
+		<!-- ad1 -->
+		{% include 'index/ad1.html' %}
+
+		<br>
+
+		<!-- Body -->
+
+		<!-- Month operating budget variance -->
+		<div class="card text-center">
+			<div class="card-header">
+				<h6>Reporting - Month operating budget variance</h6>
+				<br>
+				<a class="btn btn-outline-secondary"
+					href="https://github.com/Jay4C/Web-Automation/blob/master/Holomorphe_Website/unit_tests.py"
+					role="button"
+					target="_blank">Download this robot to fill this form by web automation</a>
+			</div>
+			<div class="card-body">
+				<form action="{% url 'generate_html_to_pdf_month_operating_budget_variance' %}" method="post">
+					{% csrf_token %}
+					<div class="card">
+						<div class="card-header">
+							Company
+						</div>
+						<div class="card-body">
+							<div class="form-group row">
+								<label class="col-sm col-form-label">
+									Company name :
+								</label>
+								<div class="col-sm">
+									<input type="text" class="form-control" name="company_name">
+								</div>
+							</div>
+							<div class="form-group row">
+								<label class="col-sm col-form-label">
+									Share capital :
+								</label>
+								<div class="col-sm">
+									<input type="text" class="form-control" name="share_capital">
+								</div>
+							</div>
+							<div class="form-group row">
+								<label class="col-sm col-form-label">
+									Head office address :
+								</label>
+								<div class="col-sm">
+									<input type="text" class="form-control" name="head_office_address">
+								</div>
+							</div>
+							<div class="form-group row">
+								<label class="col-sm col-form-label">
+									Establishment number :
+								</label>
+								<div class="col-sm">
+									<input type="text" class="form-control" name="establishment_number">
+								</div>
+							</div>
+							<div class="form-group row">
+								<label class="col-sm col-form-label">
+									Register of Trade and Companies :
+								</label>
+								<div class="col-sm">
+									<input type="text" class="form-control" name="register_of_trade_and_companies">
+								</div>
+							</div>
+							<div class="form-group row">
+								<label class="col-sm col-form-label">
+									Main activities :
+								</label>
+								<div class="col-sm">
+									<input type="text" class="form-control" name="main_activities">
+								</div>
+							</div>
+							<div class="form-group row">
+								<label class="col-sm col-form-label">
+									Activity number :
+								</label>
+								<div class="col-sm">
+									<input type="text" class="form-control" name="activity_number">
+								</div>
+							</div>
+							<div class="form-group row">
+								<label class="col-sm col-form-label">
+									Intra-community VAT number :
+								</label>
+								<div class="col-sm">
+									<input type="text" class="form-control" name="intra_community_vat_number">
+								</div>
+							</div>
+							<div class="form-group row">
+								<label class="col-sm col-form-label">
+									President :
+								</label>
+								<div class="col-sm">
+									<input type="text" class="form-control" name="president">
+								</div>
+							</div>
+							<div class="form-group row">
+								<label class="col-sm col-form-label">
+									Registration date :
+								</label>
+								<div class="col-sm">
+									<input type="text" class="form-control" name="registration_date">
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<br>
+
+		<!-- ad1 -->
+		{% include 'index/ad1.html' %}
+
+					<br>
+
+					<table class="table table-striped table-bordered">
+						<thead>
+							<tr>
+								<th scope="col">Details</th>
+								<th scope="col">
+									M1 budget
+								</th>
+								<th scope="col">
+									M1 actual
+								</th>
+								<th scope="col">
+									M2 budget
+								</th>
+								<th scope="col">
+									M2 actual
+								</th>
+								<th scope="col">
+									M3 budget
+								</th>
+								<th scope="col">
+									M3 actual
+								</th>
+								<th scope="col">
+									M4 budget
+								</th>
+								<th scope="col">
+									M4 actual
+								</th>
+								<th scope="col">
+									M5 budget
+								</th>
+								<th scope="col">
+									M5 actual
+								</th>
+								<th scope="col">
+									M6 budget
+								</th>
+								<th scope="col">
+									M6 actual
+								</th>
+								<th scope="col">
+									M7 budget
+								</th>
+								<th scope="col">
+									M7 actual
+								</th>
+								<th scope="col">
+									M8 budget
+								</th>
+								<th scope="col">
+									M8 actual
+								</th>
+								<th scope="col">
+									M9 budget
+								</th>
+								<th scope="col">
+									M9 actual
+								</th>
+								<th scope="col">
+									M10 budget
+								</th>
+								<th scope="col">
+									M10 actual
+								</th>
+								<th scope="col">
+									M11 budget
+								</th>
+								<th scope="col">
+									M11 actual
+								</th>
+								<th scope="col">
+									M12 budget
+								</th>
+								<th scope="col">
+									M12 actual
+								</th>
+								<th scope="col">
+									Totals budget
+								</th>
+								<th scope="col">
+									Totals actual
+								</th>
+								<th scope="col">
+									Totals variation
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									Salaries
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r1c1">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r1c2">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r1c3">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r1c4">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r1c5">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r1c6">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r1c7">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r1c8">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r1c9">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r1c10">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r1c11">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r1c12">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r1c13">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r1c14">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r1c15">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r1c16">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r1c17">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r1c18">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r1c19">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r1c20">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r1c21">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r1c22">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r1c23">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r1c24">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r1c25">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r1c26">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r1c27">
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									SubcontractorsEducation
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r2c1">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r2c2">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r2c3">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r2c4">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r2c5">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r2c6">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r2c7">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r2c8">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r2c9">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r2c10">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r2c11">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r2c12">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r2c13">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r2c14">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r2c15">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r2c16">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r2c17">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r2c18">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r2c19">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r2c20">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r2c21">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r2c22">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r2c23">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r2c24">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r2c25">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r2c26">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r2c27">
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									Rent or mortgage or lease
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r3c1">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r3c2">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r3c3">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r3c4">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r3c5">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r3c6">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r3c7">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r3c8">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r3c9">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r3c10">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r3c11">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r3c12">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r3c13">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r3c14">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r3c15">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r3c16">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r3c17">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r3c18">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r3c19">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r3c20">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r3c21">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r3c22">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r3c23">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r3c24">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r3c25">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r3c26">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r3c27">
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									Utilities
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r4c1">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r4c2">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r4c3">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r4c4">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r4c5">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r4c6">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r4c7">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r4c8">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r4c9">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r4c10">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r4c11">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r4c12">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r4c13">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r4c14">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r4c15">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r4c16">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r4c17">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r4c18">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r4c19">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r4c20">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r4c21">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r4c22">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r4c23">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r4c24">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r4c25">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r4c26">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r4c27">
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									Insurance
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r5c1">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r5c2">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r5c3">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r5c4">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r5c5">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r5c6">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r5c7">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r5c8">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r5c9">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r5c10">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r5c11">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r5c12">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r5c13">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r5c14">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r5c15">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r5c16">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r5c17">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r5c18">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r5c19">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r5c20">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r5c21">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r5c22">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r5c23">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r5c24">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r5c25">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r5c26">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r5c27">
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									Licenses
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r6c1">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r6c2">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r6c3">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r6c4">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r6c5">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r6c6">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r6c7">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r6c8">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r6c9">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r6c10">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r6c11">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r6c12">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r6c13">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r6c14">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r6c15">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r6c16">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r6c17">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r6c18">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r6c19">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r6c20">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r6c21">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r6c22">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r6c23">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r6c24">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r6c25">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r6c26">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r6c27">
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									Repairs or maintenance
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r7c1">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r7c2">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r7c3">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r7c4">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r7c5">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r7c6">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r7c7">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r7c8">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r7c9">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r7c10">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r7c11">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r7c12">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r7c13">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r7c14">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r7c15">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r7c16">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r7c17">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r7c18">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r7c19">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r7c20">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r7c21">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r7c22">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r7c23">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r7c24">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r7c25">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r7c26">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r7c27">
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									Equipment
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r8c1">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r8c2">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r8c3">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r8c4">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r8c5">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r8c6">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r8c7">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r8c8">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r8c9">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r8c10">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r8c11">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r8c12">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r8c13">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r8c14">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r8c15">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r8c16">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r8c17">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r8c18">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r8c19">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r8c20">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r8c21">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r8c22">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r8c23">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r8c24">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r8c25">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r8c26">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r8c27">
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									Supplies
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r9c1">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r9c2">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r9c3">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r9c4">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r9c5">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r9c6">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r9c7">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r9c8">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r9c9">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r9c10">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r9c11">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r9c12">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r9c13">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r9c14">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r9c15">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r9c16">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r9c17">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r9c18">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r9c19">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r9c20">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r9c21">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r9c22">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r9c23">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r9c24">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r9c25">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r9c26">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r9c27">
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									Software
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r10c1">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r10c2">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r10c3">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r10c4">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r10c5">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r10c6">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r10c7">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r10c8">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r10c9">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r10c10">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r10c11">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r10c12">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r10c13">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r10c14">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r10c15">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r10c16">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r10c17">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r10c18">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r10c19">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r10c20">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r10c21">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r10c22">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r10c23">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r10c24">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r10c25">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r10c26">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r10c27">
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									Marketing
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r11c1">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r11c2">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r11c3">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r11c4">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r11c5">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r11c6">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r11c7">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r11c8">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r11c9">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r11c10">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r11c11">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r11c12">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r11c13">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r11c14">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r11c15">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r11c16">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r11c17">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r11c18">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r11c19">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r11c20">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r11c21">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r11c22">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r11c23">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r11c24">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r11c25">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r11c26">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r11c27">
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									Ad Campaigns
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r12c1">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r12c2">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r12c3">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r12c4">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r12c5">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r12c6">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r12c7">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r12c8">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r12c9">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r12c10">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r12c11">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r12c12">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r12c13">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r12c14">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r12c15">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r12c16">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r12c17">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r12c18">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r12c19">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r12c20">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r12c21">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r12c22">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r12c23">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r12c24">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r12c25">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r12c26">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r12c27">
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									Promotions
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r13c1">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r13c2">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r13c3">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r13c4">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r13c5">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r13c6">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r13c7">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r13c8">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r13c9">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r13c10">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r13c11">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r13c12">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r13c13">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r13c14">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r13c15">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r13c16">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r13c17">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r13c18">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r13c19">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r13c20">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r13c21">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r13c22">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r13c23">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r13c24">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r13c25">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r13c26">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r13c27">
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									Other
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r14c1">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r14c2">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r14c3">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r14c4">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r14c5">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r14c6">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r14c7">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r14c8">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r14c9">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r14c10">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r14c11">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r14c12">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r14c13">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r14c14">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r14c15">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r14c16">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r14c17">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r14c18">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r14c19">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r14c20">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r14c21">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r14c22">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r14c23">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r14c24">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r14c25">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r14c26">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r14c27">
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									Total budget
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r15c1">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r15c2">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r15c3">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r15c4">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r15c5">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r15c6">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r15c7">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r15c8">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r15c9">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r15c10">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r15c11">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r15c12">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r15c13">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r15c14">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r15c15">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r15c16">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r15c17">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r15c18">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r15c19">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r15c20">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r15c21">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r15c22">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r15c23">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r15c24">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r15c25">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r15c26">
+									</div>
+								</td>
+								<td>
+									<div class="form-group">
+										<input type="text" class="form-control" name="r15c27">
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<br>
+
+		<!-- ad1 -->
+		{% include 'index/ad1.html' %}
+
+					<br>
+
+					<div class="row">
+						<div class="col-sm">
+						</div>
+						<div class="col-sm">
+							<button type="submit"
+								class="btn btn-secondary"
+								name="button_generate_html_to_pdf_month_operating_budget_variance">Submit</button>
+						</div>
+						<div class="col-sm">
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+
+		<br>
+
+		<!-- ad1 -->
+		{% include 'index/ad1.html' %}
+
+		<br>
+
+		<!-- Footer -->
+		{% include 'index/footer.html' %}
+
+		<br>
+	</div>
+
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+		integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+		integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+		crossorigin="anonymous"></script>
+
+	<!-- blockadblock -->
+	{% include 'index/blockadblock.html' %}
+</body>
+</html>

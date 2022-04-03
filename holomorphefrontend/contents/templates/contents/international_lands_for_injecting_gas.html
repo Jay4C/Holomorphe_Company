@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+          crossorigin="anonymous">
+
+    <!-- Leaflet.js -->
+    <link rel="stylesheet"
+          href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+          integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+          crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+            integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+            crossorigin=""></script>
+    <style type="text/css">
+        #lands_for_injecting_gas_in_france { height: 600px; }
+    </style>
+
+    <!-- Code Ad -->
+    {% include 'index/codeAd.html' %}
+
+    <!-- jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"
+            integrity="sha512-WNLxfP/8cVYL9sj8Jnp6et0BkubLP31jhTG9vhL/F5uEZmg5wEzKoXp1kJslzPQWwPT1eyMiSxlKCgzHLOTOTQ=="
+            crossorigin="anonymous"></script>
+
+    <!-- title -->
+    {% include 'index/title.html' %}
+</head>
+<body>
+    <div class="container">
+      <!-- Code consent -->
+      {% include 'index/consent.html' %}
+
+      <!-- Header -->
+      {% include 'index/header.html' %}
+
+      <br>
+
+      <!-- ad1 -->
+      {% include 'index/ad1.html' %}
+
+      <br>
+
+      <!-- International lands for injecting gas -->
+      <div class="card">
+          <div class="card-header text-center">
+           International lands for injecting gas
+          </div>
+          <div class="card-body">
+              <div class="card">
+                  <div class="card-header text-center">
+                   Lands for injecting gas in France
+                  </div>
+                  <div class="card-body">
+                      <div id="lands_for_injecting_gas_in_france">
+                      </div>
+                      <script type="text/javascript">
+                          var lands_for_injecting_gas_in_france_map = L.map('lands_for_injecting_gas_in_france').setView([48.8589507, 2.2770198], 7);
+
+                          L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                          }).addTo(lands_for_injecting_gas_in_france_map);
+
+                          // communes_desservies_en_gaz_json
+                          $.getJSON("communes_desservies_en_gaz_json", function(data_communes_desservies_en_gaz_json) {
+                              var features_data_communes_desservies_en_gaz_json = data_communes_desservies_en_gaz_json.features;
+                              L.geoJSON(features_data_communes_desservies_en_gaz_json, {color: 'green'}).addTo(lands_for_injecting_gas_in_france_map);
+                           });
+
+                           // les_sites_dinjection_de_biomethane_en_france_json
+                          $.getJSON("les_sites_dinjection_de_biomethane_en_france_json", function(data_les_sites_dinjection_de_biomethane_en_france_json) {
+                              var features_les_sites_dinjection_de_biomethane_en_france_json = data_les_sites_dinjection_de_biomethane_en_france_json.features;
+                              L.geoJSON(features_les_sites_dinjection_de_biomethane_en_france_json).addTo(lands_for_injecting_gas_in_france_map);
+                           });
+
+                          // cadastre_77304_parcelles_json
+                          $.getJSON("cadastre_77304_parcelles_json", function(data_cadastre_77304_parcelles_json) {
+                              var features_data_cadastre_77304_parcelles_json = data_cadastre_77304_parcelles_json.features;
+                              L.geoJSON(features_data_cadastre_77304_parcelles_json, {color: 'blue'}).addTo(lands_for_injecting_gas_in_france_map);
+                           });
+
+                          // cadastre_77304_batiments_json
+                          $.getJSON("cadastre_77304_batiments_json", function(data_cadastre_77304_batiments_json) {
+                              var features_cadastre_77304_batiments_json = data_cadastre_77304_batiments_json.features;
+                              L.geoJSON(features_cadastre_77304_batiments_json, {color: 'red'}).addTo(lands_for_injecting_gas_in_france_map);
+                           });
+
+                            // cadastre_77015_parcelles_json
+                            $.getJSON("cadastre_77015_parcelles_json", function(data_cadastre_77015_parcelles_json) {
+                                var features_data_cadastre_77015_parcelles_json = data_cadastre_77015_parcelles_json.features;
+                                L.geoJSON(features_data_cadastre_77015_parcelles_json, {color: 'blue'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_77015_batiments_json
+                            $.getJSON("cadastre_77015_batiments_json", function(data_cadastre_77015_batiments_json) {
+                                var features_data_cadastre_77015_batiments_json = data_cadastre_77015_batiments_json.features;
+                                L.geoJSON(features_data_cadastre_77015_batiments_json, {color: 'red'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_77356_parcelles_json
+                            $.getJSON("cadastre_77356_parcelles_json", function(data_cadastre_77356_parcelles_json) {
+                                var features_data_cadastre_77356_parcelles_json = data_cadastre_77356_parcelles_json.features;
+                                L.geoJSON(features_data_cadastre_77356_parcelles_json, {color: 'blue'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_77356_batiments_json
+                            $.getJSON("cadastre_77356_batiments_json", function(data_cadastre_77356_batiments_json) {
+                                var features_data_cadastre_77356_batiments_json = data_cadastre_77356_batiments_json.features;
+                                L.geoJSON(features_data_cadastre_77356_batiments_json, {color: 'red'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_77452_parcelles_json
+                            $.getJSON("cadastre_77452_parcelles_json", function(data_cadastre_77452_parcelles_json) {
+                                var features_data_cadastre_77452_parcelles_json = data_cadastre_77452_parcelles_json.features;
+                                L.geoJSON(features_data_cadastre_77452_parcelles_json, {color: 'blue'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_77452_batiments_json
+                            $.getJSON("cadastre_77452_batiments_json", function(data_cadastre_77452_batiments_json) {
+                                var features_data_cadastre_77452_batiments_json = data_cadastre_77452_batiments_json.features;
+                                L.geoJSON(features_data_cadastre_77452_batiments_json, {color: 'red'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_77532_parcelles_json
+                            $.getJSON("cadastre_77532_parcelles_json", function(data_cadastre_77532_parcelles_json) {
+                                var features_data_cadastre_77532_parcelles_json = data_cadastre_77532_parcelles_json.features;
+                                L.geoJSON(features_data_cadastre_77532_parcelles_json, {color: 'blue'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_77532_batiments_json
+                            $.getJSON("cadastre_77532_batiments_json", function(data_cadastre_77532_batiments_json) {
+                                var features_data_cadastre_77532_batiments_json = data_cadastre_77532_batiments_json.features;
+                                L.geoJSON(features_data_cadastre_77532_batiments_json, {color: 'red'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_78264_parcelles_json
+                            $.getJSON("cadastre_78264_parcelles_json", function(data_cadastre_78264_parcelles_json) {
+                                var features_data_cadastre_78264_parcelles_json = data_cadastre_78264_parcelles_json.features;
+                                L.geoJSON(features_data_cadastre_78264_parcelles_json, {color: 'blue'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_78264_batiments_json
+                            $.getJSON("cadastre_78264_batiments_json", function(data_cadastre_78264_batiments_json) {
+                                var features_data_cadastre_78264_batiments_json = data_cadastre_78264_batiments_json.features;
+                                L.geoJSON(features_data_cadastre_78264_batiments_json, {color: 'red'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_78606_parcelles_json
+                            $.getJSON("cadastre_78606_parcelles_json", function(data_cadastre_78606_parcelles_json) {
+                                var features_data_cadastre_78606_parcelles_json = data_cadastre_78606_parcelles_json.features;
+                                L.geoJSON(features_data_cadastre_78606_parcelles_json, {color: 'blue'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_78606_batiments_json
+                            $.getJSON("cadastre_78606_batiments_json", function(data_cadastre_78606_batiments_json) {
+                                var features_data_cadastre_78606_batiments_json = data_cadastre_78606_batiments_json.features;
+                                L.geoJSON(features_data_cadastre_78606_batiments_json, {color: 'red'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_91075_parcelles_json
+                            $.getJSON("cadastre_91075_parcelles_json", function(data_cadastre_91075_parcelles_json) {
+                                var features_data_cadastre_91075_parcelles_json = data_cadastre_91075_parcelles_json.features;
+                                L.geoJSON(features_data_cadastre_91075_parcelles_json, {color: 'blue'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_91075_batiments_json
+                            $.getJSON("cadastre_91075_batiments_json", function(data_cadastre_91075_batiments_json) {
+                                var features_data_cadastre_91075_batiments_json = data_cadastre_91075_batiments_json.features;
+                                L.geoJSON(features_data_cadastre_91075_batiments_json, {color: 'red'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_91145_parcelles_json
+                            $.getJSON("cadastre_91145_parcelles_json", function(data_cadastre_91145_parcelles_json) {
+                                var features_data_cadastre_91145_parcelles_json = data_cadastre_91145_parcelles_json.features;
+                                L.geoJSON(features_data_cadastre_91145_parcelles_json, {color: 'blue'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_91145_batiments_json
+                            $.getJSON("cadastre_91145_batiments_json", function(data_cadastre_91145_batiments_json) {
+                                var features_data_cadastre_91145_batiments_json = data_cadastre_91145_batiments_json.features;
+                                L.geoJSON(features_data_cadastre_91145_batiments_json, {color: 'red'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_95141_parcelles_json
+                            $.getJSON("cadastre_95141_parcelles_json", function(data_cadastre_95141_parcelles_json) {
+                                var features_data_cadastre_95141_parcelles_json = data_cadastre_95141_parcelles_json.features;
+                                L.geoJSON(features_data_cadastre_95141_parcelles_json, {color: 'blue'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_95141_batiments_json
+                            $.getJSON("cadastre_95141_batiments_json", function(data_cadastre_95141_batiments_json) {
+                                var features_data_cadastre_95141_batiments_json = data_cadastre_95141_batiments_json.features;
+                                L.geoJSON(features_data_cadastre_95141_batiments_json, {color: 'red'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_95144_parcelles_json
+                            $.getJSON("cadastre_95144_parcelles_json", function(data_cadastre_95144_parcelles_json) {
+                                var features_data_cadastre_95144_parcelles_json = data_cadastre_95144_parcelles_json.features;
+                                L.geoJSON(features_data_cadastre_95144_parcelles_json, {color: 'blue'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_95144_batiments_json
+                            $.getJSON("cadastre_95144_batiments_json", function(data_cadastre_95144_batiments_json) {
+                                var features_data_cadastre_95144_batiments_json = data_cadastre_95144_batiments_json.features;
+                                L.geoJSON(features_data_cadastre_95144_batiments_json, {color: 'red'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_95214_parcelles_json
+                            $.getJSON("cadastre_95214_parcelles_json", function(data_cadastre_95214_parcelles_json) {
+                                var features_data_cadastre_95214_parcelles_json = data_cadastre_95214_parcelles_json.features;
+                                L.geoJSON(features_data_cadastre_95214_parcelles_json, {color: 'blue'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_95214_batiments_json
+                            $.getJSON("cadastre_95214_batiments_json", function(data_cadastre_95214_batiments_json) {
+                                var features_data_cadastre_95214_batiments_json = data_cadastre_95214_batiments_json.features;
+                                L.geoJSON(features_data_cadastre_95214_batiments_json, {color: 'red'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_95387_parcelles_json
+                            $.getJSON("cadastre_95387_parcelles_json", function(data_cadastre_95387_parcelles_json) {
+                                var features_data_cadastre_95387_parcelles_json = data_cadastre_95387_parcelles_json.features;
+                                L.geoJSON(features_data_cadastre_95387_parcelles_json, {color: 'blue'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_95387_batiments_json
+                            $.getJSON("cadastre_95387_batiments_json", function(data_cadastre_95387_batiments_json) {
+                                var features_data_cadastre_95387_batiments_json = data_cadastre_95387_batiments_json.features;
+                                L.geoJSON(features_data_cadastre_95387_batiments_json, {color: 'red'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_95492_parcelles_json
+                            $.getJSON("cadastre_95492_parcelles_json", function(data_cadastre_95492_parcelles_json) {
+                                var features_data_cadastre_95492_parcelles_json = data_cadastre_95492_parcelles_json.features;
+                                L.geoJSON(features_data_cadastre_95492_parcelles_json, {color: 'blue'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_95492_batiments_json
+                            $.getJSON("cadastre_95492_batiments_json", function(data_cadastre_95492_batiments_json) {
+                                var features_data_cadastre_95492_batiments_json = data_cadastre_95492_batiments_json.features;
+                                L.geoJSON(features_data_cadastre_95492_batiments_json, {color: 'red'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_95611_parcelles_json
+                            $.getJSON("cadastre_95611_parcelles_json", function(data_cadastre_95611_parcelles_json) {
+                                var features_data_cadastre_95611_parcelles_json = data_cadastre_95611_parcelles_json.features;
+                                L.geoJSON(features_data_cadastre_95611_parcelles_json, {color: 'blue'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_95611_batiments_json
+                            $.getJSON("cadastre_95611_batiments_json", function(data_cadastre_95611_batiments_json) {
+                                var features_data_cadastre_95611_batiments_json = data_cadastre_95611_batiments_json.features;
+                                L.geoJSON(features_data_cadastre_95611_batiments_json, {color: 'red'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_95633_parcelles_json
+                            $.getJSON("cadastre_95633_parcelles_json", function(data_cadastre_95633_parcelles_json) {
+                                var features_data_cadastre_95633_parcelles_json = data_cadastre_95633_parcelles_json.features;
+                                L.geoJSON(features_data_cadastre_95633_parcelles_json, {color: 'blue'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_95633_batiments_json
+                            $.getJSON("cadastre_95633_batiments_json", function(data_cadastre_95633_batiments_json) {
+                                var features_data_cadastre_95633_batiments_json = data_cadastre_95633_batiments_json.features;
+                                L.geoJSON(features_data_cadastre_95633_batiments_json, {color: 'red'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_77010_parcelles_json
+                            $.getJSON("cadastre_77010_parcelles_json", function(data_cadastre_77010_parcelles_json) {
+                                var features_data_cadastre_77010_parcelles_json = data_cadastre_77010_parcelles_json.features;
+                                L.geoJSON(features_data_cadastre_77010_parcelles_json, {color: 'blue'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_77010_batiments_json
+                            $.getJSON("cadastre_77010_batiments_json", function(data_cadastre_77010_batiments_json) {
+                                var features_data_cadastre_77010_batiments_json = data_cadastre_77010_batiments_json.features;
+                                L.geoJSON(features_data_cadastre_77010_batiments_json, {color: 'red'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_77044_parcelles_json
+                            $.getJSON("cadastre_77044_parcelles_json", function(data_cadastre_77044_parcelles_json) {
+                                var features_data_cadastre_77044_parcelles_json = data_cadastre_77044_parcelles_json.features;
+                                L.geoJSON(features_data_cadastre_77044_parcelles_json, {color: 'blue'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_77044_batiments_json
+                            $.getJSON("cadastre_77044_batiments_json", function(data_cadastre_77044_batiments_json) {
+                                var features_data_cadastre_77044_batiments_json = data_cadastre_77044_batiments_json.features;
+                                L.geoJSON(features_data_cadastre_77044_batiments_json, {color: 'red'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_77071_parcelles_json
+                            $.getJSON("cadastre_77071_parcelles_json", function(data_cadastre_77071_parcelles_json) {
+                                var features_data_cadastre_77071_parcelles_json = data_cadastre_77071_parcelles_json.features;
+                                L.geoJSON(features_data_cadastre_77071_parcelles_json, {color: 'blue'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_77071_batiments_json
+                            $.getJSON("cadastre_77071_batiments_json", function(data_cadastre_77071_batiments_json) {
+                                var features_data_cadastre_77071_batiments_json = data_cadastre_77071_batiments_json.features;
+                                L.geoJSON(features_data_cadastre_77071_batiments_json, {color: 'red'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_77077_parcelles_json
+                            $.getJSON("cadastre_77077_parcelles_json", function(data_cadastre_77077_parcelles_json) {
+                                var features_data_cadastre_77077_parcelles_json = data_cadastre_77077_parcelles_json.features;
+                                L.geoJSON(features_data_cadastre_77077_parcelles_json, {color: 'blue'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_77077_batiments_json
+                            $.getJSON("cadastre_77077_batiments_json", function(data_cadastre_77077_batiments_json) {
+                                var features_data_cadastre_77077_batiments_json = data_cadastre_77077_batiments_json.features;
+                                L.geoJSON(features_data_cadastre_77077_batiments_json, {color: 'red'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_77089_parcelles_json
+                            $.getJSON("cadastre_77089_parcelles_json", function(data_cadastre_77089_parcelles_json) {
+                                var features_data_cadastre_77089_parcelles_json = data_cadastre_77089_parcelles_json.features;
+                                L.geoJSON(features_data_cadastre_77089_parcelles_json, {color: 'blue'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_77089_batiments_json
+                            $.getJSON("cadastre_77089_batiments_json", function(data_cadastre_77089_batiments_json) {
+                                var features_data_cadastre_77089_batiments_json = data_cadastre_77089_batiments_json.features;
+                                L.geoJSON(features_data_cadastre_77089_batiments_json, {color: 'red'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_77162_parcelles_json
+                            $.getJSON("cadastre_77162_parcelles_json", function(data_cadastre_77162_parcelles_json) {
+                                var features_data_cadastre_77162_parcelles_json = data_cadastre_77162_parcelles_json.features;
+                                L.geoJSON(features_data_cadastre_77162_parcelles_json, {color: 'blue'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_77162_batiments_json
+                            $.getJSON("cadastre_77162_batiments_json", function(data_cadastre_77162_batiments_json) {
+                                var features_data_cadastre_77162_batiments_json = data_cadastre_77162_batiments_json.features;
+                                L.geoJSON(features_data_cadastre_77162_batiments_json, {color: 'red'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_77172_parcelles_json
+                            $.getJSON("cadastre_77172_parcelles_json", function(data_cadastre_77172_parcelles_json) {
+                                var features_data_cadastre_77172_parcelles_json = data_cadastre_77172_parcelles_json.features;
+                                L.geoJSON(features_data_cadastre_77172_parcelles_json, {color: 'blue'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_77172_batiments_json
+                            $.getJSON("cadastre_77172_batiments_json", function(data_cadastre_77172_batiments_json) {
+                                var features_data_cadastre_77172_batiments_json = data_cadastre_77172_batiments_json.features;
+                                L.geoJSON(features_data_cadastre_77172_batiments_json, {color: 'red'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_77188_parcelles_json
+                            $.getJSON("cadastre_77188_parcelles_json", function(data_cadastre_77188_parcelles_json) {
+                                var features_data_cadastre_77188_parcelles_json = data_cadastre_77188_parcelles_json.features;
+                                L.geoJSON(features_data_cadastre_77188_parcelles_json, {color: 'blue'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_77188_batiments_json
+                            $.getJSON("cadastre_77188_batiments_json", function(data_cadastre_77188_batiments_json) {
+                                var features_data_cadastre_77188_batiments_json = data_cadastre_77188_batiments_json.features;
+                                L.geoJSON(features_data_cadastre_77188_batiments_json, {color: 'red'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_77196_parcelles_json
+                            $.getJSON("cadastre_77196_parcelles_json", function(data_cadastre_77196_parcelles_json) {
+                                var features_data_cadastre_77196_parcelles_json = data_cadastre_77196_parcelles_json.features;
+                                L.geoJSON(features_data_cadastre_77196_parcelles_json, {color: 'blue'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_77196_batiments_json
+                            $.getJSON("cadastre_77196_batiments_json", function(data_cadastre_77196_batiments_json) {
+                                var features_data_cadastre_77196_batiments_json = data_cadastre_77196_batiments_json.features;
+                                L.geoJSON(features_data_cadastre_77196_batiments_json, {color: 'red'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_77232_parcelles_json
+                            $.getJSON("cadastre_77232_parcelles_json", function(data_cadastre_77232_parcelles_json) {
+                                var features_data_cadastre_77232_parcelles_json = data_cadastre_77232_parcelles_json.features;
+                                L.geoJSON(features_data_cadastre_77232_parcelles_json, {color: 'blue'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_77232_batiments_json
+                            $.getJSON("cadastre_77232_batiments_json", function(data_cadastre_77232_batiments_json) {
+                                var features_data_cadastre_77232_batiments_json = data_cadastre_77232_batiments_json.features;
+                                L.geoJSON(features_data_cadastre_77232_batiments_json, {color: 'red'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_77283_parcelles_json
+                            $.getJSON("cadastre_77283_parcelles_json", function(data_cadastre_77283_parcelles_json) {
+                                var features_data_cadastre_77283_parcelles_json = data_cadastre_77283_parcelles_json.features;
+                                L.geoJSON(features_data_cadastre_77283_parcelles_json, {color: 'blue'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_77283_batiments_json
+                            $.getJSON("cadastre_77283_batiments_json", function(data_cadastre_77283_batiments_json) {
+                                var features_data_cadastre_77283_batiments_json = data_cadastre_77283_batiments_json.features;
+                                L.geoJSON(features_data_cadastre_77283_batiments_json, {color: 'red'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_77291_parcelles_json
+                            $.getJSON("cadastre_77291_parcelles_json", function(data_cadastre_77291_parcelles_json) {
+                                var features_data_cadastre_77291_parcelles_json = data_cadastre_77291_parcelles_json.features;
+                                L.geoJSON(features_data_cadastre_77291_parcelles_json, {color: 'blue'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_77291_batiments_json
+                            $.getJSON("cadastre_77291_batiments_json", function(data_cadastre_77291_batiments_json) {
+                                var features_data_cadastre_77291_batiments_json = data_cadastre_77291_batiments_json.features;
+                                L.geoJSON(features_data_cadastre_77291_batiments_json, {color: 'red'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_77293_parcelles_json
+                            $.getJSON("cadastre_77293_parcelles_json", function(data_cadastre_77293_parcelles_json) {
+                                var features_data_cadastre_77293_parcelles_json = data_cadastre_77293_parcelles_json.features;
+                                L.geoJSON(features_data_cadastre_77293_parcelles_json, {color: 'blue'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_77293_batiments_json
+                            $.getJSON("cadastre_77293_batiments_json", function(data_cadastre_77293_batiments_json) {
+                                var features_data_cadastre_77293_batiments_json = data_cadastre_77293_batiments_json.features;
+                                L.geoJSON(features_data_cadastre_77293_batiments_json, {color: 'red'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_77354_parcelles_json
+                            $.getJSON("cadastre_77354_parcelles_json", function(data_cadastre_77354_parcelles_json) {
+                                var features_data_cadastre_77354_parcelles_json = data_cadastre_77354_parcelles_json.features;
+                                L.geoJSON(features_data_cadastre_77354_parcelles_json, {color: 'blue'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_77354_batiments_json
+                            $.getJSON("cadastre_77354_batiments_json", function(data_cadastre_77354_batiments_json) {
+                                var features_data_cadastre_77354_batiments_json = data_cadastre_77354_batiments_json.features;
+                                L.geoJSON(features_data_cadastre_77354_batiments_json, {color: 'red'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_77406_parcelles_json
+                            $.getJSON("cadastre_77406_parcelles_json", function(data_cadastre_77406_parcelles_json) {
+                                var features_data_cadastre_77406_parcelles_json = data_cadastre_77406_parcelles_json.features;
+                                L.geoJSON(features_data_cadastre_77406_parcelles_json, {color: 'blue'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_77406_batiments_json
+                            $.getJSON("cadastre_77406_batiments_json", function(data_cadastre_77406_batiments_json) {
+                                var features_data_cadastre_77406_batiments_json = data_cadastre_77406_batiments_json.features;
+                                L.geoJSON(features_data_cadastre_77406_batiments_json, {color: 'red'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_77432_parcelles_json
+                            $.getJSON("cadastre_77432_parcelles_json", function(data_cadastre_77432_parcelles_json) {
+                                var features_data_cadastre_77432_parcelles_json = data_cadastre_77432_parcelles_json.features;
+                                L.geoJSON(features_data_cadastre_77432_parcelles_json, {color: 'blue'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_77432_batiments_json
+                            $.getJSON("cadastre_77432_batiments_json", function(data_cadastre_77432_batiments_json) {
+                                var features_data_cadastre_77432_batiments_json = data_cadastre_77432_batiments_json.features;
+                                L.geoJSON(features_data_cadastre_77432_batiments_json, {color: 'red'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_77480_parcelles_json
+                            $.getJSON("cadastre_77480_parcelles_json", function(data_cadastre_77480_parcelles_json) {
+                                var features_data_cadastre_77480_parcelles_json = data_cadastre_77480_parcelles_json.features;
+                                L.geoJSON(features_data_cadastre_77480_parcelles_json, {color: 'blue'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_77480_batiments_json
+                            $.getJSON("cadastre_77480_batiments_json", function(data_cadastre_77480_batiments_json) {
+                                var features_data_cadastre_77480_batiments_json = data_cadastre_77480_batiments_json.features;
+                                L.geoJSON(features_data_cadastre_77480_batiments_json, {color: 'red'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_77534_parcelles_json
+                            $.getJSON("cadastre_77534_parcelles_json", function(data_cadastre_77534_parcelles_json) {
+                                var features_data_cadastre_77534_parcelles_json = data_cadastre_77534_parcelles_json.features;
+                                L.geoJSON(features_data_cadastre_77534_parcelles_json, {color: 'blue'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_77534_batiments_json
+                            $.getJSON("cadastre_77534_batiments_json", function(data_cadastre_77534_batiments_json) {
+                                var features_data_cadastre_77534_batiments_json = data_cadastre_77534_batiments_json.features;
+                                L.geoJSON(features_data_cadastre_77534_batiments_json, {color: 'red'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_78020_parcelles_json
+                            $.getJSON("cadastre_78020_parcelles_json", function(data_cadastre_78020_parcelles_json) {
+                                var features_data_cadastre_78020_parcelles_json = data_cadastre_78020_parcelles_json.features;
+                                L.geoJSON(features_data_cadastre_78020_parcelles_json, {color: 'blue'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_78020_batiments_json
+                            $.getJSON("cadastre_78020_batiments_json", function(data_cadastre_78020_batiments_json) {
+                                var features_data_cadastre_78020_batiments_json = data_cadastre_78020_batiments_json.features;
+                                L.geoJSON(features_data_cadastre_78020_batiments_json, {color: 'red'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_78034_parcelles_json
+                            $.getJSON("cadastre_78034_parcelles_json", function(data_cadastre_78034_parcelles_json) {
+                                var features_data_cadastre_78034_parcelles_json = data_cadastre_78034_parcelles_json.features;
+                                L.geoJSON(features_data_cadastre_78034_parcelles_json, {color: 'blue'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_78034_batiments_json
+                            $.getJSON("cadastre_78034_batiments_json", function(data_cadastre_78034_batiments_json) {
+                                var features_data_cadastre_78034_batiments_json = data_cadastre_78034_batiments_json.features;
+                                L.geoJSON(features_data_cadastre_78034_batiments_json, {color: 'red'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_78246_parcelles_json
+                            $.getJSON("cadastre_78246_parcelles_json", function(data_cadastre_78246_parcelles_json) {
+                                var features_data_cadastre_78246_parcelles_json = data_cadastre_78246_parcelles_json.features;
+                                L.geoJSON(features_data_cadastre_78246_parcelles_json, {color: 'blue'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_78246_batiments_json
+                            $.getJSON("cadastre_78246_batiments_json", function(data_cadastre_78246_batiments_json) {
+                                var features_data_cadastre_78246_batiments_json = data_cadastre_78246_batiments_json.features;
+                                L.geoJSON(features_data_cadastre_78246_batiments_json, {color: 'red'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_78289_parcelles_json
+                            $.getJSON("cadastre_78289_parcelles_json", function(data_cadastre_78289_parcelles_json) {
+                                var features_data_cadastre_78289_parcelles_json = data_cadastre_78289_parcelles_json.features;
+                                L.geoJSON(features_data_cadastre_78289_parcelles_json, {color: 'blue'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_78289_batiments_json
+                            $.getJSON("cadastre_78289_batiments_json", function(data_cadastre_78289_batiments_json) {
+                                var features_data_cadastre_78289_batiments_json = data_cadastre_78289_batiments_json.features;
+                                L.geoJSON(features_data_cadastre_78289_batiments_json, {color: 'red'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_78307_parcelles_json
+                            $.getJSON("cadastre_78307_parcelles_json", function(data_cadastre_78307_parcelles_json) {
+                                var features_data_cadastre_78307_parcelles_json = data_cadastre_78307_parcelles_json.features;
+                                L.geoJSON(features_data_cadastre_78307_parcelles_json, {color: 'blue'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_78307_batiments_json
+                            $.getJSON("cadastre_78307_batiments_json", function(data_cadastre_78307_batiments_json) {
+                                var features_data_cadastre_78307_batiments_json = data_cadastre_78307_batiments_json.features;
+                                L.geoJSON(features_data_cadastre_78307_batiments_json, {color: 'red'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_78381_parcelles_json
+                            $.getJSON("cadastre_78381_parcelles_json", function(data_cadastre_78381_parcelles_json) {
+                                var features_data_cadastre_78381_parcelles_json = data_cadastre_78381_parcelles_json.features;
+                                L.geoJSON(features_data_cadastre_78381_parcelles_json, {color: 'blue'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_78381_batiments_json
+                            $.getJSON("cadastre_78381_batiments_json", function(data_cadastre_78381_batiments_json) {
+                                var features_data_cadastre_78381_batiments_json = data_cadastre_78381_batiments_json.features;
+                                L.geoJSON(features_data_cadastre_78381_batiments_json, {color: 'red'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_78410_parcelles_json
+                            $.getJSON("cadastre_78410_parcelles_json", function(data_cadastre_78410_parcelles_json) {
+                                var features_data_cadastre_78410_parcelles_json = data_cadastre_78410_parcelles_json.features;
+                                L.geoJSON(features_data_cadastre_78410_parcelles_json, {color: 'blue'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_78410_batiments_json
+                            $.getJSON("cadastre_78410_batiments_json", function(data_cadastre_78410_batiments_json) {
+                                var features_data_cadastre_78410_batiments_json = data_cadastre_78410_batiments_json.features;
+                                L.geoJSON(features_data_cadastre_78410_batiments_json, {color: 'red'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_78443_parcelles_json
+                            $.getJSON("cadastre_78443_parcelles_json", function(data_cadastre_78443_parcelles_json) {
+                                var features_data_cadastre_78443_parcelles_json = data_cadastre_78443_parcelles_json.features;
+                                L.geoJSON(features_data_cadastre_78443_parcelles_json, {color: 'blue'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_78443_batiments_json
+                            $.getJSON("cadastre_78443_batiments_json", function(data_cadastre_78443_batiments_json) {
+                                var features_data_cadastre_78443_batiments_json = data_cadastre_78443_batiments_json.features;
+                                L.geoJSON(features_data_cadastre_78443_batiments_json, {color: 'red'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_78464_parcelles_json
+                            $.getJSON("cadastre_78464_parcelles_json", function(data_cadastre_78464_parcelles_json) {
+                                var features_data_cadastre_78464_parcelles_json = data_cadastre_78464_parcelles_json.features;
+                                L.geoJSON(features_data_cadastre_78464_parcelles_json, {color: 'blue'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_78464_batiments_json
+                            $.getJSON("cadastre_78464_batiments_json", function(data_cadastre_78464_batiments_json) {
+                                var features_data_cadastre_78464_batiments_json = data_cadastre_78464_batiments_json.features;
+                                L.geoJSON(features_data_cadastre_78464_batiments_json, {color: 'red'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_78497_parcelles_json
+                            $.getJSON("cadastre_78497_parcelles_json", function(data_cadastre_78497_parcelles_json) {
+                                var features_data_cadastre_78497_parcelles_json = data_cadastre_78497_parcelles_json.features;
+                                L.geoJSON(features_data_cadastre_78497_parcelles_json, {color: 'blue'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_78497_batiments_json
+                            $.getJSON("cadastre_78497_batiments_json", function(data_cadastre_78497_batiments_json) {
+                                var features_data_cadastre_78497_batiments_json = data_cadastre_78497_batiments_json.features;
+                                L.geoJSON(features_data_cadastre_78497_batiments_json, {color: 'red'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_78516_parcelles_json
+                            $.getJSON("cadastre_78516_parcelles_json", function(data_cadastre_78516_parcelles_json) {
+                                var features_data_cadastre_78516_parcelles_json = data_cadastre_78516_parcelles_json.features;
+                                L.geoJSON(features_data_cadastre_78516_parcelles_json, {color: 'blue'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_78516_batiments_json
+                            $.getJSON("cadastre_78516_batiments_json", function(data_cadastre_78516_batiments_json) {
+                                var features_data_cadastre_78516_batiments_json = data_cadastre_78516_batiments_json.features;
+                                L.geoJSON(features_data_cadastre_78516_batiments_json, {color: 'red'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_78557_parcelles_json
+                            $.getJSON("cadastre_78557_parcelles_json", function(data_cadastre_78557_parcelles_json) {
+                                var features_data_cadastre_78557_parcelles_json = data_cadastre_78557_parcelles_json.features;
+                                L.geoJSON(features_data_cadastre_78557_parcelles_json, {color: 'blue'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_78557_batiments_json
+                            $.getJSON("cadastre_78557_batiments_json", function(data_cadastre_78557_batiments_json) {
+                                var features_data_cadastre_78557_batiments_json = data_cadastre_78557_batiments_json.features;
+                                L.geoJSON(features_data_cadastre_78557_batiments_json, {color: 'red'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_78569_parcelles_json
+                            $.getJSON("cadastre_78569_parcelles_json", function(data_cadastre_78569_parcelles_json) {
+                                var features_data_cadastre_78569_parcelles_json = data_cadastre_78569_parcelles_json.features;
+                                L.geoJSON(features_data_cadastre_78569_parcelles_json, {color: 'blue'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_78569_batiments_json
+                            $.getJSON("cadastre_78569_batiments_json", function(data_cadastre_78569_batiments_json) {
+                                var features_data_cadastre_78569_batiments_json = data_cadastre_78569_batiments_json.features;
+                                L.geoJSON(features_data_cadastre_78569_batiments_json, {color: 'red'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_78588_parcelles_json
+                            $.getJSON("cadastre_78588_parcelles_json", function(data_cadastre_78588_parcelles_json) {
+                                var features_data_cadastre_78588_parcelles_json = data_cadastre_78588_parcelles_json.features;
+                                L.geoJSON(features_data_cadastre_78588_parcelles_json, {color: 'blue'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_78588_batiments_json
+                            $.getJSON("cadastre_78588_batiments_json", function(data_cadastre_78588_batiments_json) {
+                                var features_data_cadastre_78588_batiments_json = data_cadastre_78588_batiments_json.features;
+                                L.geoJSON(features_data_cadastre_78588_batiments_json, {color: 'red'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_78623_parcelles_json
+                            $.getJSON("cadastre_78623_parcelles_json", function(data_cadastre_78623_parcelles_json) {
+                                var features_data_cadastre_78623_parcelles_json = data_cadastre_78623_parcelles_json.features;
+                                L.geoJSON(features_data_cadastre_78623_parcelles_json, {color: 'blue'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_78623_batiments_json
+                            $.getJSON("cadastre_78623_batiments_json", function(data_cadastre_78623_batiments_json) {
+                                var features_data_cadastre_78623_batiments_json = data_cadastre_78623_batiments_json.features;
+                                L.geoJSON(features_data_cadastre_78623_batiments_json, {color: 'red'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_91041_parcelles_json
+                            $.getJSON("cadastre_91041_parcelles_json", function(data_cadastre_91041_parcelles_json) {
+                                var features_data_cadastre_91041_parcelles_json = data_cadastre_91041_parcelles_json.features;
+                                L.geoJSON(features_data_cadastre_91041_parcelles_json, {color: 'blue'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_91041_batiments_json
+                            $.getJSON("cadastre_91041_batiments_json", function(data_cadastre_91041_batiments_json) {
+                                var features_data_cadastre_91041_batiments_json = data_cadastre_91041_batiments_json.features;
+                                L.geoJSON(features_data_cadastre_91041_batiments_json, {color: 'red'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_91293_parcelles_json
+                            $.getJSON("cadastre_91293_parcelles_json", function(data_cadastre_91293_parcelles_json) {
+                                var features_data_cadastre_91293_parcelles_json = data_cadastre_91293_parcelles_json.features;
+                                L.geoJSON(features_data_cadastre_91293_parcelles_json, {color: 'blue'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_91293_batiments_json
+                            $.getJSON("cadastre_91293_batiments_json", function(data_cadastre_91293_batiments_json) {
+                                var features_data_cadastre_91293_batiments_json = data_cadastre_91293_batiments_json.features;
+                                L.geoJSON(features_data_cadastre_91293_batiments_json, {color: 'red'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_91469_parcelles_json
+                            $.getJSON("cadastre_91469_parcelles_json", function(data_cadastre_91469_parcelles_json) {
+                                var features_data_cadastre_91469_parcelles_json = data_cadastre_91469_parcelles_json.features;
+                                L.geoJSON(features_data_cadastre_91469_parcelles_json, {color: 'blue'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_91469_batiments_json
+                            $.getJSON("cadastre_91469_batiments_json", function(data_cadastre_91469_batiments_json) {
+                                var features_data_cadastre_91469_batiments_json = data_cadastre_91469_batiments_json.features;
+                                L.geoJSON(features_data_cadastre_91469_batiments_json, {color: 'red'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_91546_parcelles_json
+                            $.getJSON("cadastre_91546_parcelles_json", function(data_cadastre_91546_parcelles_json) {
+                                var features_data_cadastre_91546_parcelles_json = data_cadastre_91546_parcelles_json.features;
+                                L.geoJSON(features_data_cadastre_91546_parcelles_json, {color: 'blue'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_91546_batiments_json
+                            $.getJSON("cadastre_91546_batiments_json", function(data_cadastre_91546_batiments_json) {
+                                var features_data_cadastre_91546_batiments_json = data_cadastre_91546_batiments_json.features;
+                                L.geoJSON(features_data_cadastre_91546_batiments_json, {color: 'red'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_91639_parcelles_json
+                            $.getJSON("cadastre_91639_parcelles_json", function(data_cadastre_91639_parcelles_json) {
+                                var features_data_cadastre_91639_parcelles_json = data_cadastre_91639_parcelles_json.features;
+                                L.geoJSON(features_data_cadastre_91639_parcelles_json, {color: 'blue'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_91639_batiments_json
+                            $.getJSON("cadastre_91639_batiments_json", function(data_cadastre_91639_batiments_json) {
+                                var features_data_cadastre_91639_batiments_json = data_cadastre_91639_batiments_json.features;
+                                L.geoJSON(features_data_cadastre_91639_batiments_json, {color: 'red'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_95008_parcelles_json
+                            $.getJSON("cadastre_95008_parcelles_json", function(data_cadastre_95008_parcelles_json) {
+                                var features_data_cadastre_95008_parcelles_json = data_cadastre_95008_parcelles_json.features;
+                                L.geoJSON(features_data_cadastre_95008_parcelles_json, {color: 'blue'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_95008_batiments_json
+                            $.getJSON("cadastre_95008_batiments_json", function(data_cadastre_95008_batiments_json) {
+                                var features_data_cadastre_95008_batiments_json = data_cadastre_95008_batiments_json.features;
+                                L.geoJSON(features_data_cadastre_95008_batiments_json, {color: 'red'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_95101_parcelles_json
+                            $.getJSON("cadastre_95101_parcelles_json", function(data_cadastre_95101_parcelles_json) {
+                                var features_data_cadastre_95101_parcelles_json = data_cadastre_95101_parcelles_json.features;
+                                L.geoJSON(features_data_cadastre_95101_parcelles_json, {color: 'blue'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_95101_batiments_json
+                            $.getJSON("cadastre_95101_batiments_json", function(data_cadastre_95101_batiments_json) {
+                                var features_data_cadastre_95101_batiments_json = data_cadastre_95101_batiments_json.features;
+                                L.geoJSON(features_data_cadastre_95101_batiments_json, {color: 'red'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_95395_parcelles_json
+                            $.getJSON("cadastre_95395_parcelles_json", function(data_cadastre_95395_parcelles_json) {
+                                var features_data_cadastre_95395_parcelles_json = data_cadastre_95395_parcelles_json.features;
+                                L.geoJSON(features_data_cadastre_95395_parcelles_json, {color: 'blue'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_95395_batiments_json
+                            $.getJSON("cadastre_95395_batiments_json", function(data_cadastre_95395_batiments_json) {
+                                var features_data_cadastre_95395_batiments_json = data_cadastre_95395_batiments_json.features;
+                                L.geoJSON(features_data_cadastre_95395_batiments_json, {color: 'red'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_95541_parcelles_json
+                            $.getJSON("cadastre_95541_parcelles_json", function(data_cadastre_95541_parcelles_json) {
+                                var features_data_cadastre_95541_parcelles_json = data_cadastre_95541_parcelles_json.features;
+                                L.geoJSON(features_data_cadastre_95541_parcelles_json, {color: 'blue'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_95541_batiments_json
+                            $.getJSON("cadastre_95541_batiments_json", function(data_cadastre_95541_batiments_json) {
+                                var features_data_cadastre_95541_batiments_json = data_cadastre_95541_batiments_json.features;
+                                L.geoJSON(features_data_cadastre_95541_batiments_json, {color: 'red'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_95554_parcelles_json
+                            $.getJSON("cadastre_95554_parcelles_json", function(data_cadastre_95554_parcelles_json) {
+                                var features_data_cadastre_95554_parcelles_json = data_cadastre_95554_parcelles_json.features;
+                                L.geoJSON(features_data_cadastre_95554_parcelles_json, {color: 'blue'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+
+                            // cadastre_95554_batiments_json
+                            $.getJSON("cadastre_95554_batiments_json", function(data_cadastre_95554_batiments_json) {
+                                var features_data_cadastre_95554_batiments_json = data_cadastre_95554_batiments_json.features;
+                                L.geoJSON(features_data_cadastre_95554_batiments_json, {color: 'red'}).addTo(lands_for_injecting_gas_in_france_map);
+                            });
+                      </script>
+                  </div>
+                  <div class="card-footer text-center text-muted">
+                      Green polygon represents a city connected to a gas network from this open data : https://www.data.gouv.fr/fr/datasets/communes-de-france-desservies-en-gaz/
+                      <br>
+                      Red polygon represents a building from this open data : https://cadastre.data.gouv.fr/datasets/cadastre-etalab
+                      <br>
+                      Blue polygon represents a single land in a specific city from this open data : https://cadastre.data.gouv.fr/datasets/cadastre-etalab
+                      <br>
+                      Blue point represents a place in a specific city for injection of biogas from this open data : https://www.data.gouv.fr/fr/datasets/sites-dinjection-de-biomethane-en-france/
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <br>
+
+      <!-- ad1 -->
+      {% include 'index/ad1.html' %}
+
+      <br>
+
+      <!-- Footer -->
+      {% include 'index/footer.html' %}
+
+      <br>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+    <br>
+
+    <!-- blockadblock -->
+    {% include 'index/blockadblock.html' %}
+</body>
+</html>

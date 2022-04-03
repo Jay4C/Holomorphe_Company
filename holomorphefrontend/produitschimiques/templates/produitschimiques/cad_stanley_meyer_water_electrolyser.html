@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+          crossorigin="anonymous">
+
+    <!-- title -->
+    {% include 'index/title.html' %}
+
+    <script src="https://cdn.babylonjs.com/viewer/babylon.viewer.js"></script>
+</head>
+<body>
+    <div class="container">
+      <!-- Code consent -->
+      {% include 'index/consent.html' %}
+
+      <!-- Header -->
+      {% include 'index/header.html' %}
+
+      <br>
+
+      <!-- Body -->
+      <div class="card text-center">
+          <div class="card-header">
+              <h6>
+                  Computer-aided design of Stanley Meyer's water electrolyser
+              </h6>
+              <br>
+              <a class="btn btn-outline-secondary"
+                href="https://patents.google.com/patent/US5149407A/en"
+                role="button"
+                target="_blank">Download the patent US 5,149,407</a>
+          </div>
+          <div class="card-body">
+            <div class="card">
+                <div class="card-header">
+                  Part : anode
+                </div>
+                <div id="part_anode" class="card-body">
+                    <babylon model="/static/produitschimiques/static/part_anode.glb"
+                             templates.main.params.fill-screen="true">
+                    </babylon>
+                </div>
+                <div class="card-footer text-muted">
+                    <h6>Price of this part in stainless steel 316L from Sculpteo : 23,96  euros without taxes</h6>
+                    <br>
+                    <a class="btn btn-outline-secondary"
+                        href="https://github.com/Jay4C/Python-Macros-For-FreeCAD/blob/master/Brevet_US_4_936_961_water_electrolyser/part_anode.py"
+                        role="button"
+                        target="_blank">Download the part on GitHub</a>
+                </div>
+                </div>
+
+              <br>
+
+            <div class="card">
+                <div class="card-header">
+                  Part : Bottom support
+                </div>
+                <div id="part_bottom_support" class="card-body">
+                    {% load static %}
+                    <babylon model="{% static 'produitschimiques/static/part_bottom_support.glb' %}"
+                             templates.main.params.fill-screen="true">
+                    </babylon>
+                </div>
+                <div class="card-footer text-muted">
+                    <h6>Price of this part in Nylon PA12 from Sculpteo : 1290,09 euros without taxes</h6>
+                    <a class="btn btn-outline-secondary"
+                     href="https://github.com/Jay4C/Python-Macros-For-FreeCAD/blob/master/Brevet_US_4_936_961_water_electrolyser/part_bottom_support.py"
+                     role="button" target="_blank">Download the part on GitHub</a>
+                </div>
+                </div>
+
+              <br>
+
+            <div class="card">
+                <div class="card-header">
+                  Part : Cathode
+                </div>
+                <div id="part_cathode" class="card-body">
+                    {% load static %}
+                    <babylon model="{% static 'produitschimiques/static/part_cathode.glb' %}"
+                             templates.main.params.fill-screen="true">
+                    </babylon>
+                </div>
+                <div class="card-footer text-muted">
+                    <h6>Price of this part in stainless steel 316L from Sculpteo : 34,80 euros without taxes</h6>
+                    <a class="btn btn-outline-secondary"
+                     href="https://github.com/Jay4C/Python-Macros-For-FreeCAD/blob/master/Brevet_US_4_936_961_water_electrolyser/part_cathode.py"
+                     role="button" target="_blank">Download the part on GitHub</a>
+                </div>
+                </div>
+
+              <br>
+
+            <div class="card">
+                <div class="card-header">
+                  Part : Cylinder First inductor
+                </div>
+                <div id="part_cylinder_first_inductor" class="card-body">
+                    {% load static %}
+                    <babylon model="{% static 'produitschimiques/static/part_cylinder_first_inductor.glb' %}"
+                             templates.main.params.fill-screen="true">
+                    </babylon>
+                </div>
+                <div class="card-footer text-muted">
+                    <h6>Price of this part in stainless steel 316L from Sculpteo : 125,19 euros without taxes</h6>
+                    <a class="btn btn-outline-secondary"
+                     href="https://github.com/Jay4C/Python-Macros-For-FreeCAD/blob/master/Brevet_US_4_936_961_water_electrolyser/part_cylinder_first_inductor.py"
+                     role="button" target="_blank">Download the part on GitHub</a>
+                </div>
+                </div>
+
+              <br>
+
+            <div class="card">
+                <div class="card-header">
+                  Part : Disc Anode
+                </div>
+                <div id="part_disc_anode" class="card-body">
+                    {% load static %}
+                    <babylon model="{% static 'produitschimiques/static/part_disc_anode.glb' %}"
+                             templates.main.params.fill-screen="true">
+                    </babylon>
+                </div>
+                <div class="card-footer text-muted">
+                    <h6>Price of this part in Nylon PA12 from Sculpteo : 146,77 euros without taxes</h6>
+                    <a class="btn btn-outline-secondary"
+                     href="https://github.com/Jay4C/Python-Macros-For-FreeCAD/blob/master/Brevet_US_4_936_961_water_electrolyser/part_disc_anode.py"
+                     role="button" target="_blank">Download the part on GitHub</a>
+                </div>
+                </div>
+
+              <br>
+
+            <div class="card">
+                <div class="card-header">
+                  Part : Disc Cathode
+                </div>
+                <div id="part_disc_cathode" class="card-body">
+                    {% load static %}
+                    <babylon model="{% static 'produitschimiques/static/part_disc_cathode.glb' %}"
+                             templates.main.params.fill-screen="true">
+                    </babylon>
+                </div>
+                <div class="card-footer text-muted">
+                    <h6>Price of this part in Nylon PA12 from Sculpteo : 429,72 euros without taxes</h6>
+                    <a class="btn btn-outline-secondary"
+                     href="https://github.com/Jay4C/Python-Macros-For-FreeCAD/blob/master/Brevet_US_4_936_961_water_electrolyser/part_disc_cathode.py"
+                     role="button" target="_blank">Download the part on GitHub</a>
+                </div>
+                </div>
+
+              <br>
+
+            <div class="card">
+                <div class="card-header">
+                  Part : Spacer Anode Cathode
+                </div>
+                <div id="part_spacer_anode_cathode" class="card-body">
+                    {% load static %}
+                    <babylon model="{% static 'produitschimiques/static/part_spacer_anode_cathode.glb' %}"
+                             templates.main.params.fill-screen="true">
+                    </babylon>
+                </div>
+                <div class="card-footer text-muted">
+                    <h6>Price of this part in Nylon PA12 from Sculpteo : 5,50 euros without taxes</h6>
+                    <a class="btn btn-outline-secondary"
+                     href="https://github.com/Jay4C/Python-Macros-For-FreeCAD/blob/master/Brevet_US_4_936_961_water_electrolyser/part_spacer_anode_cathode.py"
+                     role="button" target="_blank">Download the part on GitHub</a>
+                </div>
+                </div>
+
+              <br>
+
+            <div class="card">
+                <div class="card-header">
+                  Part : Spacer Bottom Support Ground
+                </div>
+                <div id="part_spacer_bottom_support_ground" class="card-body">
+                    {% load static %}
+                    <babylon model="{% static 'produitschimiques/static/part_spacer_bottom_support_ground.glb' %}"
+                             templates.main.params.fill-screen="true">
+                    </babylon>
+                </div>
+                <div class="card-footer text-muted">
+                    <h6>Price of this part in Nylon PA12 from Sculpteo : 5,50 euros without taxes</h6>
+                    <a class="btn btn-outline-secondary"
+                     href="https://github.com/Jay4C/Python-Macros-For-FreeCAD/blob/master/Brevet_US_4_936_961_water_electrolyser/part_spacer_bottom_support_ground.py"
+                     role="button" target="_blank">Download the part on GitHub</a>
+                </div>
+                </div>
+
+              <br>
+
+            <div class="card">
+                <div class="card-header">
+                  Part : Spacer Disc Anode Bottom Support
+                </div>
+                <div id="part_spacer_disc_anode_bottom_support" class="card-body">
+                    {% load static %}
+                    <babylon model="{% static 'produitschimiques/static/part_spacer_disc_anode_bottom_support.glb' %}"
+                             templates.main.params.fill-screen="true">
+                    </babylon>
+                </div>
+                <div class="card-footer text-muted">
+                    <h6>Price of this part in Nylon PA12 from Sculpteo : 5,50 euros without taxes</h6>
+                    <a class="btn btn-outline-secondary"
+                     href="https://github.com/Jay4C/Python-Macros-For-FreeCAD/blob/master/Brevet_US_4_936_961_water_electrolyser/part_spacer_disc_anode_bottom_support.py"
+                     role="button" target="_blank">Download the part on GitHub</a>
+                </div>
+                </div>
+
+              <br>
+
+            <div class="card">
+                <div class="card-header">
+                  Part : Spacer Disc Cathode Bottom Support
+                </div>
+                <div id="part_spacer_disc_cathode_bottom_support" class="card-body">
+                    {% load static %}
+                    <babylon model="{% static 'produitschimiques/static/part_spacer_disc_cathode_bottom_support.glb' %}"
+                             templates.main.params.fill-screen="true">
+                    </babylon>
+                </div>
+                <div class="card-footer text-muted">
+                    <h6>Price of this part in stainless steel 316L from Sculpteo : 5,50 euros without taxes</h6>
+                    <a class="btn btn-outline-secondary"
+                     href="https://github.com/Jay4C/Python-Macros-For-FreeCAD/blob/master/Brevet_US_4_936_961_water_electrolyser/part_spacer_disc_cathode_bottom_support.py"
+                     role="button" target="_blank">Download the part on GitHub</a>
+                </div>
+                </div>
+
+              <br>
+
+            <div class="card">
+                <div class="card-header">
+                  Part : Tank
+                </div>
+                <div id="part_tank" class="card-body">
+                    {% load static %}
+                    <babylon model="{% static 'produitschimiques/static/part_tank.glb' %}"
+                             templates.main.params.fill-screen="true">
+                    </babylon>
+                </div>
+                <div class="card-footer text-muted">
+                    <h6>Price of this part in Nylon PA12 from Sculpteo : (contact Sculpteo)</h6>
+                    <a class="btn btn-outline-secondary"
+                     href="https://github.com/Jay4C/Python-Macros-For-FreeCAD/blob/master/Brevet_US_4_936_961_water_electrolyser/part_tank.py"
+                     role="button" target="_blank">Download the part on GitHub</a>
+                </div>
+                </div>
+
+              <br>
+
+            <div class="card">
+                <div class="card-header">
+                  Part : Top Support
+                </div>
+                <div id="part_top_support" class="card-body">
+                    {% load static %}
+                    <babylon model="{% static 'produitschimiques/static/part_top_support.glb' %}"
+                             templates.main.params.fill-screen="true">
+                    </babylon>
+                </div>
+                <div class="card-footer text-muted">
+                    <h6>Price of this part in Nylon PA12 from Sculpteo : 1290,33 euros without taxes</h6>
+                    <a class="btn btn-outline-secondary"
+                     href="https://github.com/Jay4C/Python-Macros-For-FreeCAD/blob/master/Brevet_US_4_936_961_water_electrolyser/part_top_support.py"
+                     role="button" target="_blank">Download the part on GitHub</a>
+                </div>
+                </div>
+
+              <br>
+
+            <div class="card">
+                <div class="card-header">
+                  Part : Torus
+                </div>
+                <div id="part_torus" class="card-body">
+                    {% load static %}
+                    <babylon model="{% static 'produitschimiques/static/part_torus.glb' %}"
+                             templates.main.params.fill-screen="true">
+                    </babylon>
+                </div>
+                <div class="card-footer text-muted">
+                    <h6>Price of this part in stainless steel 316L from Sculpteo : 26,55 euros without taxes</h6>
+                    <a class="btn btn-outline-secondary"
+                     href="https://github.com/Jay4C/Python-Macros-For-FreeCAD/blob/master/Brevet_US_4_936_961_water_electrolyser/part_torus.py"
+                     role="button" target="_blank">Download the part on GitHub</a>
+                </div>
+                </div>
+
+              <br>
+
+              <div class="card">
+                <div class="card-header">
+                  Part : equerre assemblage plat l100
+                </div>
+                <div id="equerre_assemblage_plat_l100" class="card-body">
+                    {% load static %}
+                    <babylon model="{% static 'produitschimiques/static/equerre_assemblage_plat_l100.stl' %}"
+                             templates.main.params.fill-screen="true">
+                    </babylon>
+                </div>
+                <div class="card-footer text-muted">
+                    <h6>Price of this part : 0,30 euros without taxes</h6>
+                    <a class="btn btn-outline-secondary"
+                     href="https://github.com/Jay4C/Python-Macros-For-FreeCAD/blob/master/Brevet_US_4_936_961_water_electrolyser/equerre_assemblage_plat_l100.py"
+                     role="button" target="_blank">Download the part on GitHub</a>
+                </div>
+                </div>
+
+              <br>
+
+              <div class="card">
+                <div class="card-header">
+                  Part : ecrou m12
+                </div>
+                <div id="part_ecrou_m12" class="card-body">
+                    {% load static %}
+                    <babylon model="{% static 'produitschimiques/static/part_ecrou_m12.stl' %}"
+                             templates.main.params.fill-screen="true">
+                    </babylon>
+                </div>
+                <div class="card-footer text-muted">
+                    <h6>Price of this part : 0,20 euros without taxes</h6>
+                    <a class="btn btn-outline-secondary"
+                     href="https://github.com/Jay4C/Python-Macros-For-FreeCAD/blob/master/Brevet_US_4_936_961_water_electrolyser/part_ecrou_m12.py"
+                     role="button" target="_blank">Download the part on GitHub</a>
+                </div>
+              </div>
+
+              <br>
+
+              <div class="card">
+                <div class="card-header">
+                  Part : equerre assemblage angle droit l42
+                </div>
+                <div id="part_equerre_assemblage_angle_droit_l42" class="card-body">
+                    {% load static %}
+                    <babylon model="{% static 'produitschimiques/static/part_equerre_assemblage_angle_droit_l42.stl' %}"
+                             templates.main.params.fill-screen="true">
+                    </babylon>
+                </div>
+                <div class="card-footer text-muted">
+                    <h6>Price of this part : 0,30 euros without taxes</h6>
+                    <a class="btn btn-outline-secondary"
+                     href="https://github.com/Jay4C/Python-Macros-For-FreeCAD/blob/master/Brevet_US_4_936_961_water_electrolyser/part_equerre_assemblage_angle_droit_l42.py"
+                     role="button" target="_blank">Download the part on GitHub</a>
+                </div>
+              </div>
+
+              <br>
+
+              <div class="card">
+                <div class="card-header">
+                  Part : squelette primaire d80 l80
+                </div>
+                <div id="part_squelette_primaire_d80_l80" class="card-body">
+                    {% load static %}
+                    <babylon model="{% static 'produitschimiques/static/part_squelette_primaire_d80_l80.stl' %}"
+                             templates.main.params.fill-screen="true">
+                    </babylon>
+                </div>
+                <div class="card-footer text-muted">
+                    <h6>Price of this part : 43,92 euros without taxes</h6>
+                    <a class="btn btn-outline-secondary"
+                     href="https://github.com/Jay4C/Python-Macros-For-FreeCAD/blob/master/Brevet_US_4_936_961_water_electrolyser/part_squelette_primaire_d80_l80.py"
+                     role="button" target="_blank">Download the part on GitHub</a>
+                </div>
+              </div>
+
+              <br>
+
+              <div class="card">
+                <div class="card-header">
+                  Part : squelette secondaire d80 l80
+                </div>
+                <div id="part_squelette_secondaire_d80_l80" class="card-body">
+                    {% load static %}
+                    <babylon model="{% static 'produitschimiques/static/part_squelette_secondaire_d80_l80.stl' %}"
+                             templates.main.params.fill-screen="true">
+                    </babylon>
+                </div>
+                <div class="card-footer text-muted">
+                    <h6>Price of this part : 39,18 euros without taxes</h6>
+                    <a class="btn btn-outline-secondary"
+                     href="https://github.com/Jay4C/Python-Macros-For-FreeCAD/blob/master/Brevet_US_4_936_961_water_electrolyser/part_squelette_secondaire_d80_l80.py"
+                     role="button" target="_blank">Download the part on GitHub</a>
+                </div>
+              </div>
+
+              <br>
+
+              <div class="card">
+                <div class="card-header">
+                  Part : vis metal m12 l100
+                </div>
+                <div id="part_vis_metal_m12_l100" class="card-body">
+                    {% load static %}
+                    <babylon model="{% static 'produitschimiques/static/part_vis_metal_m12_l100.stl' %}"
+                             templates.main.params.fill-screen="true">
+                    </babylon>
+                </div>
+                <div class="card-footer text-muted">
+                    <h6>Price of this part : 0,90 euros without taxes</h6>
+                    <a class="btn btn-outline-secondary"
+                     href="https://github.com/Jay4C/Python-Macros-For-FreeCAD/blob/master/Brevet_US_4_936_961_water_electrolyser/part_vis_metal_m12_l100.py"
+                     role="button" target="_blank">Download the part on GitHub</a>
+                </div>
+              </div>
+          </div>
+      </div>
+
+      <br>
+
+      <!-- Footer -->
+      {% include 'index/footer.html' %}
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+            integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+            crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,1253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+          crossorigin="anonymous">
+
+    <!-- MathJax.js -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+
+    <!-- title -->
+    {% include 'index/title.html' %}
+</head>
+<body>
+    <div class="container">
+      <!-- Code consent -->
+      {% include 'index/consent.html' %}
+
+      <!-- Header -->
+      {% include 'index/header.html' %}
+
+      <br>
+
+      <!-- Body -->
+      <!-- Fundamental research of the US Patent US4936961A -->
+      <div class="card">
+        <div class="card-header text-center">
+          Fundamental research for the US Patent US4936961A - Part 1
+        </div>
+        <div class="card-body">
+          <!-- Capacitor -->
+          <div class="card">
+            <div class="card-header text-center">
+              Capacitor
+            </div>
+            <div class="card-body">
+              <!-- Course -->
+              <div class="card">
+                <div class="card-header text-center">
+                  Course
+                </div>
+                <div class="card-body">
+                  <h5>
+                    A capacitor is a passive linear dipole made up of two armatures separated by a dielectric.
+                    Under the action of a voltage u(t) charges will accumulate opposite one another.
+                    The capacitor is characterized by the proportionality coefficient between the amount
+                    of charge stored and the voltage: \[ \boxed{ \forall t \in reel , i(t) = C * \frac{\mathrm d u}{\mathrm d t} } \]
+                  </h5>
+
+                  <br>
+
+                  <h5>
+                    The capacitance C depends both on the geometry of the reinforcements and on the nature
+                    of the dielectric. Ex.: The capacity of a plane capacitor of section S
+                    whose dielectric has a thickness e: \[ \boxed{C = \epsilon * \frac{S}{e}} \]
+                  </h5>
+
+                  <br>
+
+                  <h5>
+                    \[ \boxed{ \epsilon = \epsilon_{0} * \epsilon_{r} } \]is the permittivity of the dielectric.
+                  </h5>
+
+                  <br>
+
+                  <h5>
+                    Energy stored: From an energy point of view, the behavior of the capacitor is very different
+                    from that of the resistance. As the latter dissipates electrical energy by transforming it
+                    into heat, the capacitor stores electrical energy when it charges and releases it when it
+                    discharges. There is very little loss of electrical energy. The charged capacitor therefore
+                    forms an energy reserve. This energy is expressed as a function of its capacity C and of the
+                    quantity of charge stored Q according to:
+                     \[ \boxed{ E = \frac{1}{2} * u * Q = \frac{1}{2} * C * u^{2} } \]
+                  </h5>
+
+                  <br>
+
+                  <h5>
+                    Electric power \[ \boxed{ P \equiv \frac{\mathrm d E}{\mathrm d t} } \]
+                    received by the capacitor is then:
+                    \[ \boxed{ \forall t \in reel , P(t) = u * C * \frac{\mathrm d u}{\mathrm d t} = u(t) * i(t) } \]
+                  </h5>
+
+                  <br>
+
+                  <h5>
+                    The capacitor is a cylindrical capacitor :
+                    \[ \boxed{ C=\frac{2*\pi*\epsilon_{water}*h}{\log_e{\frac{R_{2}}{R_{1}}}} } \]
+                  </h5>
+                </div>
+              </div>
+
+              <br>
+
+              <!-- Calculations -->
+              <div class="card">
+                <div class="card-header text-center">
+                  Calculations
+                </div>
+                <div class="card-body">
+                  <h5>
+                    We have :
+                    <br>
+                    \[ \boxed{ |Z_{C}| = \frac{1}{C.\omega} } \]
+                    <br>
+                    \[ \boxed{ |\underline{U_{C}}| = |Z_{C}|.|\underline{I_{C}}| } \]
+                    <br>
+                    \[ \boxed{ \omega = 2.\pi.f } \]
+                  </h5>
+
+                  <br>
+
+                  <h5>
+                    We have the features :
+                    <br>
+                    \[
+                    \boxed{
+                    \begin{cases}
+                    R_{1} = 6,35 * 10^{-3} \\
+                    R_{2} = 9,525 * 10^{-3} \\
+                    h = 0,1016 \\
+                    \epsilon_{r} = 80,2 \\
+                    \epsilon_{water} = 7 * 10^{-10} \\
+                    \epsilon_{vacuum} = 8,8541878128 * 10^{-12} \\
+                    C = 1,10209271 * 10^{-9} \\
+                    f = 10^{4} \\
+                    \omega = 62831,85 \\
+                    |Z_{C}| = 14441,16 \\
+                    |\underline{i_{C}}| = 0,167 \\
+                    |\underline{U_{C}}| = 2411,67
+                    \end{cases}
+                    }
+                    \]
+                  </h5>
+
+                  <br>
+
+                  <h5>
+                    \[ \boxed{h} \] is the length of the cylinders in meter ;
+                    <br>
+                    \[ \boxed{R_{1}} \] is the outside radius of the inner cylinder in meter ;
+                    <br>
+                    \[ \boxed{R_{2}} \] is the outside radius of the outside cylinder in meter ;
+                    <br>
+                    \[ \boxed{\epsilon_{vacuum}} \] is the vacuum permittivity in farad per meter ;
+                    <br>
+                    \[ \boxed{\epsilon_{r}} \] is the relative permittivity of the water without unit ;
+                    <br>
+                    \[ \boxed{\epsilon_{water}} \] is the water permittivity ;
+                    <br>
+                    \[ \boxed{C} \] is the capacitance of the capacitor included in the water bath in farad ;
+                    <br>
+                    \[ \boxed{\omega} \] is the frequency in radian per second ;
+                    <br>
+                    \[ \boxed{Z_{C}} \] is the impedance of the capacitor in ohms ;
+                    <br>
+                    \[ \boxed{I_{C}} \] is the current into the capacitor in amperes ;
+                    <br>
+                    \[ \boxed{U_{C}} \] is the voltage of the capacitor in volts ;
+                    <br>
+                    \[ \boxed{f} \] is the frequency of the circuit in Hz.
+                  </h5>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <br>
+
+          <!-- Transformer -->
+          <div class="card">
+            <div class="card-header text-center">
+              Transformer
+            </div>
+            <div class="card-body">
+              <!-- Course -->
+              <div class="card">
+                <div class="card-header text-center">
+                  Course
+                </div>
+                <div class="card-body">
+                  <h5>
+                    The transformer transfers energy (in alternative form) from a source to a load,
+                    while modifying the value of the voltage. The tension can either be raised or lowered
+                    depending on the intended use. The change from one voltage level to another is
+                    done by the effect of a magnetic field.
+                  </h5>
+
+                  <br>
+
+                  <h5>
+                    Among the transformer applications, we note: 1. Electronics: (a) low voltage power
+                    supply; (b) impedance matching 2. Electrical engineering: (a) transformation of the voltage
+                    for the transport and distribution of electricity (b) low-voltage power supply
+                    (for example, halogen lamps) 3. Measurement: (a) transformers d current intensity
+                    (b) potential transformers. There are two main types of transformers, the battleship
+                    type and the column type. In the battleship type, a magnetic circuit with three branches
+                    is used, and the windings are around the central branch. In the column type, a two-column
+                    magnetic circuit is used.
+                  </h5>
+
+                  <br>
+
+                  <h5>
+                    The transformer consists of two or more windings coupled on a magnetic core.
+                  </h5>
+
+                  <br>
+
+                  <h5>
+                    The side of the source is called the primary.
+                    The side of the load is called the secondary.
+                    The flow \[ \phi \] is the mutual flow.
+                  </h5>
+
+                  <br>
+
+                  <h5>
+                    It should be noted that there is no electrical connection between the primary and the secondary.
+                    The entire coupling between the two windings is magnetic. When an AC voltage is applied to the
+                    source, this creates an AC flux in the magnetic core. According to Faraday's law,
+                    this flux creates electromotive forces in the coils. The induced electromotive force
+                    is proportional to the number of turns in the coil and to the rate of change of flux.
+                    According to the ratio of the number of turns between the primary and the secondary,
+                    the secondary supplies the load with a voltage different from that of the source.
+                  </h5>
+
+                  <br>
+
+                  <h5>
+                    Ideal transformer
+                  </h5>
+
+                  <br>
+
+                  <h5>
+                    We define an ideal transformer with the following characteristics:
+                    1 - The resistance in the wires (primary and secondary) is zero.
+                    2 - The magnetic core is perfect \[ \boxed{ \mu_r  = \infty , \rho = 0 } \]
+                    <br>
+                    If we study the implications of these simplifications, we see that the reluctance of
+                    the core will be zero, and therefore there is no leakage. The flow is therefore
+                    completely contained inside the core. The magnetic coupling between primary and
+                    secondary is perfect; all the flow from primary goes to secondary.
+                    [A coupling parameter, k, is defined in the non-ideal case; for an ideal transformer, k = 1.]
+                  </h5>
+
+                  <br>
+
+                  <h5>
+                    We have :
+                    <br>
+                    \[ \boxed{N_{1} * I_{1} - N_{2} * I_{2} =  \Re * \phi = 0 } \]
+                  </h5>
+
+                  <br>
+
+                  <h5>
+                    \[ \boxed{N_{1}} \] is the number of turns of the primary coil of the transformer ;
+                    <br>
+                    \[ \boxed{N_{2}} \] is the number of turns of the secondary coil of the transformer ;
+                    <br>
+                    \[ \boxed{\Re} \] is the reluctance of the core ;
+                    <br>
+                    \[ \boxed{\phi} \] is the magnetic flow in the core.
+                  </h5>
+
+                  <br>
+
+                  <h5>
+                    The transformation ratio (a without unit) is defined as the ratio of the number of turns
+                    of the transformer. So :
+                    <br>
+                    \[ \boxed{a = \frac{N_{1}}{N_{2}} = \frac{V_{1}}{V_{2}}} \]
+                    <br>
+                    \[ \boxed{V_{1}} \] is the voltage across the primary coil of the transformer in volt;
+                    <br>
+                    \[ \boxed{V_{2}} \] is the voltage across the secondary coil of the transformer in volt
+                  </h5>
+
+                  <br>
+
+                  <h5>
+                    Hence we find :
+                    <br>
+                    \[ \boxed{\frac{I_{1}}{I_{2}} = \frac{N_{2}}{N_{1}} = \frac{1}{a}} \]
+                    <br>
+                    \[ \boxed{I_{1}} \] is the current into the primary coil of the transformer in ampere;
+                    <br>
+                    \[ \boxed{I_{2}} \] is the current into the secondary coil of the transformer in ampere
+                  </h5>
+
+                  <br>
+
+                  <h5>
+                    Toroidal transformers
+                  </h5>
+
+                  <br>
+
+                  <h5>
+                    Toroidal transformers are inductors and transformers which use magnetic cores
+                    with a toroidal (ring or donut) shape. They are passive electronic components, consisting
+                    of a circular ring or donut shaped magnetic core of ferromagnetic material such as laminated
+                    iron, iron powder, or ferrite, around which wire is wound. though in the past, closed-core
+                    inductors and transformers often used cores with a square shape, the use of toroidal-shaped
+                    cores has increased greatly because of their superior electrical performance. The advantage
+                    of the toroidal shape is that, due to its symmetry, the amount of magnetic flux that escapes
+                    outside the core (leakage flux) is low, therefore it is more efficient and thus radiates less
+                    electromagnetic interference (EMI). Toroidal inductors and transformers are used in a wide
+                    range of electronic circuits: power supplies, inverters, and amplifiers, which in turn are
+                    used in the vast majority of electrical equipment: TVs, radios, computers, and audio systems.
+                  </h5>
+
+                  <br>
+
+                  <h5>
+                    In general, a toroidal inductor/transformer is more compact than other shaped cores because
+                    they are made of fewer materials and include a centering washer, nuts, and bolts resulting in
+                    up to a 50% lighter weight design. This is especially the case for power devices. Because
+                    the toroid is a closed-loop core it will have a higher magnetic field and thus higher
+                    inductance and Q factor than an inductor of the same mass with a straight core
+                    (solenoid coils). This is because most of the magnetic field is contained within the core.
+                    By comparison, with an inductor with a straight core, the magnetic field emerging from one
+                    end of the core has a long path through air to enter the other end. In addition, because
+                    the windings are relatively short and wound in a closed magnetic field, a toroidal
+                    transformer will have a lower secondary impedance which will increase efficiency,
+                    electrical performance and reduce effects such as distortion and fringing.
+                    Due to the symmetry of a toroid, little magnetic flux escapes from the core (leakage flux).
+                    Thus a toroidal inductor/transformer, radiates less electromagnetic
+                    interference (EMI) to adjacent circuits and is an ideal choice for highly concentrated
+                    environments. Manufacturers have adopted toroidal coils in recent years to comply with
+                    increasingly strict international standards limiting the amount of electromagnetic field
+                    consumer electronics can produce.
+                  </h5>
+                </div>
+              </div>
+
+              <br>
+
+              <!-- Calculations -->
+              <div class="card">
+                <div class="card-header text-center">
+                  Calculations
+                </div>
+                <div class="card-body">
+                  <h5>
+                    We have the features :
+                  </h5>
+
+                  <br>
+
+                  <h5>
+                    \[
+                    \boxed{
+                    \begin{cases}
+                    N_{1} = 200 \\
+                    N_{2} = 600 \\
+                    A = 9.10^{-6} \\
+                    l_{1} = 1.10^{-2} \\
+                    l_{2} = 1.10^{-2} \\
+                    \mu_{r} = 1,26.10^{-4} \\
+                    L_{1} = 0,004536 \\
+                    L_{2} = 0,040824 \\
+                    a = \frac{1}{3} \\
+                    V_{1} = 26 \\
+                    V_{2} = 78 \\
+                    I_{1} = 0,5 \\
+                    I_{2} = 0,167 \\
+                    D_{o} = 39 \\
+                    T_{c} = 3 \\
+                    T_{D_{o} - D_{i}} = 7
+                    \end{cases}
+                    }
+                    \]
+                  </h5>
+
+                  <br>
+
+                  <h5>
+                    \[ \boxed{\mu_{r}} \] is the relative permeability of the magnetic circuit in henry per meter ;
+                    <br>
+                    \[ \boxed{D_{o}} \] is the outside diameter of the toroid core in millimeter ;
+                    <br>
+                    \[ \boxed{T_{c}} \] is the thickness of the toroid core in millimeter ;
+                    <br>
+                    \[ \boxed{T_{D_{o} - D_{i}}} \] is the space between the outside diameter and inside diameter in millimeter ;
+                    <br>
+                    \[ \boxed{A} \] is the area of the toroid core in square meter
+                    <br>
+                    \[ \boxed{L_{1}} \] is the inductance of the primary winding of the transformer in henry ;
+                    <br>
+                    \[ \boxed{L_{2}} \] is the inductance of the secondary winding of the transformer in henry ;
+                    <br>
+                    \[ \boxed{l_{1}} \] is the length of the primary winding of the transformer in meter ;
+                    <br>
+                    \[ \boxed{l_{2}} \] is the length of the secondary winding of the transformer in meter
+                  </h5>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <br>
+
+          <!-- Inductor -->
+          <div class="card">
+            <div class="card-header text-center">
+              Inductor
+            </div>
+            <div class="card-body">
+              <!-- Course -->
+              <div class="card">
+                <div class="card-header text-center">
+                  Course
+                </div>
+                <div class="card-body">
+                  <h5>
+                    A coil is formed from a wire wound either in air or on a magnetic core.
+                    A driver traveled by a current i(t) creates a magnetic field, of flux
+                    <br>
+                    \[ \boxed{\Phi} \]
+                    <br>
+                    , such than :
+                    <br>
+                    \[ \boxed{ \forall t \in reel , \Phi = L * i(t)} \]
+                  </h5>
+
+                  <br>
+
+                  <h5>
+                    The coefficient L is the inductance of the coil. Lenz-Faraday's law links the flow
+                    <br>
+                    \[ \boxed{\Phi} \]
+                    <br>
+                     to the f.é.m. u:
+                    <br>
+                    \[ \boxed{ \forall t \in reel , u(t) = L * \frac{\mathrm d \Phi}{\mathrm d t}} \]
+                  </h5>
+
+                  <br>
+
+                  <h5>
+                    The electrical characteristic of a coil is then given by :
+                    <br>
+                    \[ \boxed{ \forall t \in reel , u(t) = L * \frac{\mathrm d i}{\mathrm d t}} \]
+                  </h5>
+
+                  <br>
+
+                  <h5>
+                    The inductance L of a coil depends on the geometry, the number of turns N, the magnetic circuit.
+                    Ex. : The inductance of a solenoid in air with 1 layer of N turns, of section
+                    <br>
+                    \[ \boxed{S = \pi * r^{2}} \]
+                    <br>
+                    and of length
+                    <br>
+                    \[ \boxed{l \gg r} \]
+                    <br>
+                    :
+                    <br>
+                    \[ \boxed{L = \mu_{0} * \frac{S * N^{2}}{l}} \]
+                    <br>
+                    \[ \boxed{\mu_{0} = 4 * \pi * 10^{-7} H/m} \]
+                    <br>
+                    is the permeability of the vacuum.
+                    <br>
+                    L in henry ; S in square meter ; l in meter ; r in meter.
+                    <br>
+                    One of the useful characteristics of a winding produced with any magnetic core is the value
+                    <br>
+                    \[ \boxed{L = \mu_{0} * \mu_{r} * \frac{S * N^{2} * S_{m}}{l_{m}}} \]
+                    <br>
+                    \[ \boxed{\mu_{r}} \]
+                    <br>
+                    : the relative permeability of the magnetic circuit;
+                    <br>
+                    \[ \boxed{S_{m}, l_{m}} \]
+                    <br>
+                    : area and average length.
+                  </h5>
+
+                  <br>
+
+                  <h5>
+                    A coil stores energy in electromagnetic form when a current flows through it.
+                    The energy stored in a coil crossed by a current i at time t :
+                    <br>
+                    \[ \boxed{E = \frac{1}{2} * L * i^{2}} \]
+                    <br>
+                    The power supplied to the inductor :
+                    <br>
+                    \[ \boxed{ \forall t \in reel , P(t) = \frac{1}{2} * L * \frac{\mathrm d i^{2}(t)}{\mathrm d t} } \]
+                    <br>
+                    It is difficult to quickly vary the current flowing in a coil,
+                    especially since the value of its inductance L will be large.
+                  </h5>
+
+                  <br>
+
+                  <h5>
+                    An ideal coil would have no loss of energy, but in reality, the conductor used for the
+                    winding also has a certain resistance which causes losses by Joule effect.
+                    The fact that the stored energy corresponds to a current flow gives the coil an inertia
+                    effect for the current. In particular, this current cannot be discontinuous.
+                    The use of a magnetic core makes it possible to reduce the number of turns for a given
+                    inductance, therefore the losses by Joule effect. However, there are also two types of losses
+                    in magnetic cores: 1. Losses by hysteresis proportional to the frequency; 2. The eddy current
+                    losses proportional to the square of the frequency. To account for these losses, a loss
+                    resistance R is introduced in series with L, or a resistance in parallel
+                    <br>
+                    \[ \boxed{R_{p}} \]
+                  </h5>
+
+                  <br>
+
+                  <h5>
+                    Due to these physical properties, the coils are components that can hardly be miniaturized,
+                    and therefore very little used in on-board electronic circuits and even less in integrated
+                    circuits (ICs). Main characteristics of the inductors: The value of the inductor;
+                    Resistance of losses; The admissible current; Temperature coefficient,
+                    <br>
+                    \[ \boxed{\alpha} \]
+                  </h5>
+
+                  <br>
+
+                  <h5>
+                    Different categories: Air coils: Low inductance, Limited magnetic saturation,
+                    eg. used for high frequencies; Ferrite core coils: High inductance (for inductances
+                    from 0: 1 microH to 10 mH there are “miniature” coils resembling resistors.),
+                    Common frequency ranges 1 kHz to 100 kHz (but it is possible to extend to 1 GHz.)
+                    Close to saturation, the presence of the nucleus introduces non-linearities.
+                  </h5>
+                </div>
+              </div>
+
+              <br>
+
+              <!-- Calculations -->
+              <div class="card">
+                <div class="card-header text-center">
+                  Calculations
+                </div>
+                <div class="card-body">
+                  <h5>
+                    We have the features :
+                  </h5>
+
+                  <br>
+
+                  <h5>
+                    \[
+                    \boxed{
+                    \begin{cases}
+                    N = 100 \\
+                    r = 1,27 * 10^{-2} \\
+                    S = \pi * r^{2} = 5,1 * 10^{-4} \\
+                    l = 10 * 10^{-2} \\
+                    \mu_{0} = 4 * \pi * 10^{-7} \\
+                    L = 6,4 * 10^{-5}
+                    \end{cases}
+                    }
+                    \]
+                  </h5>
+
+                  <br>
+
+                  <h5>
+                    N in turns ; r in meter ; S in meter^(2) ; l in meter ; L in henry ;
+                    <br>
+                    \[ \mu_{0} \]
+                    <br>
+                    in henry per meter.
+                  </h5>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <br>
+
+          <!-- Efficiency -->
+          <div class="card">
+            <div class="card-header text-center">
+              Efficiency
+            </div>
+            <div class="card-body">
+              <!-- Course -->
+              <div class="card">
+                <div class="card-header text-center">
+                  Course
+                </div>
+                <div class="card-body">
+                  <h5>
+                    The mass per mol of hydrogen is equal to 1 gramm per mol.
+                    <br>
+                    Chemical formula for water electrolysis :
+                    <br>
+                    Cathode :
+                    <br>
+                    \[
+                    \boxed{
+                    \ce{2H+} + \ce{2e-} -> \ce{H2_{(g)}}
+                    }
+                    \]
+                    <br>
+                    Anode :
+                    <br>
+                    \[
+                    \boxed{
+                    \ce{2H2O_{(l)}} -> \ce{O2_{(g)}} + \ce{4H+_{(aq)}} + \ce{4e-}
+                    }
+                    \]
+                    <br>
+                    Final reaction :
+                    <br>
+                    \[
+                    \boxed{
+                    \ce{2H2O_{(l)}} -> \ce{O2_{(g)}} + \ce{H2_{(g)}}
+                    }
+                    \]
+                  </h5>
+                </div>
+              </div>
+
+              <br>
+
+              <!-- Calculations -->
+              <div class="card">
+                <div class="card-header text-center">
+                  Calculations
+                </div>
+                <div class="card-body">
+                  <h5>
+                    We have :
+                    <br>
+                    \[
+                    \boxed{
+                    \begin{cases}
+                    M_{H_{2}} = 2 \\
+                    \forall t \in reel , n_{H_{2}}(t) = \frac{n_{e_{-}}(t)}{2} \\
+                    \forall t \in reel , m_{H_{2}}(t) = n_{H_{2}}(t) . M_{H_{2}} \\
+                    PCI_{H_{2}} = 34 \\
+                    C = 1,10209271 . 10^{-9} \\
+                    L = 2,03 . 10^{-5} \\
+                    f = 10^{4} \\
+                    F = 96500 \\
+                    T = \frac{1}{f} = 10^{-4} \\
+                    U_{2} = 78
+                    \end{cases}
+                    }
+                    \]
+                  </h5>
+
+                  <br>
+
+                  <h5>
+                    \[ \boxed{ F } \]
+                    <br>
+                    is the Faraday constant in coulomb per mol ;
+                    <br>
+                    \[ \boxed{U_{2}} \]
+                    <br>
+                    is the voltage of the secondary coil of the transformer ;
+                    <br>
+                    \[ \boxed{f} \]
+                    <br>
+                    is the frequency of signal in Hz ;
+                    <br>
+                    \[ \boxed{M_{H_{2}}} \]
+                    <br>
+                    is the molar mass of the dihydrogen in g per mol ;
+                    <br>
+                    \[ \boxed{PCI_{H_{2}}} \]
+                    <br>
+                    is the energy of dihydrogen in kWh per kg ;
+                    <br>
+                    \[ \boxed{n_{e_{-}}} \]
+                    <br>
+                    is the quantity of matter of electrons in mol ;
+                    <br>
+                    \[ \boxed{n_{H_{2}}} \]
+                    <br>
+                    is the quantity of matter of dihydrogen in mol ;
+                    <br>
+                    \[ \boxed{m_{H_{2}}} \]
+                    <br>
+                    is the mass of dihydrogen produced in kg ;
+                    <br>
+                    \[ \boxed{L} \]
+                    <br>
+                    is the inductance of the coil in henry ;
+                  </h5>
+
+                  <br>
+
+                  <h5>
+                    We are here to resolve any ordinary differential equation with the reel world.
+                    <br>
+                    Between 0 and the half of the period, we have the following electronic circuit :
+                  </h5>
+
+                  <br>
+
+                  <h5>
+                    Thanks to the law of voltages, we have :
+                    <br>
+                    \[
+                    \boxed{
+                    \begin{aligned}
+                    \forall t \in reel , U_{2} = 2 . U_{L}^{(1)}(t) + U_{C}^{(1)}(t) \iff 78 = 2 . L .
+                    \frac{\mathrm d i_{C}^{(1)}(t)}{\mathrm d t} + U_{C}^{(1)}(t) \\
+                    \iff 78 = 2 . L . C . \frac{\mathrm d^{2} U_{C}^{(1)}(t)}{\mathrm d t^{2}} + U_{C}^{(1)}(t) \\
+                    \iff \frac{\mathrm d^{2} U_{C}^{(1)}(t)}{\mathrm d t^{2}}
+                    + \frac{U_{C}^{(1)}(t)}{2.L.C} - \frac{78}{2.L.C} = 0 \\
+                    \iff \frac{\mathrm d^{2} U_{C}^{(1)}(t)}{\mathrm d t^{2}}
+                    + 22,35.10^{12}.U_{C}^{(1)}(t) - 1,7.10^{15} = 0
+                    \end{aligned}
+                    }
+                    \]
+                  </h5>
+
+                  <br>
+
+                  <h5>
+                    \[
+                    \boxed{
+                    \begin{cases}
+                    \alpha = \frac{1}{2.L.C} \\
+                    \beta = \frac{78}{2.L.C} \\
+                    \omega = \sqrt{\alpha} \\
+                    (E):\frac{\mathrm d^{2} U_{C}^{(1)}(t)}{\mathrm d t^{2}} + \alpha.U_{C}^{(1)}(t) = \beta
+                    \end{cases}
+                    }
+                    \]
+                  </h5>
+
+                  <br>
+
+                  <h5>
+                    The homogeneous equation :
+                    <br>
+                    \[
+                    \boxed{
+                    \forall t \in reel , \frac{\mathrm d^{2} U_{C}^{(1)}(t)}{\mathrm d t^{2}} + \alpha.U_{C}^{(1)}(t) = 0
+                    }
+                    \]
+                    <br>
+                    has for solutions :
+                    <br>
+                    \[
+                    \boxed{
+                    \forall (\gamma, \lambda) \in reel, t \in [0; \frac{T}{2}], U^{(1)}_{C}(t) =
+                    \gamma.\cos(\omega.t) + \lambda.\sin(\omega.t)
+                    }
+                    \]
+                  </h5>
+
+                  <br>
+
+                  <h5>
+                    \[ \boxed{ \beta } \]
+                    <br>
+                    is a polynomial function, so (E) owns a particular solution of the form P where
+                    P is a polynomial function as the same degree as
+                    <br>
+                    \[ \boxed{ \beta } \]
+                  </h5>
+
+                  <br>
+
+                  <h5>
+                    Hence,
+                    <br>
+                    \[ \boxed{ t \in [0; \frac{T}{2}], P(t) = a } \]
+                    <br>
+                    where
+                    <br>
+                    \[ \boxed{ a \in reel. } \]
+                  </h5>
+
+                  <br>
+
+                  <h5>
+                    Find the value of a in injecting it into (E).
+                  </h5>
+
+                  <br>
+
+                  <h5>
+                    P is a particular solution of (E), so :
+                    <br>
+                    \[
+                    \boxed{
+                    \begin{aligned}
+                    \frac{\mathrm d^{2} P(t)}{\mathrm d t^{2}} + \alpha.P(t) = \beta \iff 0 + a.\alpha = \beta \\
+                    \iff a = \frac{\beta}{\alpha} = 78
+                    \end{aligned}
+                    }
+                    \]
+                  </h5>
+
+                  <br>
+
+                  <h5>
+                    Hence,
+                    <br>
+                    \[
+                    \boxed{
+                    t \in [0; \frac{T}{2}], P(t) = 78
+                    }
+                    \]
+                  </h5>
+
+                  <br>
+
+                  <h5>
+                    All solution of (E) is sum of a particular solution of the homogeneous equation associated of
+                    (E) and a particular solution of (E).
+                  </h5>
+
+                  <br>
+
+                  <h5>
+                    Hence,
+                    <br>
+                    \[
+                    \boxed{
+                    \forall (\gamma, \lambda) \in reel, t \in [0; \frac{T}{2}], U^{(1)}_{C}(t) =
+                    \gamma.\cos(\omega.t) + \lambda.\sin(\omega.t) + 78
+                    }
+                    \]
+                  </h5>
+
+                  <br>
+
+                  <h5>
+                    Hence,
+                    <br>
+                    \[
+                    \boxed{
+                    \begin{aligned}
+                    \forall (\gamma, \lambda) \in reel, t \in [0; \frac{T}{2}], Q^{(1)}(t) &= C . U^{(1)}_{C}(t) \\
+                    &= C . (\gamma.\cos(\omega.t) + \lambda.\sin(\omega.t) + 78)
+                    \end{aligned}
+                    }
+                    \]
+                  </h5>
+
+                  <br>
+
+                  <h5>
+                    Hence,
+                    <br>
+                    \[
+                    \boxed{
+                    \begin{aligned}
+                    \forall (\gamma, \lambda) \in reel, t \in [0; \frac{T}{2}], i^{(1)}_{C}(t)
+                    &= C . \frac{\mathrm d U_{C}^{(1)}(t)}{\mathrm d t} \\
+                    &= C . \frac{\mathrm d (\gamma.\cos(\omega.t) + \lambda.\sin(\omega.t) + 78) }{\mathrm d t} \\
+                    &= C . (-\gamma.\omega.\sin(\omega.t) + \lambda.\omega.\cos(\omega.t)) \\
+                    &= C . \omega . (\lambda.\cos(\omega.t)) -\gamma.\sin(\omega.t))
+                    \end{aligned}
+                    }
+                    \]
+                  </h5>
+
+                  <br>
+
+                  <h5>
+                    Hence,
+                    <br>
+                    \[
+                    \boxed{
+                    \begin{aligned}
+                    \forall (\gamma, \lambda) \in reel, t \in [0; \frac{T}{2}], n_{e^{-}}^{(1)}(t) &= \frac{Q^{(1)}(t)}{F} \\
+                    &= \frac{C . (\gamma.\cos(\omega.t) + \lambda.\sin(\omega.t) + 78)}{F}
+                    \end{aligned}
+                    }
+                    \]
+                  </h5>
+
+                  <br>
+
+                  <h5>
+                    Hence,
+                    <br>
+                    \[
+                    \boxed{
+                    \begin{aligned}
+                    \forall (\gamma, \lambda) \in reel, t \in [0; \frac{T}{2}], n_{H_{2}}^{(1)}(t)
+                    &= \frac{n_{e^{-}}^{(1)}(t)}{2} \\
+                    &= \frac{C . (\gamma.\cos(\omega.t) + \lambda.\sin(\omega.t) + 78)}{2.F}
+                    \end{aligned}
+                    }
+                    \]
+                  </h5>
+
+                  <br>
+
+                  <h5>
+                    Hence,
+                    <br>
+                    \[
+                    \boxed{
+                    \begin{aligned}
+                    \forall (\gamma, \lambda) \in reel, t \in [0; \frac{T}{2}], m_{H_{2}}^{(1)}(t)
+                    &= n_{H_{2}}^{(1)}(t) . M_{H_{2}} \\
+                    &= \frac{C . (\gamma.\cos(\omega.t) + \lambda.\sin(\omega.t) + 78)}{F}
+                    \end{aligned}
+                    }
+                    \]
+                  </h5>
+
+                  <br>
+
+                  <h5>
+                    Hence,
+                    <br>
+                    \[
+                    \boxed{
+                    \begin{aligned}
+                    \forall (\gamma, \lambda) \in reel, t \in [0; \frac{T}{2}], E_{H_{2}}^{(1)}(t)
+                    &= PCI_{H_{2}} . m_{H_{2}}^{(1)}(t) \\
+                    &= \frac{34 . C . (\gamma.\cos(\omega.t) + \lambda.\sin(\omega.t) + 78)}{F}
+                    \end{aligned}
+                    }
+                    \]
+                  </h5>
+
+                  <br>
+
+                  <h5>
+                    Hence,
+                    <br>
+                    \[
+                    \boxed{
+                    \begin{aligned}
+                    \forall (\gamma, \lambda) \in reel, t \in [0; \frac{T}{2}], E_{Transfo}^{(1)}(t)
+                    &= U_{2}(t).i_{C}^{(1)}(t).t \\
+                    &= 78.C.\frac{\mathrm d U_{C}^{(1)}(t)}{\mathrm d t}.t \\
+                    &= 78.t.C.\omega.(\lambda.\cos(\omega.t)) -\gamma.\sin(\omega.t))
+                    \end{aligned}
+                    }
+                    \]
+                  </h5>
+
+                  <br>
+
+                  <h5>
+                    Between the half of the period and the period, we have the following electronic circuit :
+                  </h5>
+
+                  <br>
+
+                  <h5>
+                    Thanks to the law of voltages, we have :
+                    <br>
+                    \[
+                    \boxed{
+                    (E):\frac{\mathrm d^{2} U_{C}^{(1)}(t)}{\mathrm d t^{2}} + U_{C}^{(1)}(t).\alpha = 0
+                    }
+                    \]
+                    <br>
+                    where
+                    <br>
+                    \[ \boxed{\alpha = \frac{1}{(L_{2}+2.L).C}} \]
+                  </h5>
+
+                  <br>
+
+                  <h5>
+                    The characteristic equation of the equation (E) is :
+                    <br>
+                    \[ \boxed{X^{2} + \alpha = 0} \]
+                  </h5>
+
+                  <br>
+
+                  <h5>
+                    Let
+                    <br>
+                    \[ \boxed{ \varDelta } \]
+                    <br>
+                    be the discriminant of the characteristic equation of the equation (E).
+                  </h5>
+
+                  <br>
+
+                  <h5>
+                    We have :
+                    <br>
+                    \[
+                    \boxed{
+                    \varDelta = 0^{2} - 4.1.\alpha < 0
+                    }
+                    \]
+                  </h5>
+
+                  <br>
+
+                  <h5>
+                    Let r1 and r2 be the complex roots of the characteristic equation of the equation (E).
+                    <br>
+                    We have :
+                    <br>
+                    \[
+                    \boxed{
+                    \begin{cases}
+                    r1 = \frac{ -0 -i.\sqrt{ | \varDelta | } }{2.1} = -i.\sqrt{\alpha} \\
+                    r2 = i.\sqrt{\alpha}
+                    \end{cases}
+                    }
+                    \]
+                  </h5>
+
+                  <br>
+
+                  <h5>
+                    Hence,
+                    <br>
+                    \[
+                    \boxed{
+                    \forall (\gamma, \lambda) \in reel, t \in [\frac{T}{2}; T], U_{C}^{(2)}(t) = \gamma.\cos(\omega.t)
+                    + \lambda.\sin(\omega.t)
+                    }
+                    \]
+                    <br>
+                    where
+                    <br>
+                    \[
+                    \boxed{
+                    \omega = \sqrt{\alpha}
+                    }
+                    \]
+                  </h5>
+
+                  <br>
+
+                  <h5>
+                    Hence,
+                    <br>
+                    \[
+                    \boxed{
+                    \begin{aligned}
+                    \forall (\gamma, \lambda) \in reel, t \in [\frac{T}{2}; T], Q^{(2)}(t) &= C . U_{C}^{(2)}(t) \\
+                    &= C . ( \gamma.\cos(\omega.t) + \lambda.\sin(\omega.t) )
+                    \end{aligned}
+                    }
+                    \]
+                  </h5>
+
+                  <br>
+
+                  <h5>
+                    Hence,
+                    <br>
+                    \[
+                    \boxed{
+                    \begin{aligned}
+                    \forall (\gamma, \lambda) \in reel, t \in [\frac{T}{2}; T], i_{C}^{(2)}(t)
+                    &= C . \frac{\mathrm d U_{C}^{(2)}(t)}{\mathrm d t} \\
+                    &= C . \frac{\mathrm d ( \gamma.\cos(\omega.t) + \lambda.\sin(\omega.t) ) }{\mathrm d t} \\
+                    &= C . (-\gamma.\omega.\sin(\omega.t) + \lambda.\omega.\cos(\omega.t)) \\
+                    &= C . \omega . ( \lambda.\cos(\omega.t) - \gamma.\sin(\omega.t) )
+                    \end{aligned}
+                    }
+                    \]
+                  </h5>
+
+                  <br>
+
+                  <h5>
+                    Hence,
+                    <br>
+                    \[
+                    \boxed{
+                    \begin{aligned}
+                    \forall (\gamma, \lambda) \in reel, t \in [\frac{T}{2}; T], n_{e^{-}}^{(2)}(t) &= \frac{Q^{(2)}(t)}{F} \\
+                    &= \frac{C . ( \gamma.\cos(\omega.t) + \lambda.\sin(\omega.t) )}{F}
+                    \end{aligned}
+                    }
+                    \]
+                  </h5>
+
+                  <br>
+
+                  <h5>
+                    Hence,
+                    <br>
+                    \[
+                    \boxed{
+                    \begin{aligned}
+                    \forall (\gamma, \lambda) \in reel, t \in [\frac{T}{2}; T], n_{H_{2}}^{(2)}(t)
+                    &= \frac{ n_{e^{-}}^{(2)}(t) }{2} \\
+                    &= \frac{C . ( \gamma.\cos(\omega.t) + \lambda.\sin(\omega.t) ) }{2.F}
+                    \end{aligned}
+                    }
+                    \]
+                  </h5>
+
+                  <br>
+
+                  <h5>
+                    Hence,
+                    <br>
+                    \[
+                    \boxed{
+                    \begin{aligned}
+                    \forall (\gamma, \lambda) \in reel, t \in [\frac{T}{2}; T], m_{H_{2}}^{(2)}(t)
+                    &= n_{H_{2}}^{(2)}(t) . M_{H_{2}} \\
+                    &= \frac{ C.(\gamma.\cos(\omega.t) + \lambda.\sin(\omega.t)).2}{2.F} \\
+                    &= \frac{C.(\gamma.\cos(\omega.t) + \lambda.\sin(\omega.t)) }{F}
+                    \end{aligned}
+                    }
+                    \]
+                  </h5>
+
+                  <br>
+
+                  <h5>
+                    Hence,
+                    <br>
+                    \[
+                    \boxed{
+                    \begin{aligned}
+                    \forall (\gamma, \lambda) \in reel, t \in [\frac{T}{2}; T], E_{H_{2}}^{(2)}(t)
+                    &= PCI_{H_{2}} . m_{H_{2}}^{(2)}(t) \\
+                    &= \frac{34.C.(\gamma.\cos(\omega.t) + \lambda.\sin(\omega.t))}{F}
+                    \end{aligned}
+                    }
+                    \]
+                  </h5>
+
+                  <br>
+
+                  <h5>
+                    Hence,
+                    <br>
+                    \[
+                    \boxed{
+                    \begin{aligned}
+                    t \in [\frac{T}{2}; T], E_{Transfo}^{(2)}(t) &= U_{2}(t).i_{C}^{(2)}(t).t \\
+                    &= 0.i_{C}^{(2)}(t).t \\
+                    &= 0
+                    \end{aligned}
+                    }
+                    \]
+                  </h5>
+
+                  <br>
+
+                  <h5>
+                    Hence,
+                    <br>
+                    \[
+                    \boxed{
+                    \begin{aligned}
+                    \forall (\gamma, \lambda) \in reel, t \in [0; \frac{T}{2}], \eta^{(1)}(t)
+                    &= \frac{ E_{H_{2}}^{(1)}(t) }{ E_{Transfo}^{(1)}(t) } \\
+                    &= \frac{ \frac{34 . C . (\gamma.\cos(\omega.t) + \lambda.\sin(\omega.t) + 78)}{F} }
+                    { 78.t.C.\omega.(\lambda.\cos(\omega.t)) -\gamma.\sin(\omega.t)) } \\
+                    &= \frac{34.C.(\gamma.\cos(\omega.t) + \lambda.\sin(\omega.t) + 78)}
+                    {F.78.t.C.\omega.(\lambda.\cos(\omega.t)) -\gamma.\sin(\omega.t))} \\
+                    &= \frac{17.(\gamma.\cos(\omega.t) + \lambda.\sin(\omega.t) + 78)}
+                    {39.F.t.\omega.(\lambda.\cos(\omega.t)) -\gamma.\sin(\omega.t))}
+                    \end{aligned}
+                    }
+                    \]
+                  </h5>
+
+                  <br>
+
+                  <h5>
+                    Hence,
+                    <br>
+                    \[
+                    \boxed{
+                    \begin{aligned}
+                    \forall (\gamma, \lambda) \in reel, t \in [\frac{T}{2} ; T], \eta^{(2)}(t)
+                    &= \frac{ E_{H_{2}}^{(2)}(t) }{ E_{Transfo}^{(2)}(t) } \\
+                    &= \frac{ \frac{34.C.(\gamma.\cos(\omega.t) + \lambda.\sin(\omega.t))}{F} }{ 0 } \\
+                    &= \infty
+                    \end{aligned}
+                    }
+                    \]
+                  </h5>
+
+                  <br>
+
+                  <h5>
+                    Hence,
+                    <br>
+                    \[
+                    \boxed{
+                    \begin{aligned}
+                    \forall (\gamma, \lambda) \in reel, \eta^{(1)}(t = \frac{T}{2})
+                    &= \frac{ 17.(\gamma.\cos(\omega.\frac{T}{2}) + \lambda.\sin(\omega.\frac{T}{2}) + 78) }
+                    {39.F.\frac{T}{2}.\omega.( \lambda.\cos(\omega.\frac{T}{2}) - \gamma.\sin(\omega.\frac{T}{2}) )} \\
+                    &= \frac{ 17.(\gamma.\cos(\frac{2.\pi.T}{T.2}) + \lambda.\sin(\frac{2.\pi.T}{T.2}) + 78) }
+                    { 39.F.\frac{T.2.\pi}{2.T}.(\lambda.\cos(\frac{2.\pi.T}{T.2}) - \gamma.\sin(\frac{2.\pi.T}{T.2})) } \\
+                    &= \frac{17.(-\gamma + 78)}{39.F.\pi.(-\lambda)} \\
+                    &= \frac{17.(78 - \gamma)}{39.F.\pi.\lambda}
+                    \end{aligned}
+                    }
+                    \]
+                  </h5>
+
+                  <br>
+
+                  <h5>
+                    We are here to resolve any ordinary differential equation with the imaginary world
+                    or the complex number world.
+                  </h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <br>
+
+      <!-- Footer -->
+      {% include 'index/footer.html' %}
+
+      <br>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+            integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+            crossorigin="anonymous"></script>
+</body>
+</html>

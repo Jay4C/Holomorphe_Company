@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+          crossorigin="anonymous">
+
+    <!-- title -->
+    {% include 'index/title.html' %}
+</head>
+<body>
+    <div class="container">
+      <!-- Code consent -->
+      {% include 'index/consent.html' %}
+
+      <!-- Header -->
+      {% include 'index/header.html' %}
+
+      <br>
+
+      <!-- Body -->
+      <div class="card text-center">
+        <div class="card-header">
+          Comparison of electrolysers
+        </div>
+        <div class="card-body">
+          <table class="table table-striped table-bordered">
+            <thead>
+              <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Theoretical power consumption per kilogram of produced hydrogen (kWh/nm^3)</th>
+                <th scope="col">Theoretical electrical power (MW)</th>
+                <th scope="col">Theoretical installation surface (m^2)</th>
+                <th scope="col">Used materials</th>
+                <th scope="col">Theoretical operating temperature (°C)</th>
+                <th scope="col">Theoretical life time (hours)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Alkaline electrolyser</td>
+                <td>4,5</td>
+                <td>4</td>
+                <td>100</td>
+                <td>Anode (Ni, Co, Fe) / Cathode (Ni, C) / Medium (Stainless steel)</td>
+                <td>90</td>
+                <td>80 000</td>
+              </tr>
+              <tr>
+                <td>PEM electrolyser</td>
+                <td>4,5</td>
+                <td>1</td>
+                <td>25</td>
+                <td>Anode (Platine) / Cathode (Iridium) / Medium (Titane)</td>
+                <td>80</td>
+                <td>20 000</td>
+              </tr>
+              <tr>
+                <td>SOEC electrolyser</td>
+                <td>3,5</td>
+                <td>2,7</td>
+                <td>300</td>
+                <td>Anode (Ni+ZrO2) / Cathode (Nickel, Cobalt, Nickel de Cermet)</td>
+                <td>1000</td>
+                <td>100 000</td>
+              </tr>
+              <tr>
+                <td>Stanley Meyer's electrolyser (Holomorphe – Hydrogen container)</td>
+                <td>0,000626488</td>
+                <td>0,00004</td>
+                <td>13,846156</td>
+                <td>Anode et cathode (stainless steel)</td>
+                <td>25</td>
+                <td>876 000</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <br>
+
+          <table class="table table-striped table-bordered">
+            <thead>
+              <tr>
+                <th scope="col">Theoretical flow (m^3/h)</th>
+                <th scope="col">Theoretical ratio of flow per surface ((m^3/h)/m^2)</th>
+                <th scope="col">Theoretical ratio of power per surface (W/m^2)</th>
+                <th scope="col">Theoretical ratio of flow per power ((m^3/h)/W)</th>
+                <th scope="col">Type of electrolyte</th>
+                <th scope="col">Type of water</th>
+                <th scope="col">Theoretical yield (%)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>800</td>
+                <td>8</td>
+                <td>40 000</td>
+                <td>0,0002</td>
+                <td>Sodium hydroxyde (NaOH) – Liquid</td>
+                <td>Alkaline water</td>
+                <td>77</td>
+              </tr>
+              <tr>
+                <td>200</td>
+                <td>8</td>
+                <td>40 000</td>
+                <td>0,0002</td>
+                <td>Solid polymere</td>
+                <td>Pure water</td>
+                <td>80</td>
+              </tr>
+              <tr>
+                <td>750</td>
+                <td>2,5</td>
+                <td>9 000</td>
+                <td>0,00028</td>
+                <td>Electrolyte waterproof for gas</td>
+                <td>Water steam</td>
+                <td>85</td>
+              </tr>
+              <tr>
+                <td>63,8479895</td>
+                <td>4,6112429688</td>
+                <td>2,8888884395</td>
+                <td>1,5961997375</td>
+                <td>No</td>
+                <td>All types of water (fresh, salted, rain, waste …)</td>
+                <td>478 860</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <br>
+
+      <!-- Footer -->
+      {% include 'index/footer.html' %}
+
+      <br>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+            integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+            crossorigin="anonymous"></script>
+</body>
+</html>
